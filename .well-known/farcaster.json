@@ -1,0 +1,27 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Japan Support Guide",
+    "iconUrl": "https://seido-guide-web.vercel.app/icons/icon-512.png",
+    "homeUrl": "https://seido-guide-web.vercel.app/",
+    "imageUrl": "https://seido-guide-web.vercel.app/icons/fc-card-3x2.png",
+    "buttonTitle": "🍀 ひらく / Open",
+    "splashImageUrl": "https://seido-guide-web.vercel.app/icons/icon-512.png",
+    "splashBackgroundColor": "#f3faf6",
+    "subtitle": "困りごとから、公的な制度をさがす",
+    "description": "An information guide for finding public support programs in Japan (welfare, medical, and social security) by the problem at hand. 81 programs with official sources. Japanese and English. Free, no ads, no sign-up. Note: the programs themselves are for people living in Japan.",
+    "primaryCategory": "education",
+    "tags": [
+      "japan",
+      "welfare",
+      "guide",
+      "support",
+      "soyogi"
+    ]
+  }
+}
