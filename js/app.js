@@ -1,8 +1,9 @@
-/* 困りごと制度ガイド app.js (12言語対応) */
+/* 困りごと制度ガイド app.js (日英2言語・設定はヘッダー常時表示) */
 (function () {
   'use strict';
 
-  var APP_VER = '1.0';
+  var APP_VER = '1.2';
+  var ASSET_V = '1.2';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -18,6 +19,7 @@
     try { p = JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch (e) { p = {}; }
     if (LANGS.indexOf(p.lang) < 0) p.lang = detectLang();
     p.fs = (p.fs === 1 || p.fs === 2) ? p.fs : 0;
+    p.bgm = (p.bgm === false) ? false : true;
     return p;
   }
   function savePref() {
@@ -57,7 +59,7 @@
     if (lang === 'ja' || window.SEIDO_L10N[lang] || l10nLoaded[lang]) { cb(); return; }
     l10nLoaded[lang] = true;
     var sc = document.createElement('script');
-    sc.src = 'js/data_' + lang + '.js';
+    sc.src = 'js/data_' + lang + '.js?v=' + ASSET_V;
     sc.onload = cb;
     sc.onerror = cb; /* 読めない場合は日本語のまま表示 */
     document.head.appendChild(sc);
@@ -71,20 +73,28 @@
   }
   function $(id) { return document.getElementById(id); }
 
-  /* タップ方式(長押しでも発火・スクロールでは発火しない) */
+  /* タップ方式(長押しでも発火・スクロールでは発火しない)。どのタップでもBGM開始のトリガーになる。
+     🔴 pointerupだけだと、スクリーンリーダー・スイッチ操作・音声操作・キーボードが出す
+        「合成click」を取りこぼして操作不能になるため、clickも購読する(直後の二重発火だけ抑える) */
   function bindTap(el, fn) {
-    var sx = 0, sy = 0, active = false;
+    var sx = 0, sy = 0, active = false, lastFire = 0;
+    function fire(e) {
+      lastFire = Date.now();
+      if (window.Sound) window.Sound.tap();
+      fn(e);
+    }
     el.addEventListener('pointerdown', function (e) {
       active = true; sx = e.clientX; sy = e.clientY;
     });
     el.addEventListener('pointerup', function (e) {
       if (!active) return;
       active = false;
-      if (Math.abs(e.clientX - sx) < 12 && Math.abs(e.clientY - sy) < 12) fn(e);
+      if (Math.abs(e.clientX - sx) < 12 && Math.abs(e.clientY - sy) < 12) fire(e);
     });
     el.addEventListener('pointercancel', function () { active = false; });
-    el.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fn(e); }
+    el.addEventListener('click', function (e) {
+      if (Date.now() - lastFire < 700) return;   /* 直前のpointerupで発火済み */
+      fire(e);
     });
   }
 
@@ -109,11 +119,22 @@
   }
 
   /* ---------- 画面切替(hashルーティング) ---------- */
+  var firstShow = true;
   function show(viewId) {
     ['view-home', 'view-list', 'view-detail'].forEach(function (v) {
       $(v).hidden = (v !== viewId);
     });
     window.scrollTo(0, 0);
+    /* 画面が切り替わったことをスクリーンリーダーにも伝えるため、その画面の見出しへ移す
+       (初回描画では利用者のフォーカスを奪わない) */
+    if (firstShow) { firstShow = false; return; }
+    var target = viewId === 'view-list' ? $('list-title')
+      : viewId === 'view-detail' ? document.querySelector('#detail-body .d-name')
+        : $('home-pick');
+    if (target) {
+      target.setAttribute('tabindex', '-1');
+      try { target.focus({ preventScroll: true }); } catch (e) { target.focus(); }
+    }
   }
 
   function route() {
@@ -246,7 +267,7 @@
     show('view-detail');
   }
 
-  /* ---------- 表示言語・文字サイズの適用 ---------- */
+  /* ---------- 表示言語・文字サイズ・音の適用 ---------- */
   function applyStatic() {
     document.documentElement.lang = pref.lang;
     document.body.setAttribute('data-fs', String(pref.fs));
@@ -254,9 +275,10 @@
     document.title = T('app.name');
     $('app-title').textContent = T('app.name');
     $('app-sub').textContent = T('app.tagline');
-    $('set-label').textContent = T('set.label');
+    /* 🔴 可視テキストをそのままアクセシブル名にする(音声操作で「とじる」と言って押せるように)。
+       aria-labelで別の文言に置き換えるとWCAG 2.5.3 Label in Nameに反する */
     $('btn-exit').textContent = T('header.close');
-    $('btn-exit').setAttribute('aria-label', T('header.closeAria'));
+    $('btn-exit').setAttribute('title', T('header.closeAria'));
     $('search-input').placeholder = T('search.placeholder');
     $('search-input').setAttribute('aria-label', T('search.aria'));
     $('btn-search').textContent = T('search.button');
@@ -267,16 +289,31 @@
     $('footer-disclaimer').textContent = T('f.disclaimer');
     $('footer-credit').textContent = T('f.credit');
     $('footer-ver').textContent = 'VER ' + APP_VER;
-    $('set-title').textContent = T('set.title');
-    $('set-fs-label').textContent = T('set.fs');
-    $('set-fs-0').textContent = T('set.fsNormal');
-    $('set-fs-1').textContent = T('set.fsLarge');
-    $('set-fs-2').textContent = T('set.fsXL');
-    $('set-close').textContent = T('set.close');
-    document.querySelectorAll('.set-fs-btn').forEach(function (b) {
-      b.classList.toggle('on', Number(b.getAttribute('data-fs')) === pref.fs);
-    });
+
+    /* ヘッダーの設定 */
+    $('set-lang').setAttribute('aria-label', T('set.lang'));
     $('set-lang').value = pref.lang;
+    $('set-fs-label').textContent = T('set.fs');
+    var fsNames = [T('set.fsNormal'), T('set.fsLarge'), T('set.fsXL')];
+    document.querySelectorAll('.set-fs-btn').forEach(function (b) {
+      var n = Number(b.getAttribute('data-fs')) || 0;
+      b.textContent = T('set.fsGlyph');
+      /* 可視文字(あ/A)を名前の先頭に含める(Label in Name) */
+      b.setAttribute('aria-label', T('set.fsGlyph') + ' ' + fsNames[n]);
+      b.setAttribute('title', T('set.fs') + ': ' + fsNames[n]);
+      b.setAttribute('aria-pressed', String(n === pref.fs));
+      b.classList.toggle('on', n === pref.fs);
+    });
+    applyBgmLabel();
+  }
+
+  function applyBgmLabel() {
+    var b = $('btn-bgm');
+    /* 可視テキスト(おと あり/なし)をそのままアクセシブル名にする(Label in Name) */
+    $('bgm-label').textContent = pref.bgm ? T('set.soundOn') : T('set.soundOff');
+    b.setAttribute('aria-pressed', String(!!pref.bgm));
+    b.setAttribute('title', T('set.sound'));
+    b.classList.toggle('on', !!pref.bgm);
   }
 
   function rerenderAll() {
@@ -291,25 +328,28 @@
     ensureL10n(pref.lang, rerenderAll);
   }
 
-  /* ---------- せってい ---------- */
-  function openSet() { $('set-overlay').hidden = false; }
-  function closeSet() { $('set-overlay').hidden = true; }
-
   /* ---------- 初期化 ---------- */
   function init() {
     bindTap($('btn-exit'), function () { location.replace(EXIT_URL); });
-    bindTap($('btn-set'), openSet);
-    bindTap($('set-close'), closeSet);
-    $('set-overlay').addEventListener('pointerup', function (e) {
-      if (e.target === $('set-overlay')) closeSet();
+
+    $('set-lang').addEventListener('change', function () {
+      if (window.Sound) window.Sound.tap();
+      setLang(this.value);
     });
-    $('set-lang').addEventListener('change', function () { setLang(this.value); });
+
     document.querySelectorAll('.set-fs-btn').forEach(function (b) {
       bindTap(b, function () {
         pref.fs = Number(b.getAttribute('data-fs')) || 0;
         savePref();
         applyStatic();
       });
+    });
+
+    bindTap($('btn-bgm'), function () {
+      pref.bgm = !pref.bgm;
+      savePref();
+      if (window.Sound) window.Sound.setBgmEnabled(pref.bgm);
+      applyBgmLabel();
     });
 
     bindTap($('btn-search'), function () {
@@ -326,10 +366,21 @@
       bindTap(b, function () { history.length > 1 ? history.back() : go('#home'); });
     });
 
+    /* 🔴 起動時は状態を合わせるだけで鳴らさない(第2引数 false)。実際の再生は最初のタップから。
+       Capacitorは自動再生制限を外すため、ここで鳴らすと実機だけ無操作で音が出てしまう。
+       ♪ボタンでのONは実際のタップの中なので、その場ですぐ鳴る(上の bindTap 側は引数なし) */
+    if (window.Sound) window.Sound.setBgmEnabled(pref.bgm, false);
+
     window.addEventListener('hashchange', route);
     ensureL10n(pref.lang, rerenderAll);
 
-    if ('serviceWorker' in navigator) {
+    /* Service Worker はWeb公開版のオフライン用。
+       localhost は「開発プレビュー」と「Capacitorアプリ内(WebViewがlocalhostで配信)」の両方で、
+       どちらも実ファイルが手元にあるため登録しない。
+       これで開発中の旧版配信と、アプリ更新直後に旧画面が出る事故([[feedback_sw_cache_reopen]])を避ける */
+    var host = location.hostname;
+    var isLocal = (host === 'localhost' || host === '127.0.0.1' || host === '');
+    if ('serviceWorker' in navigator && !isLocal) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('sw.js').catch(function () {});
       });
