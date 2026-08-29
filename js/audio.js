@@ -40,6 +40,16 @@ var Sound = (function () {
     }
   }
 
+  /* 予約済みで鳴っている/これから鳴るオシレータ。止めるときに全部その場で止める */
+  var live = [];
+  function track(o) {
+    live.push(o);
+    o.onended = function () {
+      var i = live.indexOf(o);
+      if (i >= 0) live.splice(i, 1);
+    };
+  }
+
   function scheduleBar(t) {
     var p = CALM;
     var chord = p.chords[chordIdx % p.chords.length];
@@ -53,6 +63,7 @@ var Sound = (function () {
       g.gain.linearRampToValueAtTime(0.0001, t + p.bar * 1.35);
       o.connect(g); g.connect(filter);
       o.start(t); o.stop(t + p.bar * 1.4);
+      track(o);
     });
     /* まばらな単音(1小節に0〜1音) */
     if (Math.random() < 0.5) {
@@ -65,6 +76,7 @@ var Sound = (function () {
       g2.gain.exponentialRampToValueAtTime(0.0001, nt + 2.6);
       o2.connect(g2); g2.connect(filter);
       o2.start(nt); o2.stop(nt + 2.7);
+      track(o2);
     }
   }
 
@@ -89,17 +101,28 @@ var Sound = (function () {
     }, 400);
   }
 
+  /* 🔴 止めると決めたら素早く消す(利用者が「おと なし」を押した=今すぐ黙ってほしい)。
+     ゆっくりフェードだと2秒ほど鳴り続けて「消えない」と感じる。
+     プツッと切れない程度(約0.25秒)で落とし、予約済みの音も その場で止める */
   function stopBgm() {
     if (!playing) return;
     playing = false;
     clearInterval(timer);
+    var now = ctx ? ctx.currentTime : 0;
     if (master && ctx) {
       try {
-        master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.4);   /* ゆっくりフェードアウト */
+        master.gain.cancelScheduledValues(now);
+        master.gain.setValueAtTime(master.gain.value, now);
+        master.gain.linearRampToValueAtTime(0.0001, now + 0.25);
         var m = master;
-        setTimeout(function () { try { m.disconnect(); } catch (e) {} }, 1600);
+        setTimeout(function () { try { m.disconnect(); } catch (e) {} }, 400);
       } catch (e) {}
     }
+    /* 予約済みのオシレータを全部止める(master切断だけだと鳴り続ける実装もあるため) */
+    live.forEach(function (o) {
+      try { o.stop(now + 0.26); } catch (e) { try { o.stop(); } catch (e2) {} }
+    });
+    live = [];
     master = null; filter = null;
   }
 

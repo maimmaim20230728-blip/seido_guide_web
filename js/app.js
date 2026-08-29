@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.2';
-  var ASSET_V = '1.2';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.3';
+  var ASSET_V = '1.3';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -80,8 +80,11 @@
     var sx = 0, sy = 0, active = false, lastFire = 0;
     function fire(e) {
       lastFire = Date.now();
-      if (window.Sound) window.Sound.tap();
+      /* 🔴 fn(e) を先に実行してから Sound.tap() を呼ぶ。
+         逆順にすると「おと なし」を押した瞬間に先に開始トリガーが走り、
+         止めるつもりのタップで鳴り始めてしまう(bgmEnabled はまだ true のため) */
       fn(e);
+      if (window.Sound) window.Sound.tap();
     }
     el.addEventListener('pointerdown', function (e) {
       active = true; sx = e.clientX; sy = e.clientY;
