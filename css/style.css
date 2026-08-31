@@ -125,6 +125,12 @@ body[data-fs="2"] { font-size: 21px; }
   font-size: 13px;
 }
 
+/* 画面切替のときにプログラムからフォーカスを移す見出し(スクリーンリーダーに切替を伝えるため)。
+   tabindex="-1" なのでTabキーでは到達せず、視覚的な枠は不要。操作要素の枠は消さないこと */
+.list-title[tabindex="-1"]:focus,
+.d-name[tabindex="-1"]:focus,
+.section-label[tabindex="-1"]:focus { outline: none; }
+
 /* ===== 本文 ===== */
 #main {
   max-width: 760px;

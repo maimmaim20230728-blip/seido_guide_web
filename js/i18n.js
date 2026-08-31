@@ -59,7 +59,9 @@ window.SEIDO_I18N = {
   "cat.genmen.title": "保険料・税金を減らしたい",
   "cat.genmen.sub": "免除・軽減・控除の制度",
   "cat.manabi.title": "学費・学び直し",
-  "cat.manabi.sub": "授業料・奨学金・職業訓練"
+  "cat.manabi.sub": "授業料・奨学金・職業訓練",
+  "cat.saigai.title": "災害にあった",
+  "cat.saigai.sub": "住まいと暮らしの再建・当面のお金"
  },
  "en": {
   "app.name": "Japan Support Guide",
@@ -120,6 +122,8 @@ window.SEIDO_I18N = {
   "cat.genmen.title": "Reduce premiums and taxes",
   "cat.genmen.sub": "Exemptions, reductions and deductions",
   "cat.manabi.title": "School costs and learning again",
-  "cat.manabi.sub": "Tuition, scholarships and vocational training"
+  "cat.manabi.sub": "Tuition, scholarships and vocational training",
+  "cat.saigai.title": "Affected by a disaster",
+  "cat.saigai.sub": "Rebuilding a home and daily life, and cash for the time being"
  }
 };
