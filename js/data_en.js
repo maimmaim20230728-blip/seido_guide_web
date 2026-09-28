@@ -259,6 +259,30 @@ window.SEIDO_L10N.en = {
   ],
   "recent": ""
  },
+ "tajyu-saimu-soudan": {
+  "name": "Multiple-debt consultation desks (Local Finance Bureaus, prefectures, municipalities, and others)",
+  "short": "Public desks where people who have trouble repaying debts can consult",
+  "target": "People with worries such as repaying debts (both consumers and business operators). The desk at the Kanto Local Finance Bureau also accepts consultation from family members and others besides the person concerned",
+  "benefit": "Multiple-debt consultation desks are set up at Local Finance Bureaus across the country as well as by prefectures, municipalities, and others, and the Financial Services Agency provides their contact details in a leaflet for each prefecture. According to the Financial Services Agency, the desks serve consumers and business operators who have difficulty repaying, offering advice and support on ways to resolve the situation (debt restructuring, household budget management, referral to specialists, and so on) according to the person's circumstances and wishes, and the confidentiality of what is discussed is protected. According to the Kanto and Kinki Local Finance Bureaus, consultation is free; a counselor asks about income and debts and, where debt restructuring is needed, explains the advantages and disadvantages of the 4 methods (voluntary arrangement (任意整理), specified conciliation (特定調停), individual civil rehabilitation (個人版民事再生), and personal bankruptcy (自己破産)), and where necessary refers the person to a bar association, the Japan Legal Support Center (Houterasu), a local government consultation desk for self-reliance support for people in need, or similar bodies",
+  "window": "Multiple-debt consultation desk at the Local Finance Bureau (財務局の多重債務相談窓口), or the consultation desk of the prefecture or municipality (contact details are listed in the Financial Services Agency's leaflet for each prefecture)",
+  "documents": [
+   "No universally required documents are specified in official guidance (at a Local Finance Bureau desk, the person is first asked about income, debts, and similar circumstances)",
+   "According to the Kinki Local Finance Bureau, people who have contracts, repayment schedules, transaction statements, receipts, credit cards, demand letters, or similar items are asked to bring them to the consultation"
+  ],
+  "steps": [
+   "Use the Financial Services Agency's page on multiple-debt consultation desks (多重債務についての相談窓口) or the leaflet for each prefecture to find the desk of the Local Finance Bureau, prefecture, or municipality for the area of residence",
+   "Consult by phone (Local Finance Bureaus also take consultations in person, and the Kanto Local Finance Bureau recommends booking an in-person meeting in advance)",
+   "Explain income and debts, and receive an explanation of ways to resolve the situation that suit the circumstances",
+   "Where needed, be referred to a bar association, Houterasu, a consultation desk for self-reliance support for people in need, or similar bodies"
+  ],
+  "notes": [
+   "Reception days and hours differ by desk (the desks at the Kanto and Kinki Local Finance Bureaus are open during the daytime on weekdays and do not take consultations on weekends or public holidays)",
+   "The Financial Services Agency's page also lists the following as places to consult about debt restructuring (debt problems): Houterasu, the Japan Federation of Bar Associations, the Japan Federation of Shiho-Shoshi Lawyer's Associations, the Japan Financial Services Association (日本貸金業協会), the Japan Credit Counseling Association, and the Japanese Bankers Association",
+   "As places to report and consult about illegal moneylenders (ヤミ金融), the Financial Services Agency lists the police, consumer affairs centers, the Japan Federation of Bar Associations, and the Japan Federation of Shiho-Shoshi Lawyer's Associations",
+   "There is a self-exclusion system for borrowing (貸付自粛制度) that can keep a person from newly borrowing money for overspending, gambling, and the like. When the person concerned (or a legal representative or similar) applies to the Japan Financial Services Association or the Japanese Bankers Association's personal credit information center (全国銀行個人信用情報センター), self-exclusion information is registered with the credit information agencies for a certain period"
+  ],
+  "recent": "The Multiple-Debtor Consultation Enhancement Campaign 2026 (多重債務者相談強化キャンペーン2026) is being held from September 1 to December 31, 2026, with consultation sessions and similar events in various areas (the schedule is published on the Financial Services Agency's page)"
+ },
  "jukyo-kakuho-kyufukin": {
   "name": "Housing Security Benefit (rent assistance after job loss or a drop in income)",
   "short": "A benefit covering rent-equivalent costs after job loss or reduced income",
@@ -2651,6 +2675,32 @@ window.SEIDO_L10N.en = {
    "When there is a sudden need to protect personal safety, call 110"
   ],
   "recent": "The Women's Human Rights Hotline (0570-070-810) was merged into the Human Rights Hotline for Everyone on October 1, 2025 (Reiwa 7). For consultation about women's human rights, call 0570-003-110 and select 1 in the voice guidance"
+ },
+ "shohisha-hotline-188": {
+  "name": "Consumer Hotline 188 and Consumer Affairs Centers",
+  "short": "A nationwide number that guides people to where they can consult about contract trouble, fraudulent sales practices, and similar problems",
+  "target": "People troubled by disputes with businesses over contracts or fraudulent sales practices, or by accidents caused by products, food, or services, who do not know where to turn. The number 188 is described as a way for people who do not know the phone number of a consumer affairs center or similar desk to be guided to a nearby one",
+  "benefit": "When 188 is dialed and a postal code or similar information is entered, the caller is guided to a nearby consumer affairs center or consumer consultation desk set up by a local government (the call does not go to the Consumer Affairs Agency itself). At consumer affairs centers and similar desks, specialist counselors receive complaints and inquiries about consumer life in general, including goods and services, and handle them from a fair standpoint. Examples of the consultations accepted include disputes with businesses over contracts; disputes with businesses involving fraudulent sales practices, door-to-door sales, mail-order and online sales, and the like; accidents caused by products, food, or services; and disputes arising from improper labeling, such as false origin labeling or false advertising. Consultation is free of charge. There are 847 consumer affairs centers nationwide (as of April 1, 2025), and in addition every municipality has a consumer consultation desk",
+  "window": "Consumer affairs center (消費生活センター) or consumer consultation desk (消費生活相談窓口), set up by prefectures and municipalities; when the nearby desk is closed on weekends and public holidays, the National Consumer Affairs Center of Japan (国民生活センター)",
+  "documents": [
+   "Related papers such as terms and conditions, contracts, and the advertisement or pamphlet that started the matter (the National Consumer Affairs Center of Japan's backup consultation asks people to gather these as far as possible before calling, but also says that a quick response can help in some cases, so people who are worried should call first)",
+   "Where the internet is involved, saved copies of the relevant screens and URLs (printed out if possible)"
+  ],
+  "steps": [
+   "Dial 188 (where the phone number of a consultation desk is already known, calling it directly is recommended)",
+   "Follow the voice guidance: if the postal code is known, press 1 and enter the 7-digit postal code (not the telephone area code); if it is not known, press 2 (from a landline, there may be guidance to choose the area; from a mobile phone, the call is guided to the prefectural consumer affairs center or a similar desk)",
+   "Describe the trouble to the counselor at the desk the call connects to, as much as feels possible to say",
+   "For matters better suited to a specialist desk, such as human rights, labor problems, or health, be referred to that desk"
+  ],
+  "notes": [
+   "The days and hours when consultation is available differ by desk. When the nearby desk is closed on weekends and public holidays, the National Consumer Affairs Center of Japan fills the gap, so the service can in principle be used every day except during the New Year holidays (December 29 to January 3) and similar periods",
+   "Consultation is free, but call charges apply from the moment the call connects to a desk. The number is not covered by mobile phone flat-rate calling plans, and the charge is announced by voice before the call connects",
+   "188 cannot be used from some IP phones, prepaid mobile phones, or the telephone relay service, so in those cases call the local desk directly (the nearest consumer affairs center can be searched on the National Consumer Affairs Center of Japan website)",
+   "If the desk is busy and the call does not go through, the National Consumer Affairs Center of Japan's backup consultation line (03-3446-0999, weekdays 10 a.m. to 4 p.m.) can also be used. The backup consultation can also be used in sign language through the sign language link of the telephone relay service",
+   "According to the National Consumer Affairs Center of Japan's guidance for its backup consultation, when a consultation is accepted the caller is asked for their name, address (down to the municipality), phone number, gender, age, occupation, and similar details, and calls are in principle to be made by the person concerned",
+   "If serious harm to life or body has occurred or is about to occur, first contact the police (110) or the fire department (119)"
+  ],
+  "recent": "The phone number of the National Consumer Affairs Center of Japan's backup consultation line changed to 03-3446-0999 on December 3, 2025, and the name of the service changed on April 1, 2026 (the number and name may differ from those in older materials)"
  },
  "nenkin-hokenryo-menjo": {
   "name": "Exemption and Payment Postponement of National Pension Contributions",
