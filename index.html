@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <!-- 🔴 ?v= は旧Service Workerのcache-firstを外すための版クエリ。js/app.js の ASSET_V と sw.js の ASSETS と必ず揃える -->
-<link rel="stylesheet" href="css/style.css?v=1.7">
+<link rel="stylesheet" href="css/style.css?v=1.8">
 </head>
 <body>
 <header class="app-header">
@@ -47,6 +47,11 @@
 <main id="main">
   <!-- ホーム: 困りごと選択 -->
   <section id="view-home" class="view">
+    <!-- 🔴 Play「誤解を与える表現(政府関連の情報)」: 非提携の免責と、公式の情報源へのリンクを最初の画面に見える形で置く -->
+    <div class="home-src">
+      <p id="home-src-text"></p>
+      <a href="#src" id="home-src-link" class="src-link"></a>
+    </div>
     <div class="search-row">
       <input id="search-input" type="search" placeholder="" aria-label="">
       <button id="btn-search" type="button" class="btn-primary">さがす</button>
@@ -61,7 +66,14 @@
     <button class="btn-back" type="button" data-back>← もどる</button>
     <h2 id="list-title" class="list-title"></h2>
     <p id="list-sub" class="list-sub"></p>
+    <p class="list-src"><a href="#src" id="list-src-link" class="src-link"></a></p>
     <div id="seido-list" class="seido-list"></div>
+  </section>
+
+  <!-- 出典の一覧: 公式の情報源 -->
+  <section id="view-src" class="view" hidden>
+    <button class="btn-back" type="button" data-back>← もどる</button>
+    <div id="src-body" class="src-body"></div>
   </section>
 
   <!-- 詳細: 制度の中身 -->
@@ -74,13 +86,14 @@
 <footer class="app-footer">
   <p id="footer-updated"></p>
   <p id="footer-disclaimer"></p>
+  <p><a href="#src" id="footer-src">出典の一覧(公式サイト)</a></p>
   <p><span id="footer-credit">介護と支援の相談どころ「そよぎ」</span> <a href="https://soudansoyogi.com/" target="_blank" rel="noopener">soudansoyogi.com</a> ・ <a href="privacy.html" id="footer-privacy">プライバシーポリシー / Privacy</a></p>
   <p id="footer-ver"></p>
 </footer>
 
-<script src="js/audio.js?v=1.7"></script>
-<script src="js/i18n.js?v=1.7"></script>
-<script src="js/data.js?v=1.7"></script>
-<script src="js/app.js?v=1.7"></script>
+<script src="js/audio.js?v=1.8"></script>
+<script src="js/i18n.js?v=1.8"></script>
+<script src="js/data.js?v=1.8"></script>
+<script src="js/app.js?v=1.8"></script>
 </body>
 </html>

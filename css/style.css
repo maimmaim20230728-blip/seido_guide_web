@@ -195,6 +195,51 @@ body[data-fs="2"] { font-size: 21px; }
 .cat-name { font-size: 0.91em; font-weight: 700; line-height: 1.45; }
 .cat-count { font-size: 0.74em; color: var(--muted); }
 
+/* 非提携の免責+公式の情報源への入口(Play「政府関連の情報」対応・最初の画面に見える位置) */
+.home-src {
+  margin: 2px 0 14px;
+  padding: 12px 14px;
+  background: var(--aqua-pale);
+  border-left: 5px solid var(--aqua);
+  border-radius: 10px;
+  font-size: 0.79em;
+  color: var(--black);
+}
+/* 🔴 リンクは濃い緑+下線(水色の文字は白地で約2.3:1しか出ない) */
+.src-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--green-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.list-src { font-size: 0.79em; margin: -6px 2px 10px; }
+.src-body { background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; padding: 20px 18px; }
+.src-intro { font-size: 0.85em; margin-top: 8px; }
+.src-indep { font-size: 0.79em; color: var(--muted); margin-top: 10px; padding: 10px 12px; background: var(--aqua-pale); border-radius: 8px; }
+.src-group { margin-top: 20px; }
+.src-group h3 { font-size: 0.93em; color: var(--green-deep); border-bottom: 2px solid var(--line); padding-bottom: 4px; margin-bottom: 8px; }
+.src-note { font-size: 0.76em; color: var(--muted); margin-bottom: 6px; }
+.src-group ul { list-style: none; padding: 0; }
+.src-group li { font-size: 0.82em; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.src-name { display: block; font-weight: 700; }
+.src-group a { display: inline-block; padding: 10px 0; color: var(--green-deep); word-break: break-all; }
+#footer-src { display: inline-block; min-height: 44px; line-height: 44px; font-weight: 700; }
+.src-count { display: block; font-size: 0.9em; color: var(--muted); }
+.d-src-top {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: var(--aqua-pale);
+  border-radius: 8px;
+  font-size: 0.79em;
+}
+.d-src-label { font-weight: 700; color: var(--black); }
+/* 英語の組織名は単語の途中で折らない(長いホスト名だけ途中で折れてよい) */
+.d-src-top a { color: var(--green-deep); font-weight: 700; overflow-wrap: anywhere; }
+.d-src-host { color: var(--muted); overflow-wrap: anywhere; }
+
 .home-note {
   margin-top: 22px;
   padding: 14px 16px;
@@ -278,7 +323,7 @@ body[data-fs="2"] { font-size: 21px; }
 .d-sources h3 { font-size: 0.82em; color: var(--muted); margin-bottom: 6px; }
 .d-sources ul { padding-left: 20px; }
 .d-sources li { font-size: 0.76em; color: var(--muted); }
-.d-sources a { color: var(--aqua); word-break: break-all; }
+.d-sources a { color: var(--green-deep); word-break: break-all; }
 .d-checked { font-size: 0.74em; color: var(--muted); margin-top: 8px; }
 .d-disclaimer { margin-top: 14px; font-size: 0.74em; color: var(--muted); }
 

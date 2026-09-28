@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.7';
-  var ASSET_V = '1.7';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.8';
+  var ASSET_V = '1.8';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -121,10 +121,104 @@
     return v === 'cat.' + c.id + '.sub' ? (c.sub || '') : v;
   }
 
+  /* ---------- 出典(公式の情報源)・v1.8 ----------
+     🔴 Play「誤解を与える表現(政府関連の情報)」(2026-09-28 v1.7 否承認): 政府関連の情報には、
+        公式の情報源へのはっきりしたリンクが要る。各制度ページの上に公式ページを出し、
+        ホーム・一覧・フッター(=どの画面)からも「出典の一覧」へ行けるようにする。
+        組織名は出典URLのホストで引く(サブドメインは親の組織にまとめる)。url は組織のトップ(2026-09-28 全件200を実測) */
+  var SRC_ORGS = [
+    { host: 'mhlw.go.jp', g: 'gov', url: 'https://www.mhlw.go.jp/', ja: '厚生労働省', en: 'Ministry of Health, Labour and Welfare' },
+    { host: 'cfa.go.jp', g: 'gov', url: 'https://www.cfa.go.jp/', ja: 'こども家庭庁', en: 'Children and Families Agency' },
+    { host: 'mext.go.jp', g: 'gov', url: 'https://www.mext.go.jp/', ja: '文部科学省', en: 'Ministry of Education, Culture, Sports, Science and Technology' },
+    { host: 'bousai.go.jp', g: 'gov', url: 'https://www.bousai.go.jp/', ja: '内閣府 防災情報のページ', en: 'Cabinet Office (Disaster Management)' },
+    { host: 'gender.go.jp', g: 'gov', url: 'https://www.gender.go.jp/', ja: '内閣府 男女共同参画局', en: 'Cabinet Office (Gender Equality Bureau)' },
+    { host: 'nta.go.jp', g: 'gov', url: 'https://www.nta.go.jp/', ja: '国税庁', en: 'National Tax Agency' },
+    { host: 'npa.go.jp', g: 'gov', url: 'https://www.npa.go.jp/', ja: '警察庁', en: 'National Police Agency' },
+    { host: 'moj.go.jp', g: 'gov', url: 'https://www.moj.go.jp/', ja: '法務省', en: 'Ministry of Justice' },
+    { host: 'mlit.go.jp', g: 'gov', url: 'https://www.mlit.go.jp/', ja: '国土交通省', en: 'Ministry of Land, Infrastructure, Transport and Tourism' },
+    { host: 'fsa.go.jp', g: 'gov', url: 'https://www.fsa.go.jp/', ja: '金融庁', en: 'Financial Services Agency' },
+    { host: 'lfb.mof.go.jp', g: 'gov', url: 'https://lfb.mof.go.jp/', ja: '財務省 財務局', en: 'Local Finance Bureaus (Ministry of Finance)' },
+    { host: 'caa.go.jp', g: 'gov', url: 'https://www.caa.go.jp/', ja: '消費者庁', en: 'Consumer Affairs Agency' },
+    { host: 'soumu.go.jp', g: 'gov', url: 'https://www.soumu.go.jp/', ja: '総務省', en: 'Ministry of Internal Affairs and Communications' },
+    { host: 'laws.e-gov.go.jp', g: 'gov', url: 'https://laws.e-gov.go.jp/', ja: 'e-Gov法令検索(デジタル庁)', en: 'e-Gov Law Search (Digital Agency)' },
+    { host: 'nenkin.go.jp', g: 'pub', url: 'https://www.nenkin.go.jp/', ja: '日本年金機構', en: 'Japan Pension Service' },
+    { host: 'kyoukaikenpo.or.jp', g: 'pub', url: 'https://www.kyoukaikenpo.or.jp/', ja: '全国健康保険協会(協会けんぽ)', en: 'Japan Health Insurance Association' },
+    { host: 'jasso.go.jp', g: 'pub', url: 'https://www.jasso.go.jp/', ja: '日本学生支援機構', en: 'Japan Student Services Organization (JASSO)' },
+    { host: 'houterasu.or.jp', g: 'pub', url: 'https://www.houterasu.or.jp/', ja: '日本司法支援センター(法テラス)', en: 'Japan Legal Support Center (Houterasu)' },
+    { host: 'jhf.go.jp', g: 'pub', url: 'https://www.jhf.go.jp/', ja: '住宅金融支援機構', en: 'Japan Housing Finance Agency' },
+    { host: 'jfc.go.jp', g: 'pub', url: 'https://www.jfc.go.jp/', ja: '日本政策金融公庫', en: 'Japan Finance Corporation' },
+    { host: 'kokusen.go.jp', g: 'pub', url: 'https://www.kokusen.go.jp/', ja: '国民生活センター', en: 'National Consumer Affairs Center of Japan' },
+    { host: 'wam.go.jp', g: 'pub', url: 'https://www.wam.go.jp/', ja: '福祉医療機構', en: 'Welfare And Medical Service Agency' },
+    { host: 'shakyo.or.jp', g: 'pub', url: 'https://www.shakyo.or.jp/', ja: '全国社会福祉協議会', en: 'Japan National Council of Social Welfare' },
+    { host: 'johas.go.jp', g: 'pub', url: 'https://www.johas.go.jp/', ja: '労働者健康安全機構', en: 'Japan Organization of Occupational Health and Safety' },
+    { host: 'rehab.go.jp', g: 'pub', url: 'https://www.rehab.go.jp/', ja: '国立障害者リハビリテーションセンター', en: 'National Rehabilitation Center for Persons with Disabilities' },
+    { host: 'ncnp.go.jp', g: 'pub', url: 'https://www.ncnp.go.jp/', ja: '国立精神・神経医療研究センター', en: 'National Center of Neurology and Psychiatry' },
+    { host: 'nanbyou.or.jp', g: 'pub', url: 'https://www.nanbyou.or.jp/', ja: '難病情報センター', en: 'Japan Intractable Diseases Information Center' },
+    { host: 'shouman.jp', g: 'pub', url: 'https://www.shouman.jp/', ja: '小児慢性特定疾病情報センター', en: 'Information Center for Specific Pediatric Chronic Diseases' }
+  ];
+  var SRC_GROUPS = ['gov', 'pub', 'local', 'other'];
+  function hostOf(u) {
+    var m = /^https?:\/\/([^\/?#:]+)/i.exec(String(u || ''));
+    return m ? m[1].toLowerCase() : '';
+  }
+  function orgOf(host) {
+    for (var i = 0; i < SRC_ORGS.length; i++) {
+      var h = SRC_ORGS[i].host;
+      if (host === h || host.slice(-(h.length + 1)) === '.' + h) return SRC_ORGS[i];
+    }
+    return null;
+  }
+  function isLocalHost(h) {
+    return /\.lg\.jp$/.test(h) || /(^|\.)(pref|city|town|vill)\.[a-z0-9-]+\.([a-z0-9-]+\.)?jp$/.test(h);
+  }
+  function orgName(o) { return pref.lang === 'ja' ? o.ja : o.en; }
+  /* 制度ページの上に出す1本 = 国の機関・公的機関の出典を優先、無ければ最初の出典 */
+  function primarySource(s) {
+    var list = s.sources || [];
+    for (var i = 0; i < list.length; i++) if (orgOf(hostOf(list[i].url))) return list[i];
+    return list[0] || null;
+  }
+
+  function renderSources() {
+    var groups = { gov: {}, pub: {}, local: {}, other: {} };
+    D.seido.forEach(function (s) {
+      (s.sources || []).forEach(function (src) {
+        var h = hostOf(src.url);
+        if (!h) return;
+        var o = orgOf(h);
+        var g = o ? o.g : (isLocalHost(h) ? 'local' : 'other');
+        var key = o ? o.host : h;
+        var e = groups[g][key] || (groups[g][key] = { o: o, host: h, url: o ? o.url : src.url, ids: {} });
+        e.ids[s.id] = 1;
+      });
+    });
+    var html = '<h2 id="src-title" class="list-title">' + esc(T('src.title')) + '</h2>';
+    html += '<p class="src-intro">' + esc(T('src.intro')) + '</p>';
+    html += '<p class="src-indep">' + esc(T('f.disclaimer')) + '</p>';
+    SRC_GROUPS.forEach(function (g) {
+      var items = Object.keys(groups[g]).map(function (k) { return groups[g][k]; });
+      if (!items.length) return;
+      items.sort(function (a, b) { return Object.keys(b.ids).length - Object.keys(a.ids).length; });
+      html += '<div class="src-group"><h3>' + esc(T('src.' + g)) + '</h3>';
+      if (g === 'local' || g === 'other') html += '<p class="src-note">' + esc(T('src.' + g + 'Note')) + '</p>';
+      html += '<ul>';
+      items.forEach(function (e) {
+        var n = Object.keys(e.ids).length;
+        html += '<li>';
+        if (e.o) html += '<span class="src-name">' + esc(orgName(e.o)) + '</span> ';
+        html += '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.o ? e.url : e.host) + '</a>';
+        html += ' <span class="src-count">' + esc(TF('src.count', { n: n })) + '</span></li>';
+      });
+      html += '</ul></div>';
+    });
+    $('src-body').innerHTML = html;
+    show('view-src');
+  }
+
   /* ---------- 画面切替(hashルーティング) ---------- */
   var firstShow = true;
   function show(viewId) {
-    ['view-home', 'view-list', 'view-detail'].forEach(function (v) {
+    ['view-home', 'view-list', 'view-detail', 'view-src'].forEach(function (v) {
       $(v).hidden = (v !== viewId);
     });
     window.scrollTo(0, 0);
@@ -133,7 +227,8 @@
     if (firstShow) { firstShow = false; return; }
     var target = viewId === 'view-list' ? $('list-title')
       : viewId === 'view-detail' ? document.querySelector('#detail-body .d-name')
-        : $('home-pick');
+        : viewId === 'view-src' ? $('src-title')
+          : $('home-pick');
     if (target) {
       target.setAttribute('tabindex', '-1');
       try { target.focus({ preventScroll: true }); } catch (e) { target.focus(); }
@@ -145,6 +240,7 @@
     if (h.indexOf('#c/') === 0) { renderList(decodeURIComponent(h.slice(3)), null); return; }
     if (h.indexOf('#q/') === 0) { renderList(null, decodeURIComponent(h.slice(3))); return; }
     if (h.indexOf('#s/') === 0) { renderDetail(decodeURIComponent(h.slice(3))); return; }
+    if (h === '#src') { renderSources(); return; }
     show('view-home');
   }
 
@@ -246,6 +342,15 @@
     if (pref.lang !== 'ja') {
       html += '<p class="d-official">' + esc(TF('d.officialName', { n: s.name })) + '</p>';
     }
+    /* 公式の情報源を最初に見える位置に(一番下の出典一覧とは別に) */
+    var ps = primarySource(s);
+    if (ps) {
+      var po = orgOf(hostOf(ps.url));
+      var pText = pref.lang === 'ja' ? ps.title : (po ? po.en : hostOf(ps.url));
+      html += '<p class="d-src-top"><span class="d-src-label">' + esc(T('d.srcTop')) + '</span> ' +
+        '<a href="' + esc(ps.url) + '" target="_blank" rel="noopener">' + esc(pText) + '</a> ' +
+        '<span class="d-src-host">(' + esc(hostOf(ps.url)) + ')</span></p>';
+    }
     html += '<p class="d-short">' + esc(L(s, 'short')) + '</p>';
     var recent = L(s, 'recent');
     if (recent) html += '<div class="d-recent">' + esc(TF('d.recent', { t: recent })) + '</div>';
@@ -287,6 +392,10 @@
     $('btn-search').textContent = T('search.button');
     $('home-pick').textContent = T('home.pick');
     $('home-note-text').textContent = T('home.note');
+    $('home-src-text').textContent = T('home.srcText');
+    $('home-src-link').textContent = T('home.srcLink');
+    $('list-src-link').textContent = T('list.srcLink');
+    $('footer-src').textContent = T('f.sources');
     document.querySelectorAll('[data-back]').forEach(function (b) { b.textContent = T('back'); });
     $('footer-updated').textContent = TF('f.baseDate', { d: D.updated });
     $('footer-disclaimer').textContent = T('f.disclaimer');
