@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.9';
-  var ASSET_V = '1.9';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.10';
+  var ASSET_V = '1.10';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -77,19 +77,26 @@
      pointerup で発火して画面が切り替わると、同じ指の あとから来る mousedown / mouseup / click が
      「新しい画面の同じ位置にある要素」に当たる(一覧の「もどる」で、下にあった制度カードまで開いていた)。
      bindTap が pointerup で発火したあと 700ms 以内・36px 以内の mousedown / mouseup / click を document で捨てる(click を捨てたら終わり)。
-     pointer イベントは捨てないので、すぐ次のタップは今までどおり効く。支援技術(click だけ)は pointerup が無いのでここを通らない */
+     pointer イベントは捨てないので、すぐ次のタップは今までどおり効く。支援技術(click だけ)は pointerup が無いのでここを通らない
+     🔴 mousedown を捨てるとフォーカスも動かない: さがす欄に字を入れたままボタンを押しても欄が選ばれたまま=キーボードが閉じない。
+     指が触れたときに選ばれていた欄が、まだ選ばれたままなら外す(捨てる前の mousedown と同じ)。押した処理が選んだ欄はそのまま */
   var GHOST_MS = 700, GHOST_PX = 36;
-  var ghost = null;
+  var ghost = null, downFocus = null;
   function isGhost(e) {
     if (!ghost) return false;
     if (Date.now() > ghost.until) { ghost = null; return false; }
     return Math.hypot((e.clientX || 0) - ghost.x, (e.clientY || 0) - ghost.y) <= GHOST_PX;
   }
+  document.addEventListener('pointerdown', function () { downFocus = document.activeElement; }, true);
   ['mousedown', 'mouseup', 'click'].forEach(function (type) {
     document.addEventListener(type, function (e) {
       if (!isGhost(e)) return;
       e.preventDefault();
       e.stopPropagation();
+      if (type === 'mousedown') {
+        var a = document.activeElement;
+        if (a && a === downFocus && a !== e.target && (/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName) || a.isContentEditable)) { try { a.blur(); } catch (_) {} }
+      }
       if (type === 'click') ghost = null;
     }, true);
   });
