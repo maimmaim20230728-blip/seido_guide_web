@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.8';
-  var ASSET_V = '1.8';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.9';
+  var ASSET_V = '1.9';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -73,6 +73,27 @@
   }
   function $(id) { return document.getElementById(id); }
 
+  /* 👻 あとから来るクリックを捨てる(2026-09-30・Play版の指のタップで確かめた):
+     pointerup で発火して画面が切り替わると、同じ指の あとから来る mousedown / mouseup / click が
+     「新しい画面の同じ位置にある要素」に当たる(一覧の「もどる」で、下にあった制度カードまで開いていた)。
+     bindTap が pointerup で発火したあと 700ms 以内・36px 以内の mousedown / mouseup / click を document で捨てる(click を捨てたら終わり)。
+     pointer イベントは捨てないので、すぐ次のタップは今までどおり効く。支援技術(click だけ)は pointerup が無いのでここを通らない */
+  var GHOST_MS = 700, GHOST_PX = 36;
+  var ghost = null;
+  function isGhost(e) {
+    if (!ghost) return false;
+    if (Date.now() > ghost.until) { ghost = null; return false; }
+    return Math.hypot((e.clientX || 0) - ghost.x, (e.clientY || 0) - ghost.y) <= GHOST_PX;
+  }
+  ['mousedown', 'mouseup', 'click'].forEach(function (type) {
+    document.addEventListener(type, function (e) {
+      if (!isGhost(e)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (type === 'click') ghost = null;
+    }, true);
+  });
+
   /* タップ方式(長押しでも発火・スクロールでは発火しない)。どのタップでもBGM開始のトリガーになる。
      🔴 pointerupだけだと、スクリーンリーダー・スイッチ操作・音声操作・キーボードが出す
         「合成click」を取りこぼして操作不能になるため、clickも購読する(直後の二重発火だけ抑える) */
@@ -92,7 +113,10 @@
     el.addEventListener('pointerup', function (e) {
       if (!active) return;
       active = false;
-      if (Math.abs(e.clientX - sx) < 12 && Math.abs(e.clientY - sy) < 12) fire(e);
+      if (Math.abs(e.clientX - sx) < 12 && Math.abs(e.clientY - sy) < 12) {
+        ghost = { x: e.clientX, y: e.clientY, until: Date.now() + GHOST_MS };   /* このあとの同じ指の click を捨てる(上の 👻) */
+        fire(e);
+      }
     });
     el.addEventListener('pointercancel', function () { active = false; });
     el.addEventListener('click', function (e) {
@@ -246,6 +270,42 @@
 
   function go(hash) {
     if (location.hash === hash) { route(); } else { location.hash = hash; }
+  }
+  /* 画面の「← もどる」(data-back)と、Android の戻るボタンの行き先(同じ) */
+  function goBack() {
+    if (history.length > 1) history.back(); else go('#home');
+  }
+
+  /* ---------- Android の戻るボタン(Play版だけ・2026-09-30) ----------
+     @capacitor/app が無いと、戻るを押すとアプリごと後ろに下がっていた(Android 11 以前は閉じる)。
+     一覧・詳しい表示・出典の一覧 → 画面の「← もどる」と同じ(来た画面へ)/ ホーム → アプリを後ろに下げる(minimizeApp。中身はそのまま)。
+     重ねた窓・書きかけの欄(さがす欄は数えない)・確かめの窓は、このアプリには無い。
+     🔴 プラグインはネイティブが注入する Capacitor.Plugins.App を使う(registerPlugin は WebView に無い)。
+     Web版(ブラウザ)は何も変えない(戻るはブラウザのまま) */
+  function isNativeApp() {
+    try { var c = window.Capacitor; return !!(c && typeof c.isNativePlatform === 'function' && c.isNativePlatform()); } catch (e) { return false; }
+  }
+  function nativePlugin(name, fn) {
+    try {
+      var c = window.Capacitor;
+      if (typeof c.isPluginAvailable === 'function' && !c.isPluginAvailable(name)) return null;
+      var p = c.Plugins && c.Plugins[name];
+      return (p && typeof p[fn] === 'function') ? p : null;
+    } catch (e) { return null; }
+  }
+  function minimizeApp() {
+    var ap = nativePlugin('App', 'minimizeApp');
+    try { if (ap) { var p = ap.minimizeApp(); if (p && p.catch) p.catch(function () {}); } } catch (e) {}
+  }
+  function onBackButton() {
+    if (!$('view-home').hidden) { minimizeApp(); return; }
+    goBack();
+  }
+  function watchBack() {
+    if (!isNativeApp()) return;
+    var ap = nativePlugin('App', 'addListener');
+    if (!ap) return;
+    try { ap.addListener('backButton', function () { onBackButton(); }); } catch (e) {}
   }
 
   /* ---------- ホーム ---------- */
@@ -475,8 +535,9 @@
       }
     });
     document.querySelectorAll('[data-back]').forEach(function (b) {
-      bindTap(b, function () { history.length > 1 ? history.back() : go('#home'); });
+      bindTap(b, function () { goBack(); });
     });
+    watchBack();   /* Android の戻るボタン(Play版だけ) */
 
     /* 🔴 起動時は状態を合わせるだけで鳴らさない(第2引数 false)。実際の再生は最初のタップから。
        Capacitorは自動再生制限を外すため、ここで鳴らすと実機だけ無操作で音が出てしまう。
