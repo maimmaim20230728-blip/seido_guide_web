@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.10';
-  var ASSET_V = '1.10';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.11';
+  var ASSET_V = '1.11';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -305,6 +305,7 @@
     try { if (ap) { var p = ap.minimizeApp(); if (p && p.catch) p.catch(function () {}); } } catch (e) {}
   }
   function onBackButton() {
+    if (guideOv) { guideOv._back(); return; }   /* はじめての つかいかた(下の節) */
     if (!$('view-home').hidden) { minimizeApp(); return; }
     goBack();
   }
@@ -313,6 +314,99 @@
     var ap = nativePlugin('App', 'addListener');
     if (!ap) return;
     try { ap.addListener('backButton', function () { onBackButton(); }); } catch (e) {}
+  }
+
+  /* ---------- はじめての つかいかた(初回の案内・2026-09-30) ----------
+     ヒロさん「ひとつずつ・そよぎ みたいなタイプのアプリは、必ず最初に使い方の丁寧な説明を出してほしい。10代の情報室のように」。
+     ・初回起動で必ず出す(最後まで読むまで、開くたびに出る)。文言は i18n の guide.*(heads / bodies は同じ数)
+     ・1ページずつ「つぎ」「まえ」で進む。閉じるのは最後のページの「はじめる」だけ(× は置かない)
+     ・🔴 ヘッダー(ことば・もじ・おと・× とじる)は押せるまま、その下を全部おおう。
+       「× とじる」(すぐに別のページへ)は案内のあいだも使える。ことば・もじ を変えると案内もその場で変わる
+     ・戻るボタン(Play版): 2ページ目から=まえのページ / 1ページ目=初回なら後ろに下げる(閉じない)、
+       画面のいちばん下の「つかいかたを もう一度 見る」から開いたときは閉じる
+     ・読み終えたら localStorage の seido.guide.v1 = true
+     ・🔴 案内は画面の使い方だけ。制度の中身・効果・受けられるかどうかは書かない(Play「誤解を与える表現」) */
+  var GUIDE_KEY = 'seido.guide.v1';
+  var guideOv = null;
+  function guideDone() {
+    try { return JSON.parse(localStorage.getItem(GUIDE_KEY)) === true; } catch (e) { return false; }
+  }
+  function guideEl(tag, cls) { var e = document.createElement(tag); e.className = cls; return e; }
+  /* 案内の上端=ヘッダーの下端(ヘッダーは sticky で いつも いちばん上) */
+  function placeGuide() {
+    if (!guideOv) return;
+    var h = document.querySelector('.app-header');
+    guideOv.style.top = (h ? Math.round(h.getBoundingClientRect().height) : 0) + 'px';
+  }
+  function setGuideInert(on) {
+    /* 案内の下の画面は、読み上げ・キーボードでも届かないようにする(ヘッダーは届く) */
+    ['main', '.app-footer'].forEach(function (s) {
+      var e = document.querySelector(s);
+      if (e) { e.inert = !!on; if (on) e.setAttribute('aria-hidden', 'true'); else e.removeAttribute('aria-hidden'); }
+    });
+  }
+  function openGuide(first) {
+    if (guideOv) return;
+    var bodies = T('guide.bodies');
+    if (!Array.isArray(bodies) || !bodies.length) return;
+    var i = 0;
+    var ov = guideEl('div', 'guide-ov');
+    ov.setAttribute('role', 'dialog');
+    var box = guideEl('div', 'guide-box');
+    var top = guideEl('div', 'guide-top');
+    var ttl = guideEl('p', 'guide-title');
+    var step = guideEl('p', 'guide-step');
+    top.appendChild(ttl); top.appendChild(step);
+    var h = guideEl('h2', 'guide-h');
+    var p = guideEl('p', 'guide-p');
+    var dots = guideEl('div', 'guide-dots');
+    dots.setAttribute('aria-hidden', 'true');
+    var row = guideEl('div', 'guide-row');
+    var prevB = guideEl('button', 'guide-prev');
+    var nextB = guideEl('button', 'guide-next');
+    prevB.type = 'button'; nextB.type = 'button';
+    row.appendChild(prevB); row.appendChild(nextB);
+    box.appendChild(top); box.appendChild(h); box.appendChild(p); box.appendChild(dots);
+    ov.appendChild(box); ov.appendChild(row);
+    function draw() {
+      var heads = T('guide.heads');
+      bodies = T('guide.bodies');                 /* ことばを変えたときも、いまのページのまま訳し直す */
+      var n = bodies.length;
+      if (i > n - 1) i = n - 1;
+      ov.setAttribute('aria-label', T('guide.title'));
+      ttl.textContent = T('guide.title');
+      step.textContent = String(T('guide.step')).replace('{n}', i + 1).replace('{m}', n);
+      step.setAttribute('dir', 'ltr');            /* 「1 / 7」は いつも左から */
+      h.textContent = (Array.isArray(heads) && heads[i]) ? heads[i] : '';
+      p.textContent = bodies[i];
+      dots.innerHTML = '';
+      for (var k = 0; k < n; k++) dots.appendChild(guideEl('span', 'guide-dot' + (k === i ? ' on' : '')));
+      prevB.textContent = T('guide.prev');
+      prevB.style.visibility = (i === 0) ? 'hidden' : 'visible';   /* 「つぎ」の位置を変えない */
+      nextB.textContent = (i === n - 1) ? T('guide.start') : T('guide.next');
+      ov.scrollTop = 0;
+      placeGuide();
+    }
+    function close() {
+      if (ov.parentNode) ov.parentNode.removeChild(ov);
+      guideOv = null;
+      setGuideInert(false);
+      try { localStorage.setItem(GUIDE_KEY, 'true'); } catch (e) {}
+    }
+    ov._draw = draw;
+    ov._back = function () {
+      if (i > 0) { i--; draw(); return; }
+      if (first) minimizeApp(); else close();
+    };
+    bindTap(prevB, function () { if (i > 0) { i--; draw(); } });
+    bindTap(nextB, function () { if (i < bodies.length - 1) { i++; draw(); } else close(); });
+    guideOv = ov;
+    document.body.appendChild(ov);
+    setGuideInert(true);
+    draw();
+    /* 読み上げに案内の始まりを伝える(画面切替の show() と同じく見出しへ。枠は出さない=style.css) */
+    h.setAttribute('tabindex', '-1');
+    try { h.focus({ preventScroll: true }); } catch (e) {}
   }
 
   /* ---------- ホーム ---------- */
@@ -463,6 +557,7 @@
     $('home-src-link').textContent = T('home.srcLink');
     $('list-src-link').textContent = T('list.srcLink');
     $('footer-src').textContent = T('f.sources');
+    $('footer-guide').textContent = T('guide.again');
     document.querySelectorAll('[data-back]').forEach(function (b) { b.textContent = T('back'); });
     $('footer-updated').textContent = TF('f.baseDate', { d: D.updated });
     $('footer-disclaimer').textContent = T('f.disclaimer');
@@ -484,6 +579,7 @@
       b.classList.toggle('on', n === pref.fs);
     });
     applyBgmLabel();
+    if (guideOv) guideOv._draw();   /* はじめての つかいかた も、ことば・もじ に合わせて描き直す */
   }
 
   function applyBgmLabel() {
@@ -545,6 +641,8 @@
       bindTap(b, function () { goBack(); });
     });
     watchBack();   /* Android の戻るボタン(Play版だけ) */
+    bindTap($('footer-guide'), function () { openGuide(false); });
+    window.addEventListener('resize', placeGuide);
 
     /* 🔴 起動時は状態を合わせるだけで鳴らさない(第2引数 false)。実際の再生は最初のタップから。
        Capacitorは自動再生制限を外すため、ここで鳴らすと実機だけ無操作で音が出てしまう。
@@ -553,6 +651,7 @@
 
     window.addEventListener('hashchange', route);
     ensureL10n(pref.lang, rerenderAll);
+    if (!guideDone()) openGuide(true);   /* はじめての つかいかた(読み終えるまで毎回・2026-09-30) */
 
     /* Service Worker はWeb公開版のオフライン用。
        localhost は「開発プレビュー」と「Capacitorアプリ内(WebViewがlocalhostで配信)」の両方で、

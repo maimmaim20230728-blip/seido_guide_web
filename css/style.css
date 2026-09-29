@@ -359,3 +359,69 @@ body[data-fs="2"] { font-size: 21px; }
   .tool-bgm [aria-hidden="true"] { display: none; }  /* ♪は省く(文字ラベルが本体) */
   .tool-select { font-size: 13px; padding: 2px 4px; }
 }
+
+/* ===== はじめての つかいかた(js/app.js openGuide・2026-09-30) =====
+   ヘッダー(ことば・もじ・おと・× とじる)は押せるまま、その下を全部おおう(上端は app.js がヘッダーの下端に合わせる)。
+   文は読み物なので em(もじ3段階に合わせて大きくなる)・下のボタンは操作部なので固定px。
+   ボタンは下に固定した帯(地の色つき=長いページでも本文が透けない)。本文の下の余白は帯より高くする */
+.guide-ov {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9;   /* ヘッダー(10)の下・本文とフッターの上 */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg);
+  padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 132px) max(16px, env(safe-area-inset-left, 0px));
+}
+.guide-box { max-width: 640px; margin: 0 auto; }
+.guide-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.guide-title { font-size: 0.94em; font-weight: 700; color: var(--green-deep); }
+.guide-step { font-size: 0.94em; font-weight: 700; color: var(--muted); white-space: nowrap; unicode-bidi: isolate; }
+.guide-h { font-size: 1.3em; line-height: 1.45; margin: 14px 0 12px; color: var(--black); overflow-wrap: anywhere; }
+.guide-h[tabindex="-1"]:focus { outline: none; }   /* Tab では届かない見出し(読み上げ用のフォーカスだけ) */
+.guide-p { font-size: 1.02em; line-height: 1.85; white-space: pre-line; overflow-wrap: anywhere; }
+.guide-dots { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.guide-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.guide-dot.on { background: var(--green-deep); }
+.guide-row {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 16px) max(16px, env(safe-area-inset-left, 0px));
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+.guide-row button {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 60px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.guide-prev { background: var(--white); color: var(--green-deep); border: 1.5px solid var(--line); }
+/* 🔴 明るい緑 #2fa864 に白文字は3.04:1でAA未達(ヘッダーと同じ理由)。濃い緑で組む */
+.guide-next { background: var(--green-deep); color: var(--white); border: none; }
+/* フッターの「つかいかたを もう一度 見る」(リンクと同じ見た目・タップ域44px) */
+.footer-guide {
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--green-deep);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
