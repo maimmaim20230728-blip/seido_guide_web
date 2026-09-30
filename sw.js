@@ -6,17 +6,17 @@
    🔴 更新のたびに CACHE 名を必ず上げる(feedback-always-bump-version)
    🔴 css/js の ?v= は index.html・js/app.js(ASSET_V)と必ず同じ値にする。
       これを揃えないと、旧SWが残る端末で「新しいHTML+古いJS」の組み合わせになり初回起動が壊れる */
-const CACHE = 'seido-v13';
+const CACHE = 'seido-v14';
 const ASSETS = [
   './',
   './index.html',
   './privacy.html',
-  './css/style.css?v=1.11',
-  './js/audio.js?v=1.11',
-  './js/i18n.js?v=1.11',
-  './js/data.js?v=1.11',
-  './js/data_en.js?v=1.11',
-  './js/app.js?v=1.11',
+  './css/style.css?v=1.12',
+  './js/audio.js?v=1.12',
+  './js/i18n.js?v=1.12',
+  './js/data.js?v=1.12',
+  './js/data_en.js?v=1.12',
+  './js/app.js?v=1.12',
   './manifest.webmanifest',
   './icons/icon.svg',
   './icons/icon-192.png',

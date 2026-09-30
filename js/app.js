@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.11';
-  var ASSET_V = '1.11';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.12';
+  var ASSET_V = '1.12';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -121,8 +121,16 @@
       if (!active) return;
       active = false;
       if (Math.abs(e.clientX - sx) < 12 && Math.abs(e.clientY - sy) < 12) {
-        ghost = { x: e.clientX, y: e.clientY, until: Date.now() + GHOST_MS };   /* このあとの同じ指の click を捨てる(上の 👻) */
-        fire(e);
+        var g = ghost = { x: e.clientX, y: e.clientY, until: Date.now() + GHOST_MS };   /* このあとの同じ指の click を捨てる(上の 👻) */
+        try { fire(e); }
+        finally {
+          /* ⏱ 同じ指の click は、押した処理(fn)が終わってから届く。処理が重くて 700ms を越えると(遅い端末など)、
+             付けた時刻が切れて click が通り、2回押しになる・切り替わった先の同じ位置のボタンまで押される(2026-10-01 に確かめた)。
+             処理のあとで時刻を付け直す */
+          var now = Date.now();
+          lastFire = now;
+          if (ghost === g) g.until = now + GHOST_MS;
+        }
       }
     });
     el.addEventListener('pointercancel', function () { active = false; });
@@ -649,7 +657,15 @@
        ♪ボタンでのONは実際のタップの中なので、その場ですぐ鳴る(上の bindTap 側は引数なし) */
     if (window.Sound) window.Sound.setBgmEnabled(pref.bgm, false);
 
-    window.addEventListener('hashchange', route);
+    /* ⏱ 画面の切り替え(route)は、押した処理(bindTap の fn は location.hash を変えるだけ)が終わったあとの hashchange で動く。
+       切り替えの描画が重い(遅い端末)と、同じ指の click がそのあとに届いて 700ms が切れ、切り替わった先の同じ位置の制度カードまで開いていた
+       (2026-10-01 にヘッドレスChrome の指のタップで確かめた。click が先に届く回は 👻 で捨てられる)。
+       指で押して まだ click が届いていないときだけ、切り替えのあとで時刻を付け直す(bindTap の ⏱ と同じ考え) */
+    window.addEventListener('hashchange', function () {
+      var g = (ghost && Date.now() <= ghost.until) ? ghost : null;
+      try { route(); }
+      finally { if (g && ghost === g) g.until = Date.now() + GHOST_MS; }
+    });
     ensureL10n(pref.lang, rerenderAll);
     if (!guideDone()) openGuide(true);   /* はじめての つかいかた(読み終えるまで毎回・2026-09-30) */
 
