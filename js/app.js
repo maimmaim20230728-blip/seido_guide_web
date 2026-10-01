@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.13';
-  var ASSET_V = '1.13';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.14';
+  var ASSET_V = '1.14';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -196,8 +196,52 @@
     { host: 'ncnp.go.jp', g: 'pub', url: 'https://www.ncnp.go.jp/', ja: '国立精神・神経医療研究センター', en: 'National Center of Neurology and Psychiatry' },
     { host: 'nanbyou.or.jp', g: 'pub', url: 'https://www.nanbyou.or.jp/', ja: '難病情報センター', en: 'Japan Intractable Diseases Information Center' },
     { host: 'shouman.jp', g: 'pub', url: 'https://www.shouman.jp/', ja: '小児慢性特定疾病情報センター', en: 'Information Center for Specific Pediatric Chronic Diseases' },
-    /* v1.13: 後期高齢者医療広域連合は都内の区市町村でつくる地方公共団体。.net なので名前を付けて自治体に入れる */
-    { host: 'tokyo-ikiiki.net', g: 'local', url: 'https://www.tokyo-ikiiki.net/', ja: '東京都後期高齢者医療広域連合', en: 'Tokyo Late-Stage Elderly Medical Care Association (a public body of Tokyo municipalities)' }
+    /* v1.14(2026-10-02 4回目の否承認・指摘の画面=出典の一覧のいちばん下=会社・団体のページ): 出典は国・公的機関・自治体だけにした。
+       自治体もホスト名だけでなく名前を出す(トップページは 2026-10-02 に全件200を実測。.lg.jp でない市の公式ドメインもあるため) */
+{ host: 'city.kawasaki.jp', g: 'local', url: 'https://www.city.kawasaki.jp/', ja: '川崎市', en: 'Kawasaki City' },
+    { host: 'pref.hokkaido.lg.jp', g: 'local', url: 'https://www.pref.hokkaido.lg.jp/', ja: '北海道', en: 'Hokkaido Government' },
+    { host: 'pref.ishikawa.lg.jp', g: 'local', url: 'https://www.pref.ishikawa.lg.jp/', ja: '石川県', en: 'Ishikawa Prefecture' },
+    { host: 'city.taito.lg.jp', g: 'local', url: 'https://www.city.taito.lg.jp/', ja: '台東区(東京都)', en: 'Taito City, Tokyo' },
+    { host: 'pref.tokushima.lg.jp', g: 'local', url: 'https://www.pref.tokushima.lg.jp/', ja: '徳島県', en: 'Tokushima Prefecture' },
+    { host: 'city.sakai.lg.jp', g: 'local', url: 'https://www.city.sakai.lg.jp/', ja: '堺市', en: 'Sakai City' },
+    { host: 'town.ojika.lg.jp', g: 'local', url: 'https://www.town.ojika.lg.jp/', ja: '小値賀町(長崎県)', en: 'Ojika Town, Nagasaki' },
+    { host: 'city.chiba.jp', g: 'local', url: 'https://www.city.chiba.jp/', ja: '千葉市', en: 'Chiba City' },
+    { host: 'city.kagoshima.lg.jp', g: 'local', url: 'https://www.city.kagoshima.lg.jp/', ja: '鹿児島市', en: 'Kagoshima City' },
+    { host: 'city.kitakyushu.lg.jp', g: 'local', url: 'https://www.city.kitakyushu.lg.jp/', ja: '北九州市', en: 'Kitakyushu City' },
+    { host: 'pref.chiba.lg.jp', g: 'local', url: 'https://www.pref.chiba.lg.jp/', ja: '千葉県', en: 'Chiba Prefecture' },
+    { host: 'city.chuo.lg.jp', g: 'local', url: 'https://www.city.chuo.lg.jp/', ja: '中央区(東京都)', en: 'Chuo City, Tokyo' },
+    { host: 'pref.osaka.lg.jp', g: 'local', url: 'https://www.pref.osaka.lg.jp/', ja: '大阪府', en: 'Osaka Prefecture' },
+    { host: 'city.kobe.lg.jp', g: 'local', url: 'https://www.city.kobe.lg.jp/', ja: '神戸市', en: 'Kobe City' },
+    { host: 'fukushi.metro.tokyo.lg.jp', g: 'local', url: 'https://www.fukushi.metro.tokyo.lg.jp/', ja: '東京都 福祉局', en: 'Tokyo Metropolitan Government (Social Welfare)' },
+    { host: 'city.osaka.lg.jp', g: 'local', url: 'https://www.city.osaka.lg.jp/', ja: '大阪市', en: 'Osaka City' },
+    { host: 'hokeniryo.metro.tokyo.lg.jp', g: 'local', url: 'https://www.hokeniryo.metro.tokyo.lg.jp/', ja: '東京都 保健医療局', en: 'Tokyo Metropolitan Government (Public Health)' },
+    { host: 'city.yokohama.lg.jp', g: 'local', url: 'https://www.city.yokohama.lg.jp/', ja: '横浜市', en: 'Yokohama City' },
+    { host: 'city.nagasaki.lg.jp', g: 'local', url: 'https://www.city.nagasaki.lg.jp/', ja: '長崎市', en: 'Nagasaki City' },
+    { host: 'pref.fukuoka.lg.jp', g: 'local', url: 'https://www.pref.fukuoka.lg.jp/', ja: '福岡県', en: 'Fukuoka Prefecture' },
+    { host: 'city.himeji.lg.jp', g: 'local', url: 'https://www.city.himeji.lg.jp/', ja: '姫路市', en: 'Himeji City' },
+    { host: 'web.pref.hyogo.lg.jp', g: 'local', url: 'https://web.pref.hyogo.lg.jp/', ja: '兵庫県', en: 'Hyogo Prefecture' },
+    { host: 'city.kyoto.lg.jp', g: 'local', url: 'https://www.city.kyoto.lg.jp/', ja: '京都市', en: 'Kyoto City' },
+    { host: 'city.sapporo.jp', g: 'local', url: 'https://www.city.sapporo.jp/', ja: '札幌市', en: 'Sapporo City' },
+    { host: 'city.sakuragawa.lg.jp', g: 'local', url: 'https://www.city.sakuragawa.lg.jp/', ja: '桜川市(茨城県)', en: 'Sakuragawa City, Ibaraki' },
+    { host: 'city.omitama.lg.jp', g: 'local', url: 'https://www.city.omitama.lg.jp/', ja: '小美玉市(茨城県)', en: 'Omitama City, Ibaraki' },
+    { host: 'city.kita.lg.jp', g: 'local', url: 'https://www.city.kita.lg.jp/', ja: '北区(東京都)', en: 'Kita City, Tokyo' },
+    { host: 'city.koto.lg.jp', g: 'local', url: 'https://www.city.koto.lg.jp/', ja: '江東区(東京都)', en: 'Koto City, Tokyo' },
+    { host: 'city.nagahama.lg.jp', g: 'local', url: 'https://www.city.nagahama.lg.jp/', ja: '長浜市(滋賀県)', en: 'Nagahama City, Shiga' },
+    { host: 'pref.aichi.jp', g: 'local', url: 'https://www.pref.aichi.jp/', ja: '愛知県', en: 'Aichi Prefecture' },
+    { host: 'city.hiroshima.lg.jp', g: 'local', url: 'https://www.city.hiroshima.lg.jp/', ja: '広島市', en: 'Hiroshima City' },
+    { host: 'city.matsusaka.mie.jp', g: 'local', url: 'https://www.city.matsusaka.mie.jp/', ja: '松阪市(三重県)', en: 'Matsusaka City, Mie' },
+    { host: 'city.moriguchi.osaka.jp', g: 'local', url: 'https://www.city.moriguchi.osaka.jp/', ja: '守口市(大阪府)', en: 'Moriguchi City, Osaka' },
+    { host: 'pref.saga.lg.jp', g: 'local', url: 'https://www.pref.saga.lg.jp/', ja: '佐賀県', en: 'Saga Prefecture' },
+    { host: 'city.toshima.lg.jp', g: 'local', url: 'https://www.city.toshima.lg.jp/', ja: '豊島区(東京都)', en: 'Toshima City, Tokyo' },
+    { host: 'city.sendai.jp', g: 'local', url: 'https://www.city.sendai.jp/', ja: '仙台市', en: 'Sendai City' },
+    { host: 'city.akashi.lg.jp', g: 'local', url: 'https://www.city.akashi.lg.jp/', ja: '明石市(兵庫県)', en: 'Akashi City, Hyogo' },
+    { host: 'city.tachikawa.lg.jp', g: 'local', url: 'https://www.city.tachikawa.lg.jp/', ja: '立川市(東京都)', en: 'Tachikawa City, Tokyo' },
+    { host: 'city.shinjuku.lg.jp', g: 'local', url: 'https://www.city.shinjuku.lg.jp/', ja: '新宿区(東京都)', en: 'Shinjuku City, Tokyo' },
+    { host: 'city.tama.lg.jp', g: 'local', url: 'https://www.city.tama.lg.jp/', ja: '多摩市(東京都)', en: 'Tama City, Tokyo' },
+    { host: 'tax.metro.tokyo.lg.jp', g: 'local', url: 'https://www.tax.metro.tokyo.lg.jp/', ja: '東京都 主税局', en: 'Tokyo Metropolitan Government (Taxation)' },
+    { host: 'town.haboro.lg.jp', g: 'local', url: 'https://www.town.haboro.lg.jp/', ja: '羽幌町(北海道)', en: 'Haboro Town, Hokkaido' },
+    { host: 'city.saitama.lg.jp', g: 'local', url: 'https://www.city.saitama.lg.jp/', ja: 'さいたま市', en: 'Saitama City' },
+    { host: 'pref.okinawa.jp', g: 'local', url: 'https://www.pref.okinawa.jp/', ja: '沖縄県', en: 'Okinawa Prefecture' }
   ];
   var SRC_GROUPS = ['gov', 'pub', 'local', 'other'];
   function hostOf(u) {

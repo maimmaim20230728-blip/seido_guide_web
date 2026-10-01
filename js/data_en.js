@@ -395,7 +395,7 @@ window.SEIDO_L10N.en = {
   "name": "Rent reduction and deferred collection for public housing",
   "short": "Reduces public housing rent during illness or unemployment",
   "target": "Households living in prefectural, municipal or other public housing may be eligible where their income is extremely low, where they have an illness requiring long-term treatment, or where paying the rent has become difficult because of unemployment or a disaster.",
-  "benefit": "Under Article 16, paragraph 5 of the Public Housing Act, the managing body (prefecture or municipality) reduces or waives the rent. The rate of reduction, the threshold amounts and the period (3 months, 6 months, 1 year, etc.) are set in local ordinances and guidelines and differ by municipality (for the prefectural housing managed by the Saitama Prefecture Housing Supply Corporation, for example, standards such as a monthly income of 104,000 yen or less for the whole household are published). Deferred collection, which postpones rent payment for a set period, is a separate scheme under Article 19 of the same act, and some local governments provide both.",
+  "benefit": "Under Article 16, paragraph 5 of the Public Housing Act, the managing body (prefecture or municipality) reduces or waives the rent. The rate of reduction, the threshold amounts and the period (3 months, 6 months, 1 year, etc.) are set in local ordinances and guidelines and differ by municipality (for Kagoshima City's municipal housing, for example, the rent is reduced by one quarter when monthly income is over 25,000 yen and up to 50,000 yen, and by half when it is 25,000 yen or less). Deferred collection, which postpones rent payment for a set period, is a separate scheme under Article 19 of the same act, and some local governments provide both.",
   "window": "Housing division of the prefecture or municipality that manages the public housing, or the counter of the designated manager or the housing supply corporation (住宅担当課・指定管理者・住宅供給公社)",
   "documents": [
    "Application for rent reduction (form provided by the local government)",
@@ -413,9 +413,8 @@ window.SEIDO_L10N.en = {
   ],
   "notes": [
    "The requirements, rate, period and application form for a reduction differ according to local ordinances and guidelines",
-   "It is common for a reduction to apply only from after the date of application, without being applied retroactively (in the Saitama Prefecture Housing Supply Corporation example, an application by the 20th of a month applies from the following month)",
+   "It is common for a reduction to apply only from after the date of application, without being applied retroactively (in the Kagoshima City example, it applies from the month after the month of application)",
    "A reduction is granted for a set period, and a late reapplication may mean the reduction can no longer be received, according to Kitakyushu City's official guidance",
-   "In some local governments certain reasons, such as a decrease in overtime pay or maternity leave, are not accepted as grounds for a reduction",
    "Rent for private rental housing is not covered by this scheme (in that case there are separate places to consult, such as for the Housing Security Benefit)"
   ],
   "recent": ""
@@ -1226,7 +1225,7 @@ window.SEIDO_L10N.en = {
    "The cover of the certificate reads only 'disability certificate' (障害者手帳)",
    "The grade is assessed separately from the disability pension grades"
   ],
-  "recent": "From 1 April 2025, the JR Group (the JR companies) introduced a fare discount for people with mental disabilities. It covers people whose certificate has Type 1 or Type 2 recorded in its passenger fare reduction field (旅客運賃減額欄); guidance from the Tokyo Metropolitan Government and others states that grade 1 corresponds to Type 1 and grades 2 and 3 correspond to Type 2. When travelling alone, holders of either type receive 50% off ordinary tickets for a section whose one-way operating distance exceeds 100 km. When a Type 1 holder travels with a caregiver, the holder and 1 caregiver receive 50% off ordinary tickets, coupon tickets, ordinary express tickets and commuter passes (excluding child commuter passes). When a Type 2 holder travels with a caregiver, 50% off commuter passes (excluding child commuter passes) applies only when the holder is under 12 (the discount covers 1 caregiver). The discounted tickets cannot be bought without a certificate that has this entry, and the certificate is to be carried on the train and shown when staff ask for it. A certificate without an entry in this field may be able to receive one at a municipal or other designated counter, for example by sticker or stamp; the counter, method and timing differ by municipality."
+  "recent": "From 1 April 2025, the JR Group (the JR companies) introduced a fare discount for people with mental disabilities. It covers people whose certificate has Type 1 or Type 2 recorded in its passenger fare reduction field (旅客運賃減額欄); guidance from the Tokyo Metropolitan Government and others states that grade 1 corresponds to Type 1 and grades 2 and 3 correspond to Type 2. When travelling alone, holders of either type receive 50% off ordinary tickets for a section whose one-way operating distance exceeds 100 km. When a Type 1 holder travels with a caregiver, the holder and 1 caregiver receive 50% off ordinary tickets, coupon tickets, ordinary express tickets and commuter passes. When a Type 2 holder travels with a caregiver, 50% off commuter passes applies only when the holder is under 12 (the discount covers 1 caregiver). The discounted tickets cannot be bought without a certificate that has this entry, and the certificate is to be carried on the train and shown when staff ask for it. A certificate without an entry in this field may be able to receive one at a municipal or other designated counter, for example by sticker or stamp; the counter, method and timing differ by municipality."
  },
  "shogai-nenkin": {
   "name": "Disability Pension (Disability Basic Pension and Disability Employees' Pension)",
@@ -2871,8 +2870,8 @@ window.SEIDO_L10N.en = {
  "nhk-jushinryo-menjo": {
   "name": "Exemption of NHK Broadcast Receiving Fees (Full or Half Exemption)",
   "short": "Full or half exemption of the receiving fee",
-  "target": "Households exempt from municipal residence tax that include a person holding a disability certificate or similar; households receiving public assistance or other public aid; residents of social welfare facilities; students living away from their parents who receive need-based scholarships or similar support; and households where a person with a visual or hearing disability or a severe disability is the head of household and the receiving contract holder.",
-  "benefit": "Full exemption covers: households that include a person with a physical, intellectual, or mental disability where all household members are exempt from municipal residence tax; recipients of public aid such as assistance under the Public Assistance Act; residents of social welfare facilities; and students living apart from their parents who qualify for scholarships or tuition waivers with financial-need criteria, the National Pension's Special Payment System for Students, or similar. Half exemption covers cases where a person with a visual or hearing disability, a severe physical disability (grade 1 or 2), a severe intellectual disability, a severe mental disability (grade 1), or a severe war injury or illness is both the head of household and the receiving contract holder.",
+  "target": "Households exempt from municipal residence tax that include a person holding a disability certificate or similar; households receiving public assistance or other public aid; residents of social welfare facilities; and households where a person with a visual or hearing disability or a severe disability is the head of household and the receiving contract holder.",
+  "benefit": "Full exemption covers: households that include a person with a physical, intellectual, or mental disability where all household members are exempt from municipal residence tax; recipients of public aid such as assistance under the Public Assistance Act; and residents of social welfare facilities. Half exemption covers cases where a person with a visual or hearing disability, a severe physical disability (grade 1 or 2), a severe intellectual disability, a severe mental disability (grade 1), or a severe war injury or illness is both the head of household and the receiving contract holder.",
   "window": "Certification of the grounds for exemption is done at the relevant municipal desk (市区町村の担当窓口, such as disability welfare or public assistance); the application form is submitted to NHK",
   "documents": [
    "Broadcast receiving fee exemption application form",
@@ -2882,13 +2881,11 @@ window.SEIDO_L10N.en = {
    "Check which full or half exemption category applies",
    "Obtain the exemption application form from NHK or the municipal desk",
    "Have the grounds for exemption certified at the relevant municipal desk",
-   "Submit the certified application form to NHK",
-   "The exemption applies from the month NHK accepts the application"
+   "Submit the certified application form to NHK"
   ],
   "notes": [
-   "With a My Number Card, the procedure may be completed via Mynaportal (except for some half-exemption categories)",
-   "A dedicated application site is available for the student exemption",
-   "Notification is required when the grounds for exemption no longer apply"
+   "The desk that certifies the grounds for exemption differs by category (such as the disability welfare or public assistance desk)",
+   "There are also exemption categories other than those listed here; details can be confirmed in NHK's guidance"
   ],
   "recent": ""
  },
