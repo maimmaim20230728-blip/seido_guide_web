@@ -5666,6 +5666,16 @@ window.SEIDO_DATA = {
      "title": "保険料の決め方・賦課(東京都後期高齢者医療広域連合)",
      "url": "https://www.tokyo-ikiiki.net/seido/1001968/1001975/index.html",
      "checked": "2026-08-31"
+    },
+    {
+     "title": "高齢者医療制度(厚生労働省)",
+     "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/koukikourei/index.html",
+     "checked": "2026-10-01"
+    },
+    {
+     "title": "後期高齢者医療の保険料について(厚生労働省・PDF)",
+     "url": "https://www.mhlw.go.jp/content/001255769.pdf",
+     "checked": "2026-10-01"
     }
    ],
    "verified": "ok"
@@ -5792,6 +5802,11 @@ window.SEIDO_DATA = {
      "title": "受信料免除のお手続きについて(NHK受信料の窓口)",
      "url": "https://www.nhk-cs.jp/jushinryo/exemption_list.html",
      "checked": "2026-08-31"
+    },
+    {
+     "title": "NHK受信料の免除(横浜市)",
+     "url": "https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/fukushi-kaigo/fukushi/annai/zeikin/kokyo/receivingfree.html",
+     "checked": "2026-10-01"
     }
    ],
    "verified": "ok"

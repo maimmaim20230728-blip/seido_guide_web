@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.12';
-  var ASSET_V = '1.12';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.13';
+  var ASSET_V = '1.13';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -180,6 +180,8 @@
     { host: 'caa.go.jp', g: 'gov', url: 'https://www.caa.go.jp/', ja: '消費者庁', en: 'Consumer Affairs Agency' },
     { host: 'soumu.go.jp', g: 'gov', url: 'https://www.soumu.go.jp/', ja: '総務省', en: 'Ministry of Internal Affairs and Communications' },
     { host: 'laws.e-gov.go.jp', g: 'gov', url: 'https://laws.e-gov.go.jp/', ja: 'e-Gov法令検索(デジタル庁)', en: 'e-Gov Law Search (Digital Agency)' },
+    /* v1.13: DV相談＋は内閣府の事業のサイト(運営は委託先)。.jp なので、名前を付けないと下の「政府・自治体ではないページ」に入ってしまう */
+    { host: 'soudanplus.jp', g: 'gov', url: 'https://soudanplus.jp/', ja: '内閣府 DV相談＋', en: 'Cabinet Office DV Soudan Plus (helpline)' },
     { host: 'nenkin.go.jp', g: 'pub', url: 'https://www.nenkin.go.jp/', ja: '日本年金機構', en: 'Japan Pension Service' },
     { host: 'kyoukaikenpo.or.jp', g: 'pub', url: 'https://www.kyoukaikenpo.or.jp/', ja: '全国健康保険協会(協会けんぽ)', en: 'Japan Health Insurance Association' },
     { host: 'jasso.go.jp', g: 'pub', url: 'https://www.jasso.go.jp/', ja: '日本学生支援機構', en: 'Japan Student Services Organization (JASSO)' },
@@ -193,7 +195,9 @@
     { host: 'rehab.go.jp', g: 'pub', url: 'https://www.rehab.go.jp/', ja: '国立障害者リハビリテーションセンター', en: 'National Rehabilitation Center for Persons with Disabilities' },
     { host: 'ncnp.go.jp', g: 'pub', url: 'https://www.ncnp.go.jp/', ja: '国立精神・神経医療研究センター', en: 'National Center of Neurology and Psychiatry' },
     { host: 'nanbyou.or.jp', g: 'pub', url: 'https://www.nanbyou.or.jp/', ja: '難病情報センター', en: 'Japan Intractable Diseases Information Center' },
-    { host: 'shouman.jp', g: 'pub', url: 'https://www.shouman.jp/', ja: '小児慢性特定疾病情報センター', en: 'Information Center for Specific Pediatric Chronic Diseases' }
+    { host: 'shouman.jp', g: 'pub', url: 'https://www.shouman.jp/', ja: '小児慢性特定疾病情報センター', en: 'Information Center for Specific Pediatric Chronic Diseases' },
+    /* v1.13: 後期高齢者医療広域連合は都内の区市町村でつくる地方公共団体。.net なので名前を付けて自治体に入れる */
+    { host: 'tokyo-ikiiki.net', g: 'local', url: 'https://www.tokyo-ikiiki.net/', ja: '東京都後期高齢者医療広域連合', en: 'Tokyo Late-Stage Elderly Medical Care Association (a public body of Tokyo municipalities)' }
   ];
   var SRC_GROUPS = ['gov', 'pub', 'local', 'other'];
   function hostOf(u) {
@@ -211,11 +215,22 @@
     return /\.lg\.jp$/.test(h) || /(^|\.)(pref|city|town|vill)\.[a-z0-9-]+\.([a-z0-9-]+\.)?jp$/.test(h);
   }
   function orgName(o) { return pref.lang === 'ja' ? o.ja : o.en; }
-  /* 制度ページの上に出す1本 = 国の機関・公的機関の出典を優先、無ければ最初の出典 */
+  /* 出典の分け方: gov / pub / local / other(other=政府・自治体のサイトではない会社・団体のページ) */
+  function srcGroup(u) {
+    var h = hostOf(u), o = orgOf(h);
+    return o ? o.g : (isLocalHost(h) ? 'local' : 'other');
+  }
+  /* 制度ページの上に出す1本 = 国の機関・公的機関 → 自治体 → それ以外 の順で最初のもの
+     🔴 v1.13(2026-10-01 3回目の否承認「政府関連の情報の情報源のリンクがない」・指摘の画面=出典の一覧の「そのほかの公式サイト」):
+        どの制度も政府・自治体の出典を最低1本持つ(_smoke.js [12])。会社・団体のページを「公式」として先頭に出さない */
   function primarySource(s) {
-    var list = s.sources || [];
-    for (var i = 0; i < list.length; i++) if (orgOf(hostOf(list[i].url))) return list[i];
-    return list[0] || null;
+    var list = s.sources || [], best = null, br = 9;
+    var RANK = { gov: 0, pub: 0, local: 1, other: 2 };
+    for (var i = 0; i < list.length; i++) {
+      var r = RANK[srcGroup(list[i].url)];
+      if (r < br) { br = r; best = list[i]; }
+    }
+    return best;
   }
 
   function renderSources() {
@@ -515,10 +530,11 @@
     var ps = primarySource(s);
     if (ps) {
       var po = orgOf(hostOf(ps.url));
-      var pText = pref.lang === 'ja' ? ps.title : (po ? po.en : hostOf(ps.url));
+      /* 英語で組織表に無い出典(自治体など)は、ホストを2回並べず URL をそのまま出す */
+      var pText = pref.lang === 'ja' ? ps.title : (po ? po.en : ps.url);
       html += '<p class="d-src-top"><span class="d-src-label">' + esc(T('d.srcTop')) + '</span> ' +
-        '<a href="' + esc(ps.url) + '" target="_blank" rel="noopener">' + esc(pText) + '</a> ' +
-        '<span class="d-src-host">(' + esc(hostOf(ps.url)) + ')</span></p>';
+        '<a href="' + esc(ps.url) + '" target="_blank" rel="noopener">' + esc(pText) + '</a>' +
+        (pText === ps.url ? '' : ' <span class="d-src-host">(' + esc(hostOf(ps.url)) + ')</span>') + '</p>';
     }
     html += '<p class="d-short">' + esc(L(s, 'short')) + '</p>';
     var recent = L(s, 'recent');
@@ -536,7 +552,8 @@
     }
     html += '<div class="d-sources"><h3>' + esc(T('d.sources')) + '</h3><ul>';
     (s.sources || []).forEach(function (src) {
-      html += '<li>' + esc(src.title) + ' <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.url) + '</a></li>';
+      html += '<li>' + esc(src.title) + ' <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.url) + '</a>' +
+        (srcGroup(src.url) === 'other' ? ' <span class="d-src-nongov">' + esc(T('d.srcNonGov')) + '</span>' : '') + '</li>';
     });
     html += '</ul><p class="d-checked">' + esc(TF('d.checked', { d: checked })) + '</p></div>';
     html += '<p class="d-disclaimer">' + esc(T('d.disclaimer')) + '</p>';
