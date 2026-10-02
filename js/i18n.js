@@ -119,7 +119,7 @@ window.SEIDO_I18N = {
   "home.srcLink": "See the list of sources (official websites)",
   "list.srcLink": "List of sources (official websites)",
   "src.title": "Sources (official information)",
-  "src.intro": "The program information in this app was compiled independently by SOYOGI, based only on the {n} official websites listed below (national government bodies, public organizations, prefectures, and municipalities). These {n} websites are all of the sources; no other sources are used. Each program page shows the URL of the official page it is based on and the date its content was checked. Pages on related sites of the same organization (e.g. www.hellowork.mhlw.go.jp) are listed under that organization. Most official pages are in Japanese.",
+  "src.intro": "The program information in this app was compiled independently by SOYOGI, based only on the {n} official websites listed below (national government bodies, public organizations, prefectures, and municipalities). These {n} websites are all of the sources; no other sources are used. Each program page shows the URL of the official page it is based on and the date its content was checked. Pages on related sites of the same organization (e.g. www.hellowork.mhlw.go.jp) are grouped under that organization. Most official pages are in Japanese.",
   "src.store": "The app description on Google Play lists the same {n} websites in the same order as this list.",
   "src.gov": "National government",
   "src.pub": "Public organizations",

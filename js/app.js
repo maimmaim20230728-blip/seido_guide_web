@@ -165,7 +165,8 @@
         公式の情報源へのはっきりしたリンクが要る。各制度ページの上に公式ページを出し、
         ホーム・一覧・フッター(=どの画面)からも「出典の一覧」へ行けるようにする。
         組織名は出典URLのホストで引く(サブドメインは親の組織にまとめる)。url は組織のトップ(2026-09-28 全件200を実測)
-        v1.15: url の末尾の / を外し(同じページ)、英語名を短くした(ストアの英語の説明文に全サイトを載せる字数のため) */
+        v1.15: url の末尾の / を外し(同じページ)、英語名を短くした(ストアの英語の説明文に全サイトを載せる字数のため)。
+        🔴 短くしても正式名と違う名前にしない(国土交通省=Ministry of Land, Infrastructure, Transport and Tourism・総務省=Ministry of Internal Affairs and Communications は略さない。"Ministry of Transport" は2001年になくなった運輸省) */
   var SRC_ORGS = [
     { host: 'mhlw.go.jp', g: 'gov', url: 'https://www.mhlw.go.jp', ja: '厚生労働省', en: 'Ministry of Health, Labour and Welfare' },
     { host: 'cfa.go.jp', g: 'gov', url: 'https://www.cfa.go.jp', ja: 'こども家庭庁', en: 'Children and Families Agency' },
@@ -175,11 +176,11 @@
     { host: 'nta.go.jp', g: 'gov', url: 'https://www.nta.go.jp', ja: '国税庁', en: 'National Tax Agency' },
     { host: 'npa.go.jp', g: 'gov', url: 'https://www.npa.go.jp', ja: '警察庁', en: 'National Police Agency' },
     { host: 'moj.go.jp', g: 'gov', url: 'https://www.moj.go.jp', ja: '法務省', en: 'Ministry of Justice' },
-    { host: 'mlit.go.jp', g: 'gov', url: 'https://www.mlit.go.jp', ja: '国土交通省', en: 'MLIT (Ministry of Transport)' },
+    { host: 'mlit.go.jp', g: 'gov', url: 'https://www.mlit.go.jp', ja: '国土交通省', en: 'Ministry of Land, Infrastructure, Transport and Tourism' },
     { host: 'fsa.go.jp', g: 'gov', url: 'https://www.fsa.go.jp', ja: '金融庁', en: 'Financial Services Agency' },
     { host: 'lfb.mof.go.jp', g: 'gov', url: 'https://lfb.mof.go.jp', ja: '財務省 財務局', en: 'MOF Local Finance Bureaus' },
     { host: 'caa.go.jp', g: 'gov', url: 'https://www.caa.go.jp', ja: '消費者庁', en: 'Consumer Affairs Agency' },
-    { host: 'soumu.go.jp', g: 'gov', url: 'https://www.soumu.go.jp', ja: '総務省', en: 'MIC (Ministry of Internal Affairs)' },
+    { host: 'soumu.go.jp', g: 'gov', url: 'https://www.soumu.go.jp', ja: '総務省', en: 'Ministry of Internal Affairs and Communications' },
     { host: 'laws.e-gov.go.jp', g: 'gov', url: 'https://laws.e-gov.go.jp', ja: 'e-Gov法令検索(デジタル庁)', en: 'e-Gov Law Search' },
     /* v1.13: DV相談＋は内閣府の事業のサイト(運営は委託先)。.jp なので、名前を付けないと下の「政府・自治体ではないページ」に入ってしまう */
     { host: 'soudanplus.jp', g: 'gov', url: 'https://soudanplus.jp', ja: '内閣府 DV相談＋', en: 'Cabinet Office DV Soudan Plus' },
