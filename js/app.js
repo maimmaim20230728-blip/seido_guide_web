@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.14';
-  var ASSET_V = '1.14';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.15';
+  var ASSET_V = '1.15';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -164,84 +164,85 @@
      🔴 Play「誤解を与える表現(政府関連の情報)」(2026-09-28 v1.7 否承認): 政府関連の情報には、
         公式の情報源へのはっきりしたリンクが要る。各制度ページの上に公式ページを出し、
         ホーム・一覧・フッター(=どの画面)からも「出典の一覧」へ行けるようにする。
-        組織名は出典URLのホストで引く(サブドメインは親の組織にまとめる)。url は組織のトップ(2026-09-28 全件200を実測) */
+        組織名は出典URLのホストで引く(サブドメインは親の組織にまとめる)。url は組織のトップ(2026-09-28 全件200を実測)
+        v1.15: url の末尾の / を外し(同じページ)、英語名を短くした(ストアの英語の説明文に全サイトを載せる字数のため) */
   var SRC_ORGS = [
-    { host: 'mhlw.go.jp', g: 'gov', url: 'https://www.mhlw.go.jp/', ja: '厚生労働省', en: 'Ministry of Health, Labour and Welfare' },
-    { host: 'cfa.go.jp', g: 'gov', url: 'https://www.cfa.go.jp/', ja: 'こども家庭庁', en: 'Children and Families Agency' },
-    { host: 'mext.go.jp', g: 'gov', url: 'https://www.mext.go.jp/', ja: '文部科学省', en: 'Ministry of Education, Culture, Sports, Science and Technology' },
-    { host: 'bousai.go.jp', g: 'gov', url: 'https://www.bousai.go.jp/', ja: '内閣府 防災情報のページ', en: 'Cabinet Office (Disaster Management)' },
-    { host: 'gender.go.jp', g: 'gov', url: 'https://www.gender.go.jp/', ja: '内閣府 男女共同参画局', en: 'Cabinet Office (Gender Equality Bureau)' },
-    { host: 'nta.go.jp', g: 'gov', url: 'https://www.nta.go.jp/', ja: '国税庁', en: 'National Tax Agency' },
-    { host: 'npa.go.jp', g: 'gov', url: 'https://www.npa.go.jp/', ja: '警察庁', en: 'National Police Agency' },
-    { host: 'moj.go.jp', g: 'gov', url: 'https://www.moj.go.jp/', ja: '法務省', en: 'Ministry of Justice' },
-    { host: 'mlit.go.jp', g: 'gov', url: 'https://www.mlit.go.jp/', ja: '国土交通省', en: 'Ministry of Land, Infrastructure, Transport and Tourism' },
-    { host: 'fsa.go.jp', g: 'gov', url: 'https://www.fsa.go.jp/', ja: '金融庁', en: 'Financial Services Agency' },
-    { host: 'lfb.mof.go.jp', g: 'gov', url: 'https://lfb.mof.go.jp/', ja: '財務省 財務局', en: 'Local Finance Bureaus (Ministry of Finance)' },
-    { host: 'caa.go.jp', g: 'gov', url: 'https://www.caa.go.jp/', ja: '消費者庁', en: 'Consumer Affairs Agency' },
-    { host: 'soumu.go.jp', g: 'gov', url: 'https://www.soumu.go.jp/', ja: '総務省', en: 'Ministry of Internal Affairs and Communications' },
-    { host: 'laws.e-gov.go.jp', g: 'gov', url: 'https://laws.e-gov.go.jp/', ja: 'e-Gov法令検索(デジタル庁)', en: 'e-Gov Law Search (Digital Agency)' },
+    { host: 'mhlw.go.jp', g: 'gov', url: 'https://www.mhlw.go.jp', ja: '厚生労働省', en: 'Ministry of Health, Labour and Welfare' },
+    { host: 'cfa.go.jp', g: 'gov', url: 'https://www.cfa.go.jp', ja: 'こども家庭庁', en: 'Children and Families Agency' },
+    { host: 'mext.go.jp', g: 'gov', url: 'https://www.mext.go.jp', ja: '文部科学省', en: 'MEXT (Ministry of Education)' },
+    { host: 'bousai.go.jp', g: 'gov', url: 'https://www.bousai.go.jp', ja: '内閣府 防災情報のページ', en: 'Cabinet Office Disaster Management' },
+    { host: 'gender.go.jp', g: 'gov', url: 'https://www.gender.go.jp', ja: '内閣府 男女共同参画局', en: 'Cabinet Office Gender Equality Bureau' },
+    { host: 'nta.go.jp', g: 'gov', url: 'https://www.nta.go.jp', ja: '国税庁', en: 'National Tax Agency' },
+    { host: 'npa.go.jp', g: 'gov', url: 'https://www.npa.go.jp', ja: '警察庁', en: 'National Police Agency' },
+    { host: 'moj.go.jp', g: 'gov', url: 'https://www.moj.go.jp', ja: '法務省', en: 'Ministry of Justice' },
+    { host: 'mlit.go.jp', g: 'gov', url: 'https://www.mlit.go.jp', ja: '国土交通省', en: 'MLIT (Ministry of Transport)' },
+    { host: 'fsa.go.jp', g: 'gov', url: 'https://www.fsa.go.jp', ja: '金融庁', en: 'Financial Services Agency' },
+    { host: 'lfb.mof.go.jp', g: 'gov', url: 'https://lfb.mof.go.jp', ja: '財務省 財務局', en: 'MOF Local Finance Bureaus' },
+    { host: 'caa.go.jp', g: 'gov', url: 'https://www.caa.go.jp', ja: '消費者庁', en: 'Consumer Affairs Agency' },
+    { host: 'soumu.go.jp', g: 'gov', url: 'https://www.soumu.go.jp', ja: '総務省', en: 'MIC (Ministry of Internal Affairs)' },
+    { host: 'laws.e-gov.go.jp', g: 'gov', url: 'https://laws.e-gov.go.jp', ja: 'e-Gov法令検索(デジタル庁)', en: 'e-Gov Law Search' },
     /* v1.13: DV相談＋は内閣府の事業のサイト(運営は委託先)。.jp なので、名前を付けないと下の「政府・自治体ではないページ」に入ってしまう */
-    { host: 'soudanplus.jp', g: 'gov', url: 'https://soudanplus.jp/', ja: '内閣府 DV相談＋', en: 'Cabinet Office DV Soudan Plus (helpline)' },
-    { host: 'nenkin.go.jp', g: 'pub', url: 'https://www.nenkin.go.jp/', ja: '日本年金機構', en: 'Japan Pension Service' },
-    { host: 'kyoukaikenpo.or.jp', g: 'pub', url: 'https://www.kyoukaikenpo.or.jp/', ja: '全国健康保険協会(協会けんぽ)', en: 'Japan Health Insurance Association' },
-    { host: 'jasso.go.jp', g: 'pub', url: 'https://www.jasso.go.jp/', ja: '日本学生支援機構', en: 'Japan Student Services Organization (JASSO)' },
-    { host: 'houterasu.or.jp', g: 'pub', url: 'https://www.houterasu.or.jp/', ja: '日本司法支援センター(法テラス)', en: 'Japan Legal Support Center (Houterasu)' },
-    { host: 'jhf.go.jp', g: 'pub', url: 'https://www.jhf.go.jp/', ja: '住宅金融支援機構', en: 'Japan Housing Finance Agency' },
-    { host: 'jfc.go.jp', g: 'pub', url: 'https://www.jfc.go.jp/', ja: '日本政策金融公庫', en: 'Japan Finance Corporation' },
-    { host: 'kokusen.go.jp', g: 'pub', url: 'https://www.kokusen.go.jp/', ja: '国民生活センター', en: 'National Consumer Affairs Center of Japan' },
-    { host: 'wam.go.jp', g: 'pub', url: 'https://www.wam.go.jp/', ja: '福祉医療機構', en: 'Welfare And Medical Service Agency' },
-    { host: 'shakyo.or.jp', g: 'pub', url: 'https://www.shakyo.or.jp/', ja: '全国社会福祉協議会', en: 'Japan National Council of Social Welfare' },
-    { host: 'johas.go.jp', g: 'pub', url: 'https://www.johas.go.jp/', ja: '労働者健康安全機構', en: 'Japan Organization of Occupational Health and Safety' },
-    { host: 'rehab.go.jp', g: 'pub', url: 'https://www.rehab.go.jp/', ja: '国立障害者リハビリテーションセンター', en: 'National Rehabilitation Center for Persons with Disabilities' },
-    { host: 'ncnp.go.jp', g: 'pub', url: 'https://www.ncnp.go.jp/', ja: '国立精神・神経医療研究センター', en: 'National Center of Neurology and Psychiatry' },
-    { host: 'nanbyou.or.jp', g: 'pub', url: 'https://www.nanbyou.or.jp/', ja: '難病情報センター', en: 'Japan Intractable Diseases Information Center' },
-    { host: 'shouman.jp', g: 'pub', url: 'https://www.shouman.jp/', ja: '小児慢性特定疾病情報センター', en: 'Information Center for Specific Pediatric Chronic Diseases' },
+    { host: 'soudanplus.jp', g: 'gov', url: 'https://soudanplus.jp', ja: '内閣府 DV相談＋', en: 'Cabinet Office DV Soudan Plus' },
+    { host: 'nenkin.go.jp', g: 'pub', url: 'https://www.nenkin.go.jp', ja: '日本年金機構', en: 'Japan Pension Service' },
+    { host: 'kyoukaikenpo.or.jp', g: 'pub', url: 'https://www.kyoukaikenpo.or.jp', ja: '全国健康保険協会(協会けんぽ)', en: 'Japan Health Insurance Association' },
+    { host: 'jasso.go.jp', g: 'pub', url: 'https://www.jasso.go.jp', ja: '日本学生支援機構', en: 'JASSO (Student Services)' },
+    { host: 'houterasu.or.jp', g: 'pub', url: 'https://www.houterasu.or.jp', ja: '日本司法支援センター(法テラス)', en: 'Japan Legal Support Center' },
+    { host: 'jhf.go.jp', g: 'pub', url: 'https://www.jhf.go.jp', ja: '住宅金融支援機構', en: 'Japan Housing Finance Agency' },
+    { host: 'jfc.go.jp', g: 'pub', url: 'https://www.jfc.go.jp', ja: '日本政策金融公庫', en: 'Japan Finance Corporation' },
+    { host: 'kokusen.go.jp', g: 'pub', url: 'https://www.kokusen.go.jp', ja: '国民生活センター', en: 'National Consumer Affairs Center' },
+    { host: 'wam.go.jp', g: 'pub', url: 'https://www.wam.go.jp', ja: '福祉医療機構', en: 'Welfare and Medical Service Agency' },
+    { host: 'shakyo.or.jp', g: 'pub', url: 'https://www.shakyo.or.jp', ja: '全国社会福祉協議会', en: 'National Council of Social Welfare' },
+    { host: 'johas.go.jp', g: 'pub', url: 'https://www.johas.go.jp', ja: '労働者健康安全機構', en: 'JOHAS (Occupational Health)' },
+    { host: 'rehab.go.jp', g: 'pub', url: 'https://www.rehab.go.jp', ja: '国立障害者リハビリテーションセンター', en: 'National Rehabilitation Center' },
+    { host: 'ncnp.go.jp', g: 'pub', url: 'https://www.ncnp.go.jp', ja: '国立精神・神経医療研究センター', en: 'NCNP (Neurology and Psychiatry)' },
+    { host: 'nanbyou.or.jp', g: 'pub', url: 'https://www.nanbyou.or.jp', ja: '難病情報センター', en: 'Intractable Diseases Info Center' },
+    { host: 'shouman.jp', g: 'pub', url: 'https://www.shouman.jp', ja: '小児慢性特定疾病情報センター', en: 'Pediatric Chronic Diseases Info Center' },
     /* v1.14(2026-10-02 4回目の否承認・指摘の画面=出典の一覧のいちばん下=会社・団体のページ): 出典は国・公的機関・自治体だけにした。
        自治体もホスト名だけでなく名前を出す(トップページは 2026-10-02 に全件200を実測。.lg.jp でない市の公式ドメインもあるため) */
-{ host: 'city.kawasaki.jp', g: 'local', url: 'https://www.city.kawasaki.jp/', ja: '川崎市', en: 'Kawasaki City' },
-    { host: 'pref.hokkaido.lg.jp', g: 'local', url: 'https://www.pref.hokkaido.lg.jp/', ja: '北海道', en: 'Hokkaido Government' },
-    { host: 'pref.ishikawa.lg.jp', g: 'local', url: 'https://www.pref.ishikawa.lg.jp/', ja: '石川県', en: 'Ishikawa Prefecture' },
-    { host: 'city.taito.lg.jp', g: 'local', url: 'https://www.city.taito.lg.jp/', ja: '台東区(東京都)', en: 'Taito City, Tokyo' },
-    { host: 'pref.tokushima.lg.jp', g: 'local', url: 'https://www.pref.tokushima.lg.jp/', ja: '徳島県', en: 'Tokushima Prefecture' },
-    { host: 'city.sakai.lg.jp', g: 'local', url: 'https://www.city.sakai.lg.jp/', ja: '堺市', en: 'Sakai City' },
-    { host: 'town.ojika.lg.jp', g: 'local', url: 'https://www.town.ojika.lg.jp/', ja: '小値賀町(長崎県)', en: 'Ojika Town, Nagasaki' },
-    { host: 'city.chiba.jp', g: 'local', url: 'https://www.city.chiba.jp/', ja: '千葉市', en: 'Chiba City' },
-    { host: 'city.kagoshima.lg.jp', g: 'local', url: 'https://www.city.kagoshima.lg.jp/', ja: '鹿児島市', en: 'Kagoshima City' },
-    { host: 'city.kitakyushu.lg.jp', g: 'local', url: 'https://www.city.kitakyushu.lg.jp/', ja: '北九州市', en: 'Kitakyushu City' },
-    { host: 'pref.chiba.lg.jp', g: 'local', url: 'https://www.pref.chiba.lg.jp/', ja: '千葉県', en: 'Chiba Prefecture' },
-    { host: 'city.chuo.lg.jp', g: 'local', url: 'https://www.city.chuo.lg.jp/', ja: '中央区(東京都)', en: 'Chuo City, Tokyo' },
-    { host: 'pref.osaka.lg.jp', g: 'local', url: 'https://www.pref.osaka.lg.jp/', ja: '大阪府', en: 'Osaka Prefecture' },
-    { host: 'city.kobe.lg.jp', g: 'local', url: 'https://www.city.kobe.lg.jp/', ja: '神戸市', en: 'Kobe City' },
-    { host: 'fukushi.metro.tokyo.lg.jp', g: 'local', url: 'https://www.fukushi.metro.tokyo.lg.jp/', ja: '東京都 福祉局', en: 'Tokyo Metropolitan Government (Social Welfare)' },
-    { host: 'city.osaka.lg.jp', g: 'local', url: 'https://www.city.osaka.lg.jp/', ja: '大阪市', en: 'Osaka City' },
-    { host: 'hokeniryo.metro.tokyo.lg.jp', g: 'local', url: 'https://www.hokeniryo.metro.tokyo.lg.jp/', ja: '東京都 保健医療局', en: 'Tokyo Metropolitan Government (Public Health)' },
-    { host: 'city.yokohama.lg.jp', g: 'local', url: 'https://www.city.yokohama.lg.jp/', ja: '横浜市', en: 'Yokohama City' },
-    { host: 'city.nagasaki.lg.jp', g: 'local', url: 'https://www.city.nagasaki.lg.jp/', ja: '長崎市', en: 'Nagasaki City' },
-    { host: 'pref.fukuoka.lg.jp', g: 'local', url: 'https://www.pref.fukuoka.lg.jp/', ja: '福岡県', en: 'Fukuoka Prefecture' },
-    { host: 'city.himeji.lg.jp', g: 'local', url: 'https://www.city.himeji.lg.jp/', ja: '姫路市', en: 'Himeji City' },
-    { host: 'web.pref.hyogo.lg.jp', g: 'local', url: 'https://web.pref.hyogo.lg.jp/', ja: '兵庫県', en: 'Hyogo Prefecture' },
-    { host: 'city.kyoto.lg.jp', g: 'local', url: 'https://www.city.kyoto.lg.jp/', ja: '京都市', en: 'Kyoto City' },
-    { host: 'city.sapporo.jp', g: 'local', url: 'https://www.city.sapporo.jp/', ja: '札幌市', en: 'Sapporo City' },
-    { host: 'city.sakuragawa.lg.jp', g: 'local', url: 'https://www.city.sakuragawa.lg.jp/', ja: '桜川市(茨城県)', en: 'Sakuragawa City, Ibaraki' },
-    { host: 'city.omitama.lg.jp', g: 'local', url: 'https://www.city.omitama.lg.jp/', ja: '小美玉市(茨城県)', en: 'Omitama City, Ibaraki' },
-    { host: 'city.kita.lg.jp', g: 'local', url: 'https://www.city.kita.lg.jp/', ja: '北区(東京都)', en: 'Kita City, Tokyo' },
-    { host: 'city.koto.lg.jp', g: 'local', url: 'https://www.city.koto.lg.jp/', ja: '江東区(東京都)', en: 'Koto City, Tokyo' },
-    { host: 'city.nagahama.lg.jp', g: 'local', url: 'https://www.city.nagahama.lg.jp/', ja: '長浜市(滋賀県)', en: 'Nagahama City, Shiga' },
-    { host: 'pref.aichi.jp', g: 'local', url: 'https://www.pref.aichi.jp/', ja: '愛知県', en: 'Aichi Prefecture' },
-    { host: 'city.hiroshima.lg.jp', g: 'local', url: 'https://www.city.hiroshima.lg.jp/', ja: '広島市', en: 'Hiroshima City' },
-    { host: 'city.matsusaka.mie.jp', g: 'local', url: 'https://www.city.matsusaka.mie.jp/', ja: '松阪市(三重県)', en: 'Matsusaka City, Mie' },
-    { host: 'city.moriguchi.osaka.jp', g: 'local', url: 'https://www.city.moriguchi.osaka.jp/', ja: '守口市(大阪府)', en: 'Moriguchi City, Osaka' },
-    { host: 'pref.saga.lg.jp', g: 'local', url: 'https://www.pref.saga.lg.jp/', ja: '佐賀県', en: 'Saga Prefecture' },
-    { host: 'city.toshima.lg.jp', g: 'local', url: 'https://www.city.toshima.lg.jp/', ja: '豊島区(東京都)', en: 'Toshima City, Tokyo' },
-    { host: 'city.sendai.jp', g: 'local', url: 'https://www.city.sendai.jp/', ja: '仙台市', en: 'Sendai City' },
-    { host: 'city.akashi.lg.jp', g: 'local', url: 'https://www.city.akashi.lg.jp/', ja: '明石市(兵庫県)', en: 'Akashi City, Hyogo' },
-    { host: 'city.tachikawa.lg.jp', g: 'local', url: 'https://www.city.tachikawa.lg.jp/', ja: '立川市(東京都)', en: 'Tachikawa City, Tokyo' },
-    { host: 'city.shinjuku.lg.jp', g: 'local', url: 'https://www.city.shinjuku.lg.jp/', ja: '新宿区(東京都)', en: 'Shinjuku City, Tokyo' },
-    { host: 'city.tama.lg.jp', g: 'local', url: 'https://www.city.tama.lg.jp/', ja: '多摩市(東京都)', en: 'Tama City, Tokyo' },
-    { host: 'tax.metro.tokyo.lg.jp', g: 'local', url: 'https://www.tax.metro.tokyo.lg.jp/', ja: '東京都 主税局', en: 'Tokyo Metropolitan Government (Taxation)' },
-    { host: 'town.haboro.lg.jp', g: 'local', url: 'https://www.town.haboro.lg.jp/', ja: '羽幌町(北海道)', en: 'Haboro Town, Hokkaido' },
-    { host: 'city.saitama.lg.jp', g: 'local', url: 'https://www.city.saitama.lg.jp/', ja: 'さいたま市', en: 'Saitama City' },
-    { host: 'pref.okinawa.jp', g: 'local', url: 'https://www.pref.okinawa.jp/', ja: '沖縄県', en: 'Okinawa Prefecture' }
+{ host: 'city.kawasaki.jp', g: 'local', url: 'https://www.city.kawasaki.jp', ja: '川崎市', en: 'Kawasaki City' },
+    { host: 'pref.hokkaido.lg.jp', g: 'local', url: 'https://www.pref.hokkaido.lg.jp', ja: '北海道', en: 'Hokkaido Government' },
+    { host: 'pref.ishikawa.lg.jp', g: 'local', url: 'https://www.pref.ishikawa.lg.jp', ja: '石川県', en: 'Ishikawa Prefecture' },
+    { host: 'city.taito.lg.jp', g: 'local', url: 'https://www.city.taito.lg.jp', ja: '台東区(東京都)', en: 'Taito City, Tokyo' },
+    { host: 'pref.tokushima.lg.jp', g: 'local', url: 'https://www.pref.tokushima.lg.jp', ja: '徳島県', en: 'Tokushima Prefecture' },
+    { host: 'city.sakai.lg.jp', g: 'local', url: 'https://www.city.sakai.lg.jp', ja: '堺市', en: 'Sakai City' },
+    { host: 'town.ojika.lg.jp', g: 'local', url: 'https://www.town.ojika.lg.jp', ja: '小値賀町(長崎県)', en: 'Ojika Town, Nagasaki' },
+    { host: 'city.chiba.jp', g: 'local', url: 'https://www.city.chiba.jp', ja: '千葉市', en: 'Chiba City' },
+    { host: 'city.kagoshima.lg.jp', g: 'local', url: 'https://www.city.kagoshima.lg.jp', ja: '鹿児島市', en: 'Kagoshima City' },
+    { host: 'city.kitakyushu.lg.jp', g: 'local', url: 'https://www.city.kitakyushu.lg.jp', ja: '北九州市', en: 'Kitakyushu City' },
+    { host: 'pref.chiba.lg.jp', g: 'local', url: 'https://www.pref.chiba.lg.jp', ja: '千葉県', en: 'Chiba Prefecture' },
+    { host: 'city.chuo.lg.jp', g: 'local', url: 'https://www.city.chuo.lg.jp', ja: '中央区(東京都)', en: 'Chuo City, Tokyo' },
+    { host: 'pref.osaka.lg.jp', g: 'local', url: 'https://www.pref.osaka.lg.jp', ja: '大阪府', en: 'Osaka Prefecture' },
+    { host: 'city.kobe.lg.jp', g: 'local', url: 'https://www.city.kobe.lg.jp', ja: '神戸市', en: 'Kobe City' },
+    { host: 'fukushi.metro.tokyo.lg.jp', g: 'local', url: 'https://www.fukushi.metro.tokyo.lg.jp', ja: '東京都 福祉局', en: 'Tokyo Metropolitan Government (Social Welfare)' },
+    { host: 'city.osaka.lg.jp', g: 'local', url: 'https://www.city.osaka.lg.jp', ja: '大阪市', en: 'Osaka City' },
+    { host: 'hokeniryo.metro.tokyo.lg.jp', g: 'local', url: 'https://www.hokeniryo.metro.tokyo.lg.jp', ja: '東京都 保健医療局', en: 'Tokyo Metropolitan Government (Public Health)' },
+    { host: 'city.yokohama.lg.jp', g: 'local', url: 'https://www.city.yokohama.lg.jp', ja: '横浜市', en: 'Yokohama City' },
+    { host: 'city.nagasaki.lg.jp', g: 'local', url: 'https://www.city.nagasaki.lg.jp', ja: '長崎市', en: 'Nagasaki City' },
+    { host: 'pref.fukuoka.lg.jp', g: 'local', url: 'https://www.pref.fukuoka.lg.jp', ja: '福岡県', en: 'Fukuoka Prefecture' },
+    { host: 'city.himeji.lg.jp', g: 'local', url: 'https://www.city.himeji.lg.jp', ja: '姫路市', en: 'Himeji City' },
+    { host: 'web.pref.hyogo.lg.jp', g: 'local', url: 'https://web.pref.hyogo.lg.jp', ja: '兵庫県', en: 'Hyogo Prefecture' },
+    { host: 'city.kyoto.lg.jp', g: 'local', url: 'https://www.city.kyoto.lg.jp', ja: '京都市', en: 'Kyoto City' },
+    { host: 'city.sapporo.jp', g: 'local', url: 'https://www.city.sapporo.jp', ja: '札幌市', en: 'Sapporo City' },
+    { host: 'city.sakuragawa.lg.jp', g: 'local', url: 'https://www.city.sakuragawa.lg.jp', ja: '桜川市(茨城県)', en: 'Sakuragawa City, Ibaraki' },
+    { host: 'city.omitama.lg.jp', g: 'local', url: 'https://www.city.omitama.lg.jp', ja: '小美玉市(茨城県)', en: 'Omitama City, Ibaraki' },
+    { host: 'city.kita.lg.jp', g: 'local', url: 'https://www.city.kita.lg.jp', ja: '北区(東京都)', en: 'Kita City, Tokyo' },
+    { host: 'city.koto.lg.jp', g: 'local', url: 'https://www.city.koto.lg.jp', ja: '江東区(東京都)', en: 'Koto City, Tokyo' },
+    { host: 'city.nagahama.lg.jp', g: 'local', url: 'https://www.city.nagahama.lg.jp', ja: '長浜市(滋賀県)', en: 'Nagahama City, Shiga' },
+    { host: 'pref.aichi.jp', g: 'local', url: 'https://www.pref.aichi.jp', ja: '愛知県', en: 'Aichi Prefecture' },
+    { host: 'city.hiroshima.lg.jp', g: 'local', url: 'https://www.city.hiroshima.lg.jp', ja: '広島市', en: 'Hiroshima City' },
+    { host: 'city.matsusaka.mie.jp', g: 'local', url: 'https://www.city.matsusaka.mie.jp', ja: '松阪市(三重県)', en: 'Matsusaka City, Mie' },
+    { host: 'city.moriguchi.osaka.jp', g: 'local', url: 'https://www.city.moriguchi.osaka.jp', ja: '守口市(大阪府)', en: 'Moriguchi City, Osaka' },
+    { host: 'pref.saga.lg.jp', g: 'local', url: 'https://www.pref.saga.lg.jp', ja: '佐賀県', en: 'Saga Prefecture' },
+    { host: 'city.toshima.lg.jp', g: 'local', url: 'https://www.city.toshima.lg.jp', ja: '豊島区(東京都)', en: 'Toshima City, Tokyo' },
+    { host: 'city.sendai.jp', g: 'local', url: 'https://www.city.sendai.jp', ja: '仙台市', en: 'Sendai City' },
+    { host: 'city.akashi.lg.jp', g: 'local', url: 'https://www.city.akashi.lg.jp', ja: '明石市(兵庫県)', en: 'Akashi City, Hyogo' },
+    { host: 'city.tachikawa.lg.jp', g: 'local', url: 'https://www.city.tachikawa.lg.jp', ja: '立川市(東京都)', en: 'Tachikawa City, Tokyo' },
+    { host: 'city.shinjuku.lg.jp', g: 'local', url: 'https://www.city.shinjuku.lg.jp', ja: '新宿区(東京都)', en: 'Shinjuku City, Tokyo' },
+    { host: 'city.tama.lg.jp', g: 'local', url: 'https://www.city.tama.lg.jp', ja: '多摩市(東京都)', en: 'Tama City, Tokyo' },
+    { host: 'tax.metro.tokyo.lg.jp', g: 'local', url: 'https://www.tax.metro.tokyo.lg.jp', ja: '東京都 主税局', en: 'Tokyo Metropolitan Government (Taxation)' },
+    { host: 'town.haboro.lg.jp', g: 'local', url: 'https://www.town.haboro.lg.jp', ja: '羽幌町(北海道)', en: 'Haboro Town, Hokkaido' },
+    { host: 'city.saitama.lg.jp', g: 'local', url: 'https://www.city.saitama.lg.jp', ja: 'さいたま市', en: 'Saitama City' },
+    { host: 'pref.okinawa.jp', g: 'local', url: 'https://www.pref.okinawa.jp', ja: '沖縄県', en: 'Okinawa Prefecture' }
   ];
   var SRC_GROUPS = ['gov', 'pub', 'local', 'other'];
   function hostOf(u) {
@@ -290,14 +291,20 @@
         e.ids[s.id] = 1;
       });
     });
+    /* 🔴🔴 v1.15(2026-10-02 5回目の否承認「情報源の提供が不十分」・指摘=英語の詳しい説明): 説明文の自治体が「例」の3つだけで、
+       この一覧と合わなかった。この一覧の並び(制度の数の多い順)と数は、ストアの説明文(store/_listing.js が作る)と同じにする */
+    var total = 0;
+    SRC_GROUPS.forEach(function (g) { total += Object.keys(groups[g]).length; });
     var html = '<h2 id="src-title" class="list-title">' + esc(T('src.title')) + '</h2>';
-    html += '<p class="src-intro">' + esc(T('src.intro')) + '</p>';
+    html += '<p class="src-intro">' + esc(TF('src.intro', { n: total })) + '</p>';
+    /* ストアの説明文の話は Play版だけ(Web版にはストアの説明文が無い) */
+    if (isNativeApp()) html += '<p class="src-intro">' + esc(TF('src.store', { n: total })) + '</p>';
     html += '<p class="src-indep">' + esc(T('f.disclaimer')) + '</p>';
     SRC_GROUPS.forEach(function (g) {
       var items = Object.keys(groups[g]).map(function (k) { return groups[g][k]; });
       if (!items.length) return;
       items.sort(function (a, b) { return Object.keys(b.ids).length - Object.keys(a.ids).length; });
-      html += '<div class="src-group"><h3>' + esc(T('src.' + g)) + '</h3>';
+      html += '<div class="src-group"><h3>' + esc(TF('src.groupHead', { t: T('src.' + g), n: items.length })) + '</h3>';
       if (g === 'local' || g === 'other') html += '<p class="src-note">' + esc(T('src.' + g + 'Note')) + '</p>';
       html += '<ul>';
       items.forEach(function (e) {
