@@ -1,6 +1,6 @@
 /* 自動生成ファイル: node _build_data.js が work/research/*.json から生成する。直接編集しない */
 window.SEIDO_DATA = {
- "updated": "2026-08-31",
+ "updated": "2026-10-30",
  "categories": [
   {
    "id": "seikatsu",
@@ -118,9 +118,9 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     },
     {
-     "title": "令和7年10月からの生活保護基準改定について(川崎市)",
-     "url": "https://www.city.kawasaki.jp/350/page/0000180391.html",
-     "checked": "2026-08-31"
+     "title": "平成25年から実施した生活扶助基準改定に関する最高裁判決を踏まえた保護費等の追加給付について(川崎市)",
+     "url": "https://www.city.kawasaki.jp/350/page/0000185033.html",
+     "checked": "2026-10-30"
     },
     {
      "title": "令和8年度生活扶助基準の見直しについて(第55回社会保障審議会生活保護基準部会 資料4・厚生労働省)",
@@ -2304,9 +2304,9 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     },
     {
-     "title": "高年齢求職者給付金の額は（北海道労働局・ハローワーク）",
-     "url": "https://jsite.mhlw.go.jp/hokkaido-hellowork/list/sapporo/kyusyokusya/hokenzyukyu/kourei/4.html",
-     "checked": "2026-08-31"
+     "title": "基本手当について(高年齢求職者給付金について)（ハローワークインターネットサービス・厚生労働省）",
+     "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html",
+     "checked": "2026-10-30"
     },
     {
      "title": "求職者給付に関するQ＆A（東京労働局・ハローワーク）",
@@ -3721,8 +3721,8 @@ window.SEIDO_DATA = {
     },
     {
      "title": "認知症疾患医療センターについて(愛知県)",
-     "url": "https://www.pref.aichi.jp/soshiki/chiikihoukatu/ninnchisho-shikkan-iryou-center.html",
-     "checked": "2026-08-31"
+     "url": "https://www.pref.aichi.jp/soshiki/korei/ninnchisho-shikkan-iryou-center.html",
+     "checked": "2026-10-30"
     }
    ],
    "verified": "fixed",
@@ -6361,9 +6361,9 @@ window.SEIDO_DATA = {
    "recent": "令和8年度(2026年度)から対象世帯が拡大され、生活保護受給世帯・住民税非課税世帯に加えて、保護者等の住民税所得割額の合算が182,500円未満(年収490万円未満程度が目安)の中間所得層も対象になった。新たに加わった区分には、住民税非課税世帯より低い額が設定されている。",
    "sources": [
     {
-     "title": "高校生等奨学給付金(文部科学省)",
-     "url": "https://www.mext.go.jp/a_menu/shotou/mushouka/1344089.htm",
-     "checked": "2026-08-31"
+     "title": "高校生等への修学支援(高校生等奨学給付金)(文部科学省)",
+     "url": "https://www.mext.go.jp/a_menu/shotou/mushouka/index.htm",
+     "checked": "2026-10-30"
     },
     {
      "title": "高校生等奨学給付金リーフレット(令和8年度)(文部科学省)",

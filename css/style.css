@@ -319,6 +319,8 @@ body[data-fs="2"] { font-size: 21px; }
   font-size: 0.91em;
 }
 .d-phone { font-size: 1em; font-weight: 700; color: var(--green-deep); margin-top: 4px; }
+/* v1.16: 番号を押すと電話をかけられる(指で押しやすい高さ) */
+.d-phone .d-tel { color: inherit; display: inline-block; padding: 6px 0; min-height: 24px; }
 .d-notes li { color: var(--danger); font-size: 0.85em; }
 .d-sources { margin-top: 22px; padding-top: 14px; border-top: 1px dashed var(--line); }
 .d-sources h3 { font-size: 0.82em; color: var(--muted); margin-bottom: 6px; }

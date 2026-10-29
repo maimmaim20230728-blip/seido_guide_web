@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <!-- 🔴 ?v= は旧Service Workerのcache-firstを外すための版クエリ。js/app.js の ASSET_V と sw.js の ASSETS と必ず揃える -->
-<link rel="stylesheet" href="css/style.css?v=1.15">
+<link rel="stylesheet" href="css/style.css?v=1.16">
 </head>
 <body>
 <header class="app-header">
@@ -22,7 +22,7 @@
       <h1 id="app-title">困りごと制度ガイド</h1>
       <p class="header-sub" id="app-sub">困りごとから、公的な制度をさがす</p>
     </div>
-    <button id="btn-exit" class="btn-exit" type="button" aria-label="このページを閉じる">× とじる</button>
+    <button id="btn-exit" class="btn-exit" type="button">× とじる</button>
   </div>
   <div class="header-tools">
     <div class="tool-group">
@@ -38,8 +38,8 @@
       <button type="button" class="tool-btn set-fs-btn fs-1" data-fs="1" id="set-fs-1">あ</button>
       <button type="button" class="tool-btn set-fs-btn fs-2" data-fs="2" id="set-fs-2">あ</button>
     </div>
-    <button type="button" class="tool-btn tool-bgm" id="btn-bgm" aria-pressed="true">
-      <span aria-hidden="true">♪</span> <span id="bgm-label">おと あり</span>
+    <button type="button" class="tool-btn tool-bgm" id="btn-bgm" aria-pressed="false">
+      <span aria-hidden="true">♪</span> <span id="bgm-label">おと なし</span>
     </button>
   </div>
 </header>
@@ -92,9 +92,9 @@
   <p id="footer-ver"></p>
 </footer>
 
-<script src="js/audio.js?v=1.15"></script>
-<script src="js/i18n.js?v=1.15"></script>
-<script src="js/data.js?v=1.15"></script>
-<script src="js/app.js?v=1.15"></script>
+<script src="js/audio.js?v=1.16"></script>
+<script src="js/i18n.js?v=1.16"></script>
+<script src="js/data.js?v=1.16"></script>
+<script src="js/app.js?v=1.16"></script>
 </body>
 </html>

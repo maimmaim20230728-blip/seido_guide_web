@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.15';
-  var ASSET_V = '1.15';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.16';
+  var ASSET_V = '1.16';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -19,7 +19,8 @@
     try { p = JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch (e) { p = {}; }
     if (LANGS.indexOf(p.lang) < 0) p.lang = detectLang();
     p.fs = (p.fs === 1 || p.fs === 2) ? p.fs : 0;
-    p.bgm = (p.bgm === false) ? false : true;
+    /* v1.16(2026-10-30): 音のはじめは「切」(困りごとを探す人が夜に開いても、急に鳴らない)。一度「おと あり」にした人はそのまま */
+    p.bgm = (p.bgm === true) ? true : false;
     return p;
   }
   function savePref() {
@@ -503,13 +504,22 @@
   }
 
   /* ---------- 一覧(カテゴリ or 検索) ---------- */
+  /* 検索の文字をそろえる(v1.16): 全角・半角(NFKC)、大文字・小文字、カタカナ→ひらがな。
+     「せいかつほご」でも「セイカツ」でも「ｾｲｶﾂ」でも同じに当たる */
+  function normSearch(t) {
+    t = String(t == null ? '' : t);
+    try { t = t.normalize('NFKC'); } catch (e) {}
+    return t.toLowerCase().replace(/[ァ-ヶ]/g, function (c) {
+      return String.fromCharCode(c.charCodeAt(0) - 0x60);
+    });
+  }
   function searchHay(s) {
     /* 表示言語と日本語の両方から検索できるようにする */
     var parts = [s.name, s.short, s.target, s.benefit, (s.keywords || []).join(' ')];
     if (pref.lang !== 'ja') {
       parts.push(L(s, 'name'), L(s, 'short'), L(s, 'target'), L(s, 'benefit'));
     }
-    return parts.join(' ').toLowerCase();
+    return normSearch(parts.join(' '));
   }
 
   function renderList(catId, query) {
@@ -521,7 +531,7 @@
       title = c.icon + ' ' + catTitle(c);
       sub = catSub(c);
     } else {
-      var q = (query || '').trim().toLowerCase();
+      var q = normSearch((query || '').trim());
       items = D.seido.filter(function (s) {
         var hay = searchHay(s);
         return q.split(/\s+/).every(function (w) { return w === '' || hay.indexOf(w) >= 0; });
@@ -569,6 +579,15 @@
     return s[field] || [];
   }
 
+  /* 窓口の電話番号を押して発信できるように(v1.16)。
+     番号だけ(0120-46-1999・#8008・189 など)のときだけ tel: にする。説明の文や内線の入ったものは文字のまま */
+  function phoneHtml(ph) {
+    var t = String(ph).trim();
+    if (!/^#?\d[\d-]*\d$/.test(t)) return esc(t);
+    var dial = t.replace(/-/g, '').replace('#', '%23');
+    return '<a class="d-tel" href="tel:' + esc(dial) + '">' + esc(t) + '</a>';
+  }
+
   function renderDetail(id) {
     var s = seidoById(id);
     if (!s) { go('#home'); return; }
@@ -594,7 +613,7 @@
     html += '<div class="d-sec"><h3>' + esc(T('d.what')) + '</h3><p>' + esc(L(s, 'benefit')) + '</p></div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.target')) + '</h3><p>' + esc(L(s, 'target')) + '</p></div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.window')) + '</h3><div class="d-window-box">' + esc(L(s, 'window'));
-    if (s.phone) html += '<div class="d-phone">' + esc(s.phone) + '</div>';
+    if (s.phone) html += '<div class="d-phone">' + phoneHtml(s.phone) + '</div>';
     html += '</div></div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.docs')) + '</h3>' + listHtml(lArr(s, 'documents')) + '</div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.steps')) + '</h3>' + stepsHtml(lArr(s, 'steps')) + '</div>';
