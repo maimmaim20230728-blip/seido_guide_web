@@ -46,7 +46,7 @@ body[data-fs="2"] { font-size: 21px; }
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 10px max(12px, env(safe-area-inset-right, 0px)) 6px max(12px, env(safe-area-inset-left, 0px));
+  padding: 18px max(12px, env(safe-area-inset-right, 0px)) 6px max(12px, env(safe-area-inset-left, 0px));
   max-width: 760px;
   margin: 0 auto;
 }
