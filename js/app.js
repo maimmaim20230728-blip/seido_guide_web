@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.17';
-  var ASSET_V = '1.17';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.18';
+  var ASSET_V = '1.18';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -342,11 +342,13 @@
     }
   }
 
+  function safeDec(s) { try { return decodeURIComponent(s); } catch (e) { return s; } }
+
   function route() {
     var h = location.hash || '#home';
-    if (h.indexOf('#c/') === 0) { renderList(decodeURIComponent(h.slice(3)), null); return; }
-    if (h.indexOf('#q/') === 0) { renderList(null, decodeURIComponent(h.slice(3))); return; }
-    if (h.indexOf('#s/') === 0) { renderDetail(decodeURIComponent(h.slice(3))); return; }
+    if (h.indexOf('#c/') === 0) { renderList(safeDec(h.slice(3)), null); return; }
+    if (h.indexOf('#q/') === 0) { renderList(null, safeDec(h.slice(3))); return; }
+    if (h.indexOf('#s/') === 0) { renderDetail(safeDec(h.slice(3))); return; }
     if (h === '#src') { renderSources(); return; }
     show('view-home');
   }
