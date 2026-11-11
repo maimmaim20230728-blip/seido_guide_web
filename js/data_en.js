@@ -114,7 +114,8 @@ window.SEIDO_L10N.en = {
    "The loans are described as being provided together with consultation support from community welfare commissioners and Councils of Social Welfare",
    "The phone number is the call center for the Livelihood Welfare Fund Loan program listed on the Ministry of Health, Labour and Welfare page (weekdays 9:00 to 17:00)"
   ],
-  "recent": "New applications for the special COVID-19 loans (the special provisions for emergency small-amount funds and comprehensive support funds) closed at the end of September of Reiwa 4 (2022), and the program currently operates as the regular loan program. Consultations about exemption from or deferral of repayment for amounts already borrowed are accepted at each Council of Social Welfare."
+  "recent": "New applications for the special COVID-19 loans (the special provisions for emergency small-amount funds and comprehensive support funds) closed at the end of September of Reiwa 4 (2022), and the program currently operates as the regular loan program. Consultations about exemption from or deferral of repayment for amounts already borrowed are accepted at each Council of Social Welfare.",
+  "phoneNote": "Livelihood welfare loan call center: weekdays 9:00-17:00"
  },
  "kinkyu-koguchi-shikin": {
   "name": "Livelihood Welfare Fund Loans (Emergency Small-Amount Funds)",
@@ -136,7 +137,8 @@ window.SEIDO_L10N.en = {
    "This is a loan program, and repayment is required",
    "The phone number is the call center for the Livelihood Welfare Fund Loan program listed on the Ministry of Health, Labour and Welfare page (weekdays 9:00 to 17:00)"
   ],
-  "recent": "New applications for the special COVID-19 loans closed at the end of September of Reiwa 4 (2022), and the program currently operates as the regular loan program."
+  "recent": "New applications for the special COVID-19 loans closed at the end of September of Reiwa 4 (2022), and the program currently operates as the regular loan program.",
+  "phoneNote": "Livelihood welfare loan call center: weekdays 9:00-17:00"
  },
  "kyoiku-shien-shikin": {
   "name": "Livelihood Welfare Fund Loans (Education Support Funds)",
@@ -160,7 +162,8 @@ window.SEIDO_L10N.en = {
    "Programs in the education field (such as the new higher education tuition support system) may be introduced alongside this one",
    "The phone number is the call center for the Livelihood Welfare Fund Loan program listed on the Ministry of Health, Labour and Welfare page (weekdays 9:00 to 17:00)"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Livelihood welfare loan call center: weekdays 9:00-17:00"
  },
  "rinji-tokurei-tsunagi-shikin": {
   "name": "Temporary Special Bridging Fund Loans",
@@ -232,7 +235,8 @@ window.SEIDO_L10N.en = {
    "The loans are described as being provided together with consultation support from community welfare commissioners and Councils of Social Welfare",
    "The phone number is the call center for the Livelihood Welfare Fund Loan program listed on the Ministry of Health, Labour and Welfare page (weekdays 9:00 to 17:00)"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Livelihood welfare loan call center: weekdays 9:00-17:00"
  },
  "sosai-fujo": {
   "name": "Public Assistance Program (Funeral Aid)",
@@ -969,7 +973,8 @@ window.SEIDO_L10N.en = {
    "Health insurance and workers' accident insurance cannot be used together. When a work-caused injury or illness has been treated using health insurance, a procedure to switch is required",
    "Telephone consultation is available on the Workers' Accident Insurance Consultation Line (0570-006031, weekdays 8:30-17:15)"
   ],
-  "recent": "From November 1, 2024 (Reiwa 6, 2024/11/1), freelancers engaged in specified entrusted business were added to the scope of special enrollment in workers' accident compensation insurance"
+  "recent": "From November 1, 2024 (Reiwa 6, 2024/11/1), freelancers engaged in specified entrusted business were added to the scope of special enrollment in workers' accident compensation insurance",
+  "phoneNote": "Workers' accident insurance helpline: weekdays 8:30-17:15"
  },
  "kyushokusha-shien": {
   "name": "Job Seeker Support System (vocational training benefit)",
@@ -1815,7 +1820,8 @@ window.SEIDO_L10N.en = {
    "Telephone consultation does not provide a diagnosis; it responds to worries and gives guidance on seeing a doctor and on using available schemes",
    "The opening hours and closure days of telephone consultation lines can change, so it is best to check the latest information from each counter before using it"
   ],
-  "recent": "The Basic Act on Dementia to Promote an Inclusive Society took effect on January 1, 2024, and the Basic Plan for Promoting Dementia Policies based on that act was adopted by the Cabinet on December 3, 2024. The basic plan places the building of consultation arrangements, so that people with dementia and their families reach needed consultation and support at an early stage, as one of its pillars."
+  "recent": "The Basic Act on Dementia to Promote an Inclusive Society took effect on January 1, 2024, and the Basic Plan for Promoting Dementia Policies based on that act was adopted by the Cabinet on December 3, 2024. The basic plan places the building of consultation arrangements, so that people with dementia and their families reach needed consultation and support at an early stage, as one of its pillars.",
+  "phoneNote": "Phone line of the family association for people with dementia: weekdays 10:00-15:00 (closed on public holidays)"
  },
  "kaigo-koreisha-gyakutai": {
   "name": "Consultation and reporting of elder abuse (Act on the Prevention of Elder Abuse)",
@@ -2079,7 +2085,8 @@ window.SEIDO_L10N.en = {
    "Statutory child support is described as a provisional and supplementary mechanism that lasts until an agreement is made, and not as a substitute for a proper agreement reached through discussion or mediation based on the calculation tables and similar references",
    "Whether it applies to an individual case needs to be confirmed through legal consultation (Houterasu, a lawyer, and so on)"
   ],
-  "recent": "The act amending the Civil Code and other acts, enacted in May 2024 (Reiwa 6), came into force on April 1, 2026 (2026-04-01, Reiwa 8). The Ministry of Justice ordinance setting the statutory child support amount (20,000 yen per month for 1 child) and the amount covered by the statutory lien (80,000 yen per month for 1 child), Ministry of Justice Ordinance No. 56 of 2025 (Reiwa 7), was established on December 12, 2025 (2025-12-12, Reiwa 7)."
+  "recent": "The act amending the Civil Code and other acts, enacted in May 2024 (Reiwa 6), came into force on April 1, 2026 (2026-04-01, Reiwa 8). The Ministry of Justice ordinance setting the statutory child support amount (20,000 yen per month for 1 child) and the amount covered by the statutory lien (80,000 yen per month for 1 child), Ministry of Justice Ordinance No. 56 of 2025 (Reiwa 7), was established on December 12, 2025 (2025-12-12, Reiwa 7).",
+  "phoneNote": "Houterasu Support Dial: weekdays 9:00-21:00, Saturdays 9:00-17:00"
  },
  "kodomo-iryohi-josei": {
   "name": "Children's Medical Expense Subsidy (municipal)",
@@ -2319,7 +2326,8 @@ window.SEIDO_L10N.en = {
    "Call charges are borne by the caller, at the same rate as a call to an ordinary landline",
    "In an emergency, when there is immediate danger, call 110"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Connects to the nearest center. Hours vary by area. Call charges apply."
  },
  "dv-soudan-plus": {
   "name": "DV Consultation Plus, the national 24-hour domestic violence helpline",
@@ -2339,7 +2347,8 @@ window.SEIDO_L10N.en = {
    "Support in foreign languages is provided through the chat consultation service",
    "In an emergency, when there is immediate danger, call 110"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "24 hours, free call, national DV hotline"
  },
  "haigusha-boryoku-soudan-center": {
   "name": "Spousal Violence Counseling and Support Center",
@@ -2360,7 +2369,8 @@ window.SEIDO_L10N.en = {
    "How temporary protective shelter is operated, and the reception hours, differ by prefecture",
    "Some centers can accept a parent together with children for temporary protective shelter (check the details with each center)"
   ],
-  "recent": "Under the Act on Support for Women Facing Difficulties, which took effect in April 2024, the core facility was renamed from Women's Consulting Office (婦人相談所) to Women's Consultation and Support Center (女性相談支援センター)"
+  "recent": "Under the Act on Support for Women Facing Difficulties, which took effect in April 2024, the core facility was renamed from Women's Consulting Office (婦人相談所) to Women's Consultation and Support Center (女性相談支援センター)",
+  "phoneNote": "Connects to the nearest center. Hours vary by prefecture."
  },
  "hogo-meirei": {
   "name": "Protection orders under the Act on the Prevention of Spousal Violence",
@@ -2407,7 +2417,8 @@ window.SEIDO_L10N.en = {
    "In some areas and on some types of phone line, #8778 cannot be used; in that case, call each center directly",
    "The specific content of support and the reception hours differ by prefecture"
   ],
-  "recent": "The Act on Support for Women Facing Difficulties took effect on April 1, 2024, and the former Women's Consulting Offices, women's consultants, and women's protection facilities were reorganized into Women's Consultation and Support Centers, women's consultation support workers, and women's independence support facilities. Support carried out in cooperation with private organizations was also given a basis in the act"
+  "recent": "The Act on Support for Women Facing Difficulties took effect on April 1, 2024, and the former Women's Consulting Offices, women's consultants, and women's protection facilities were reorganized into Women's Consultation and Support Centers, women's consultation support workers, and women's independence support facilities. Support carried out in cooperation with private organizations was also given a basis in the act",
+  "phoneNote": "Connects to the nearest center. Call charges apply. Hours vary by prefecture."
  },
  "jiso-gyakutai-dial-189": {
   "name": "Child abuse hotline 189 and the LINE consultation service for parents and children",
@@ -2429,7 +2440,8 @@ window.SEIDO_L10N.en = {
    "The days and hours of the LINE consultation service for parents and children differ by local government, ranging from 24-hour operation to weekday daytime only",
    "Reporting is an act to protect a child, and no responsibility is imposed on the reporter if it turns out that there was no abuse"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Free call, anonymous is fine, connects to the child guidance center in charge"
  },
  "young-carer-soudan": {
   "name": "Consultation services for young carers",
@@ -2449,7 +2461,8 @@ window.SEIDO_L10N.en = {
    "Whether a dedicated young carer desk or coordinator is in place differs by municipality",
    "This may lead to arranging long-term care insurance services or disability welfare services that reduce the care work itself"
   ],
-  "recent": "The Act on Promotion of Development and Support for Children and Young People was amended in June 2024 (Reiwa 6), and young carers were written into the law as a group that the national and local governments and others are to make efforts to support"
+  "recent": "The Act on Promotion of Development and Support for Children and Young People was amended in June 2024 (Reiwa 6), and young carers were written into the law as a group that the national and local governments and others are to make efforts to support",
+  "phoneNote": "Child guidance center consultation line, free call"
  },
  "hikikomori-chiiki-shien-center": {
   "name": "Regional support centers for social withdrawal (hikikomori)",
@@ -2492,7 +2505,8 @@ window.SEIDO_L10N.en = {
    "The reception hours of the Mental Health Consultation Unified Dial differ by prefecture",
    "The Yorisoi Hotline has a number dedicated to Fukushima Prefecture (0120-279-226)"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "#Inochi SOS: every day, 24 hours, free call"
  },
  "houterasu-houritsu-shien": {
   "name": "Houterasu, the Japan Legal Support Center (civil legal aid and legal consultation for victims of domestic violence and similar harm)",
@@ -2516,7 +2530,8 @@ window.SEIDO_L10N.en = {
    "Legal consultation assistance for victims of domestic violence and similar harm can be used only by the person concerned, and consultation through a representative is not possible",
    "Consultation about criminal cases falls outside the scope of civil legal aid"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Houterasu Support Dial: weekdays 9:00-21:00, Saturdays 9:00-17:00"
  },
  "seiboryoku-onestop-center": {
   "name": "One-stop support centers for victims of sexual crime and sexual violence (#8891)",
@@ -2539,7 +2554,8 @@ window.SEIDO_L10N.en = {
    "Consultation is possible even before deciding whether to report to the police",
    "Some prefectures also run consultation through social media such as LINE (availability differs by prefecture)"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Connects to the nearest center. Free from mobile phones. Hours vary by center."
  },
  "keisatsu-soudan-9110": {
   "name": "Police consultation line (#9110)",
@@ -2561,7 +2577,8 @@ window.SEIDO_L10N.en = {
    "Call charges are borne by the caller at ordinary rates, and the number may not be usable from some IP phone lines",
    "Because an application for a protection order requires the fact of having consulted the police or a similar body, having a record of consultation may help with later procedures"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "Connects to the prefectural police. Usually weekdays 8:30-17:15. Call charges apply."
  },
  "hanzai-higaisha-kyufukin": {
   "name": "Crime victim benefits (the crime victim benefit payment system)",
@@ -2608,7 +2625,8 @@ window.SEIDO_L10N.en = {
    "Where the harm comes from a spouse or former spouse, other systems such as a protection order under the Act on the Prevention of Spousal Violence may also be available",
    "Keeping a record of the harm may help with later procedures"
   ],
-  "recent": "An amendment to the Anti-Stalking Act was promulgated on December 10, 2025 (Reiwa 7) and took effect on December 30 of the same year. Obtaining location information without consent by means such as a lost-item prevention tag was added to the regulated acts, warnings issued on the authorities' own initiative were created, employers of victims and heads of schools that victims attend were added to those under a duty to make efforts to provide assistance, and the range of public safety commissions able to issue prohibition orders was widened. From March 10, 2026 (Reiwa 8), a mechanism also took effect under which the chief of police headquarters or similar authority can request that a person's information not be provided to someone likely to engage in stalking"
+  "recent": "An amendment to the Anti-Stalking Act was promulgated on December 10, 2025 (Reiwa 7) and took effect on December 30 of the same year. Obtaining location information without consent by means such as a lost-item prevention tag was added to the regulated acts, warnings issued on the authorities' own initiative were created, employers of victims and heads of schools that victims attend were added to those under a duty to make efforts to provide assistance, and the range of public safety commissions able to issue prohibition orders was widened. From March 10, 2026 (Reiwa 8), a mechanism also took effect under which the chief of police headquarters or similar authority can request that a person's information not be provided to someone likely to engage in stalking",
+  "phoneNote": "Connects to the prefectural police. Usually weekdays 8:30-17:15. Call charges apply."
  },
  "seishin-hoken-fukushi-center": {
   "name": "Mental Health and Welfare Centers (consultation on mental health and addiction)",
@@ -2630,7 +2648,8 @@ window.SEIDO_L10N.en = {
    "The Mental Health Consultation Unified Dial uses a Navi Dial number, so call charges are borne by the caller, and reception hours differ by area",
    "As a more local option, public health centers and health centers also take consultations about matters such as insomnia, depression, violence in the home, social withdrawal, and addiction"
   ],
-  "recent": "The 2022 (Reiwa 4) amendment to the Act on Mental Health and Welfare for the Mentally Disabled was phased in on April 1, 2023 (Reiwa 5) and April 1, 2024 (Reiwa 6). As part of strengthening support for community living, consultation support systems including those at the municipal level are being developed"
+  "recent": "The 2022 (Reiwa 4) amendment to the Act on Mental Health and Welfare for the Mentally Disabled was phased in on April 1, 2023 (Reiwa 5) and April 1, 2024 (Reiwa 6). As part of strengthening support for community living, consultation support systems including those at the municipal level are being developed",
+  "phoneNote": "Call charges apply. Hours vary by area."
  },
  "kodomo-sos-dial": {
   "name": "24-hour Children's SOS Dial",
@@ -2651,7 +2670,8 @@ window.SEIDO_L10N.en = {
    "The consultation bodies are run by prefectural and designated-city boards of education, so the counselors who respond differ by area",
    "The Ministry of Justice's Children's Human Rights Hotline (0120-007-110, calls free, weekdays 8:30 a.m. to 5:15 p.m.) also takes consultations about matters such as bullying and unpleasant treatment by people at home"
   ],
-  "recent": ""
+  "recent": "",
+  "phoneNote": "24 hours, free call, connects to the local board of education counseling"
  },
  "jinken-soudan-madoguchi": {
   "name": "Ministry of Justice human rights consultation services (Human Rights Hotline for Everyone and others)",
@@ -2674,7 +2694,8 @@ window.SEIDO_L10N.en = {
    "Reception is on weekdays from 8:30 a.m. to 5:15 p.m., so for urgent consultation at night or on holidays, use one of the services that operate 24 hours",
    "When there is a sudden need to protect personal safety, call 110"
   ],
-  "recent": "The Women's Human Rights Hotline (0570-070-810) was merged into the Human Rights Hotline for Everyone on October 1, 2025 (Reiwa 7). For consultation about women's human rights, call 0570-003-110 and select 1 in the voice guidance"
+  "recent": "The Women's Human Rights Hotline (0570-070-810) was merged into the Human Rights Hotline for Everyone on October 1, 2025 (Reiwa 7). For consultation about women's human rights, call 0570-003-110 and select 1 in the voice guidance",
+  "phoneNote": "Weekdays 8:30-17:15. Call charges apply."
  },
  "shohisha-hotline-188": {
   "name": "Consumer Hotline 188 and Consumer Affairs Centers",
@@ -2700,7 +2721,8 @@ window.SEIDO_L10N.en = {
    "According to the National Consumer Affairs Center of Japan's guidance for its backup consultation, when a consultation is accepted the caller is asked for their name, address (down to the municipality), phone number, gender, age, occupation, and similar details, and calls are in principle to be made by the person concerned",
    "If serious harm to life or body has occurred or is about to occur, first contact the police (110) or the fire department (119)"
   ],
-  "recent": "The phone number of the National Consumer Affairs Center of Japan's backup consultation line changed to 03-3446-0999 on December 3, 2025, and the name of the service changed on April 1, 2026 (the number and name may differ from those in older materials)"
+  "recent": "The phone number of the National Consumer Affairs Center of Japan's backup consultation line changed to 03-3446-0999 on December 3, 2025, and the name of the service changed on April 1, 2026 (the number and name may differ from those in older materials)",
+  "phoneNote": "Connects to a nearby consumer center. Days and hours vary. Call charges apply once connected."
  },
  "nenkin-hokenryo-menjo": {
   "name": "Exemption and Payment Postponement of National Pension Contributions",
@@ -3432,7 +3454,8 @@ window.SEIDO_L10N.en = {
    "A list of the bodies that have established schools for diverse learning is posted on the MEXT website. The COCOLO Plan aims to establish them in every prefecture and designated city at an early stage, and eventually at 300 schools nationwide, including branch-classroom types",
    "The 24-hour Children's SOS Dial is described as a service that accepts all kinds of worries, not only non-attendance but also bullying and others, and guardians can use it too (the \"24-hour Children's SOS Dial\" card can also be used together with this one)"
   ],
-  "recent": "Through the amendment of the Enforcement Regulations of the School Education Act and related measures on August 29, 2024, it was established that the results of learning done during absence by non-attending elementary and junior high school students can be reflected in grade evaluation when certain requirements are met. In addition, on August 31, 2023, \"special schools for non-attendance\" (不登校特例校) were renamed \"schools for diverse learning\" (学びの多様化学校) (MEXT states that the name change does not change the system or the application procedures)"
+  "recent": "Through the amendment of the Enforcement Regulations of the School Education Act and related measures on August 29, 2024, it was established that the results of learning done during absence by non-attending elementary and junior high school students can be reflected in grade evaluation when certain requirements are met. In addition, on August 31, 2023, \"special schools for non-attendance\" (不登校特例校) were renamed \"schools for diverse learning\" (学びの多様化学校) (MEXT states that the name change does not change the system or the application procedures)",
+  "phoneNote": "24 hours, free call (24-hour Children SOS Dial)"
  },
  "risai-shomeisho": {
   "name": "Issuance of a Disaster Victim Certificate",

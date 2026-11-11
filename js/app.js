@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.19';
-  var ASSET_V = '1.19';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.20';
+  var ASSET_V = '1.20';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -62,7 +62,12 @@
     var sc = document.createElement('script');
     sc.src = 'js/data_' + lang + '.js?v=' + ASSET_V;
     sc.onload = cb;
-    sc.onerror = cb; /* 読めない場合は日本語のまま表示 */
+    /* 読めない場合は日本語のまま表示。v1.20: 失敗の印を戻し、次に ことば を切り替えたとき読み込み直す(電波が悪いとき一度で諦めない) */
+    sc.onerror = function () {
+      l10nLoaded[lang] = false;
+      if (sc.parentNode) sc.parentNode.removeChild(sc);
+      cb();
+    };
     document.head.appendChild(sc);
   }
 
@@ -344,8 +349,23 @@
 
   function safeDec(s) { try { return decodeURIComponent(s); } catch (e) { return s; } }
 
+  /* v1.20: 履歴の各エントリに、このアプリの中で何番目の画面かを覚えておく(history.state)。
+     共有リンクで #s/… に直接入った人は 0 番目なので、「← もどる」は元のサイトではなくホームへ行く。
+     アプリの中で進んだ画面(1番以降)は、いつもどおり history.back() */
+  var curIdx = null;
+  function trackIdx() {
+    try {
+      var st = history.state;
+      if (st && typeof st.seidoIdx === 'number') { curIdx = st.seidoIdx; return; }
+      curIdx = (curIdx == null) ? 0 : curIdx + 1;
+      history.replaceState({ seidoIdx: curIdx }, '');
+    } catch (e) { if (curIdx == null) curIdx = 0; }
+  }
+
   function route() {
+    trackIdx();
     var h = location.hash || '#home';
+    if (h === '#tel') { renderList(null, null, true); return; }
     if (h.indexOf('#c/') === 0) { renderList(safeDec(h.slice(3)), null); return; }
     if (h.indexOf('#q/') === 0) { renderList(null, safeDec(h.slice(3))); return; }
     if (h.indexOf('#s/') === 0) { renderDetail(safeDec(h.slice(3))); return; }
@@ -358,7 +378,7 @@
   }
   /* 画面の「← もどる」(data-back)と、Android の戻るボタンの行き先(同じ) */
   function goBack() {
-    if (history.length > 1) history.back(); else go('#home');
+    if (curIdx > 0 && history.length > 1) history.back(); else go('#home');
   }
 
   /* ---------- Android の戻るボタン(Play版だけ・2026-09-30) ----------
@@ -381,6 +401,12 @@
   function minimizeApp() {
     var ap = nativePlugin('App', 'minimizeApp');
     try { if (ap) { var p = ap.minimizeApp(); if (p && p.catch) p.catch(function () {}); } } catch (e) {}
+  }
+  /* 「× とじる」: すぐ別のページへ。Play版では Google が端末のブラウザで開くだけでアプリの画面が残るため、
+     そのあとアプリを後ろに下げる(戻るを押しても、アプリの画面が見えないように)。Web版は今までどおり */
+  function exitNow() {
+    location.replace(EXIT_URL);
+    if (isNativeApp()) setTimeout(minimizeApp, 300);
   }
   function onBackButton() {
     if (guideOv) { guideOv._back(); return; }   /* はじめての つかいかた(下の節) */
@@ -487,6 +513,28 @@
     try { h.focus({ preventScroll: true }); } catch (e) {}
   }
 
+  /* ---------- 文字が特大のときの上の設定の段(v1.20) ----------
+     ヘッダーは sticky で、特大だと題名と設定の2段が本文の高さを狭くする。下へスクロールしている間は設定の段(ことば・もじ・おと)だけ畳み、
+     上へスクロールするかいちばん上に戻ると出す。題名と「× とじる」は いつも残る。畳んだ直後の高さの変化によるスクロールは見ない(350ms) */
+  var folded = false, foldLast = 0, foldLock = 0;
+  function setFold(on) {
+    if (on === folded) return;
+    folded = on;
+    document.body.classList.toggle('hdr-fold', on);
+    foldLock = Date.now() + 350;
+    placeGuide();
+  }
+  function onFoldScroll() {
+    var y = window.pageYOffset || 0;
+    if (pref.fs !== 2 || guideOv) { setFold(false); foldLast = y; return; }
+    if (Date.now() < foldLock) { foldLast = y; return; }
+    var d = y - foldLast;
+    if (y < 60) { setFold(false); foldLast = y; }
+    else if (d > 10) { setFold(true); foldLast = y; }
+    else if (d < -10) { setFold(false); foldLast = y; }
+    else if (folded ? y > foldLast : y < foldLast) foldLast = y;
+  }
+
   /* ---------- ホーム ---------- */
   function renderHome() {
     var grid = $('cat-grid');
@@ -524,9 +572,18 @@
     return normSearch(parts.join(' '));
   }
 
-  function renderList(catId, query) {
+  function telItems() {
+    var a = D.seido.filter(function (s) { return !!s.phone; });
+    return a.filter(function (s) { return s.phone24; }).concat(a.filter(function (s) { return !s.phone24; }));
+  }
+  function renderList(catId, query, tel) {
     var items, title, sub;
-    if (catId) {
+    if (tel) {
+      /* v1.20: 電話番号のある窓口の一覧(24時間つながるものを先に) */
+      items = telItems();
+      title = T('list.telTitle');
+      sub = TF('list.telSub', { n: items.length });
+    } else if (catId) {
       var c = catById(catId);
       if (!c) { go('#home'); return; }
       items = seidoByCat(catId);
@@ -555,7 +612,8 @@
       b.innerHTML =
         '<span class="s-name">' + esc(L(s, 'name')) + '</span>' +
         '<span class="s-short">' + esc(L(s, 'short')) + '</span>' +
-        '<span class="s-window">' + esc(TF('list.window', { w: L(s, 'window') })) + '</span>';
+        '<span class="s-window">' + esc(TF('list.window', { w: L(s, 'window') })) + '</span>' +
+        (tel ? '<span class="s-phone">' + esc(s.phone + (L(s, 'phoneNote') ? ' / ' + L(s, 'phoneNote') : '')) + '</span>' : '');
       bindTap(b, function () { go('#s/' + encodeURIComponent(s.id)); });
       wrap.appendChild(b);
     });
@@ -612,10 +670,12 @@
     html += '<p class="d-short">' + esc(L(s, 'short')) + '</p>';
     var recent = L(s, 'recent');
     if (recent) html += '<div class="d-recent">' + esc(TF('d.recent', { t: recent })) + '</div>';
+    if (s.amountDated) html += '<p class="d-amount-checked">' + esc(TF('d.amountChecked', { d: checked })) + '</p>';
     html += '<div class="d-sec"><h3>' + esc(T('d.what')) + '</h3><p>' + esc(L(s, 'benefit')) + '</p></div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.target')) + '</h3><p>' + esc(L(s, 'target')) + '</p></div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.window')) + '</h3><div class="d-window-box">' + esc(L(s, 'window'));
     if (s.phone) html += '<div class="d-phone">' + phoneHtml(s.phone) + '</div>';
+    if (s.phone && L(s, 'phoneNote')) html += '<div class="d-phone-note">' + esc(L(s, 'phoneNote')) + '</div>';
     html += '</div></div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.docs')) + '</h3>' + listHtml(lArr(s, 'documents')) + '</div>';
     html += '<div class="d-sec"><h3>' + esc(T('d.steps')) + '</h3>' + stepsHtml(lArr(s, 'steps')) + '</div>';
@@ -636,6 +696,7 @@
 
   /* ---------- 表示言語・文字サイズ・音の適用 ---------- */
   function applyStatic() {
+    if (pref.fs !== 2) setFold(false);
     document.documentElement.lang = pref.lang;
     document.body.setAttribute('data-fs', String(pref.fs));
 
@@ -651,6 +712,7 @@
     $('btn-search').textContent = T('search.button');
     $('home-pick').textContent = T('home.pick');
     $('home-note-text').textContent = T('home.note');
+    $('home-tel-link').textContent = TF('home.telLink', { n: telItems().length });
     $('home-src-text').textContent = T('home.srcText');
     $('home-src-link').textContent = T('home.srcLink');
     $('list-src-link').textContent = T('list.srcLink');
@@ -703,7 +765,7 @@
 
   /* ---------- 初期化 ---------- */
   function init() {
-    bindTap($('btn-exit'), function () { location.replace(EXIT_URL); });
+    bindTap($('btn-exit'), function () { exitNow(); });
 
     $('set-lang').addEventListener('change', function () {
       if (window.Sound) window.Sound.tap();
@@ -741,6 +803,7 @@
     watchBack();   /* Android の戻るボタン(Play版だけ) */
     bindTap($('footer-guide'), function () { openGuide(false); });
     window.addEventListener('resize', placeGuide);
+    window.addEventListener('scroll', onFoldScroll, { passive: true });
 
     /* 🔴 起動時は状態を合わせるだけで鳴らさない(第2引数 false)。実際の再生は最初のタップから。
        Capacitorは自動再生制限を外すため、ここで鳴らすと実機だけ無操作で音が出てしまう。

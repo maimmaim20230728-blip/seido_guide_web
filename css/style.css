@@ -428,3 +428,10 @@ body[data-fs="2"] { font-size: 21px; }
   text-underline-offset: 3px;
   cursor: pointer;
 }
+
+/* v1.20: 電話の窓口の一覧・電話の受付の一行・金額の確認日・特大のときの設定の段の畳み */
+.home-tel { margin: 0 0 8px; }
+.seido-card .s-phone { display: block; font-size: 0.74em; font-weight: 700; color: var(--black); margin-top: 6px; }
+.d-phone-note { font-size: 0.82em; color: var(--muted); margin-top: 2px; }
+.d-amount-checked { margin-top: 10px; font-size: 0.76em; color: var(--muted); }
+body[data-fs="2"].hdr-fold .header-tools { display: none; }

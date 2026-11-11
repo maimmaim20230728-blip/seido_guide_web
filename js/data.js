@@ -138,7 +138,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "amountDated": true
   },
   {
    "id": "jiritsu-sodan-shien",
@@ -312,7 +313,8 @@ window.SEIDO_DATA = {
    "verified": "fixed",
    "keywords": [
     "お金を借りる"
-   ]
+   ],
+   "phoneNote": "生活福祉資金のコールセンター 平日9:00〜17:00"
   },
   {
    "id": "kinkyu-koguchi-shikin",
@@ -360,7 +362,8 @@ window.SEIDO_DATA = {
    "verified": "ok",
    "keywords": [
     "お金を借りる"
-   ]
+   ],
+   "phoneNote": "生活福祉資金のコールセンター 平日9:00〜17:00"
   },
   {
    "id": "kyoiku-shien-shikin",
@@ -408,7 +411,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "生活福祉資金のコールセンター 平日9:00〜17:00"
   },
   {
    "id": "rinji-tokurei-tsunagi-shikin",
@@ -539,7 +543,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "phoneNote": "生活福祉資金のコールセンター 平日9:00〜17:00"
   },
   {
    "id": "sosai-fujo",
@@ -1185,7 +1190,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "入院費",
     "医療費の上限"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "maina-hokensho-gendogaku",
@@ -1944,7 +1950,8 @@ window.SEIDO_DATA = {
     "失業手当",
     "退職",
     "unemployment"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "shobyo-teate",
@@ -2058,7 +2065,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "労災",
     "仕事中のけが"
-   ]
+   ],
+   "phoneNote": "労災保険相談ダイヤル 平日8:30〜17:15"
   },
   {
    "id": "kyushokusha-shien",
@@ -2645,7 +2653,8 @@ window.SEIDO_DATA = {
     "うつ病",
     "精神疾患",
     "働けない"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "shogai-nenkin-seikatsusha-shien-kyufukin",
@@ -2685,7 +2694,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "amountDated": true
   },
   {
    "id": "tokubetsu-shogaisha-teate",
@@ -2722,7 +2732,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "amountDated": true
   },
   {
    "id": "shogaiji-fukushi-teate",
@@ -2759,7 +2770,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "amountDated": true
   },
   {
    "id": "shogai-fukushi-service",
@@ -3000,7 +3012,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "障害児",
     "手当"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "shogaiji-tsusho-shien",
@@ -3324,7 +3337,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "要介護",
     "ケアマネジャー"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "kogaku-kaigo-service-hi",
@@ -3375,7 +3389,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "amountDated": true
   },
   {
    "id": "futan-gendogaku-nintei",
@@ -3729,7 +3744,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "認知症",
     "もの忘れ"
-   ]
+   ],
+   "phoneNote": "認知症の人と家族の会の電話相談は平日10〜15時(祝日除く)"
   },
   {
    "id": "kaigo-koreisha-gyakutai",
@@ -3894,7 +3910,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "amountDated": true
   },
   {
    "id": "jido-fuyo-teate",
@@ -3950,7 +3967,8 @@ window.SEIDO_DATA = {
     "母子手当",
     "シングルマザー",
     "シングルファザー"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "hitorioya-iryohi-josei",
@@ -4213,7 +4231,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "法テラス・サポートダイヤル 平日9〜21時・土曜9〜17時"
   },
   {
    "id": "kodomo-iryohi-josei",
@@ -4665,7 +4684,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "phoneNote": "最寄りの相談窓口につながる・受付時間は地域により異なる・通話料は利用者負担"
   },
   {
    "id": "dv-soudan-plus",
@@ -4708,7 +4728,9 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "phoneNote": "24時間・通話無料・国のDV相談窓口",
+   "phone24": true
   },
   {
    "id": "haigusha-boryoku-soudan-center",
@@ -4742,7 +4764,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "最寄りの相談窓口につながる・受付時間は都道府県により異なる"
   },
   {
    "id": "hogo-meirei",
@@ -4830,7 +4853,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "最寄りのセンターにつながる・通話料は相談者負担・受付時間は都道府県により異なる"
   },
   {
    "id": "jiso-gyakutai-dial-189",
@@ -4870,7 +4894,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "通話無料・匿名でも可・管轄の児童相談所につながる"
   },
   {
    "id": "young-carer-soudan",
@@ -4909,7 +4934,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "児童相談所相談専用ダイヤル・通話無料"
   },
   {
    "id": "hikikomori-chiiki-shien-center",
@@ -4981,7 +5007,9 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "phoneNote": "#いのちSOSは毎日24時間・通話無料",
+   "phone24": true
   },
   {
    "id": "houterasu-houritsu-shien",
@@ -5034,7 +5062,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "phoneNote": "法テラス・サポートダイヤル 平日9〜21時・土曜9〜17時"
   },
   {
    "id": "seiboryoku-onestop-center",
@@ -5070,7 +5099,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "phoneNote": "最寄りのセンターにつながる・携帯電話などからは通話料無料・受付時間はセンターにより異なる"
   },
   {
    "id": "keisatsu-soudan-9110",
@@ -5115,7 +5145,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "phoneNote": "都道府県警察の相談窓口につながる・平日8:30〜17:15が基本・通話料は利用者負担"
   },
   {
    "id": "hanzai-higaisha-kyufukin",
@@ -5215,7 +5246,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "ストーカー",
     "つきまとい"
-   ]
+   ],
+   "phoneNote": "都道府県警察の相談窓口につながる・平日8:30〜17:15が基本・通話料は利用者負担"
   },
   {
    "id": "seishin-hoken-fukushi-center",
@@ -5273,7 +5305,8 @@ window.SEIDO_DATA = {
     "薬物",
     "依存症",
     "こころ"
-   ]
+   ],
+   "phoneNote": "通話料は相談者負担・受付時間は地域により異なる"
   },
   {
    "id": "kodomo-sos-dial",
@@ -5315,7 +5348,9 @@ window.SEIDO_DATA = {
    "verified": "ok",
    "keywords": [
     "いじめ"
-   ]
+   ],
+   "phoneNote": "24時間・通話無料・所在地の教育委員会の相談機関につながる",
+   "phone24": true
   },
   {
    "id": "jinken-soudan-madoguchi",
@@ -5371,7 +5406,8 @@ window.SEIDO_DATA = {
     "差別",
     "人権",
     "いじめ"
-   ]
+   ],
+   "phoneNote": "平日8:30〜17:15・通話料は相談者負担"
   },
   {
    "id": "shohisha-hotline-188",
@@ -5434,7 +5470,8 @@ window.SEIDO_DATA = {
     "定期購入",
     "解約",
     "consumer"
-   ]
+   ],
+   "phoneNote": "身近な消費生活相談窓口につながる・曜日と時間は窓口により異なる・つながった時点から通話料がかかる"
   },
   {
    "id": "nenkin-hokenryo-menjo",
@@ -5632,7 +5669,8 @@ window.SEIDO_DATA = {
    "verified": "fixed",
    "keywords": [
     "保険料が払えない"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "kouki-iryo-hokenryo-keigen",
@@ -5677,7 +5715,8 @@ window.SEIDO_DATA = {
      "checked": "2026-10-01"
     }
    ],
-   "verified": "ok"
+   "verified": "ok",
+   "amountDated": true
   },
   {
    "id": "kaigo-hokenryo-keigen",
@@ -6282,7 +6321,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "大学無償化",
     "授業料減免"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "shugaku-shienkin",
@@ -6328,7 +6368,8 @@ window.SEIDO_DATA = {
    "keywords": [
     "高校無償化",
     "授業料"
-   ]
+   ],
+   "amountDated": true
   },
   {
    "id": "kokosei-shogaku-kyufukin",
@@ -6381,7 +6422,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-31"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "amountDated": true
   },
   {
    "id": "jasso-shogakukin",
@@ -6457,7 +6499,8 @@ window.SEIDO_DATA = {
      "checked": "2026-08-29"
     }
    ],
-   "verified": "fixed"
+   "verified": "fixed",
+   "amountDated": true
   },
   {
    "id": "kyoiku-kunren-kyufu",
@@ -6951,7 +6994,9 @@ window.SEIDO_DATA = {
     "COCOLOプラン",
     "教育機会確保法",
     "休養"
-   ]
+   ],
+   "phoneNote": "24時間・通話無料(24時間子供SOSダイヤル)",
+   "phone24": true
   },
   {
    "id": "risai-shomeisho",
