@@ -2441,7 +2441,7 @@ window.SEIDO_L10N.en = {
    "Reporting is an act to protect a child, and no responsibility is imposed on the reporter if it turns out that there was no abuse"
   ],
   "recent": "",
-  "phoneNote": "Free call, anonymous is fine, connects to the child guidance center in charge"
+  "phoneNote": "Free call. Anonymous calls are accepted. Connects to the child guidance center for the area."
  },
  "young-carer-soudan": {
   "name": "Consultation services for young carers",
@@ -2671,7 +2671,7 @@ window.SEIDO_L10N.en = {
    "The Ministry of Justice's Children's Human Rights Hotline (0120-007-110, calls free, weekdays 8:30 a.m. to 5:15 p.m.) also takes consultations about matters such as bullying and unpleasant treatment by people at home"
   ],
   "recent": "",
-  "phoneNote": "24 hours, free call, connects to the local board of education counseling"
+  "phoneNote": "24 hours, free call, connects to the counseling service of the local board of education"
  },
  "jinken-soudan-madoguchi": {
   "name": "Ministry of Justice human rights consultation services (Human Rights Hotline for Everyone and others)",
