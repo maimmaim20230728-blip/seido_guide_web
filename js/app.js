@@ -2,8 +2,8 @@
 (function () {
   'use strict';
 
-  var APP_VER = '1.20';
-  var ASSET_V = '1.20';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
+  var APP_VER = '1.21';
+  var ASSET_V = '1.21';   /* 旧Service Workerのcache-firstを確実に外すための版クエリ(index.html/sw.jsと揃える) */
   var EXIT_URL = 'https://www.google.com/';
   /* 🔴言語は日英のみ(2026-08-29ヒロ決定「制度が日本のものなので日本語と英語だけで良い」) */
   var LANGS = ['ja', 'en'];
@@ -177,7 +177,7 @@
     { host: 'mhlw.go.jp', g: 'gov', url: 'https://www.mhlw.go.jp', ja: '厚生労働省', en: 'Ministry of Health, Labour and Welfare' },
     { host: 'cfa.go.jp', g: 'gov', url: 'https://www.cfa.go.jp', ja: 'こども家庭庁', en: 'Children and Families Agency' },
     { host: 'mext.go.jp', g: 'gov', url: 'https://www.mext.go.jp', ja: '文部科学省', en: 'MEXT (Ministry of Education)' },
-    { host: 'bousai.go.jp', g: 'gov', url: 'https://www.bousai.go.jp', ja: '内閣府 防災情報のページ', en: 'Cabinet Office Disaster Management' },
+    { host: 'bousai.go.jp', g: 'gov', url: 'https://www.bousai.go.jp', ja: '防災庁 防災情報のページ', en: 'Disaster Management Agency' },
     { host: 'gender.go.jp', g: 'gov', url: 'https://www.gender.go.jp', ja: '内閣府 男女共同参画局', en: 'Cabinet Office Gender Equality Bureau' },
     { host: 'nta.go.jp', g: 'gov', url: 'https://www.nta.go.jp', ja: '国税庁', en: 'National Tax Agency' },
     { host: 'npa.go.jp', g: 'gov', url: 'https://www.npa.go.jp', ja: '警察庁', en: 'National Police Agency' },
