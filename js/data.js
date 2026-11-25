@@ -1,6 +1,6 @@
 /* 自動生成ファイル: node _build_data.js が work/research/*.json から生成する。直接編集しない */
 window.SEIDO_DATA = {
- "updated": "2026-11-17",
+ "updated": "2026-11-26",
  "categories": [
   {
    "id": "seikatsu",
@@ -105,37 +105,37 @@ window.SEIDO_DATA = {
     {
      "title": "生活保護制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatuhogo/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活保護を申請したい方へ(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsuhogopage.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活保護法(昭和25年法律第144号)第24条(厚生労働省法令等データベース)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=82048000&dataType=0&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "平成25年から実施した生活扶助基準改定に関する最高裁判決を踏まえた保護費等の追加給付について(川崎市)",
      "url": "https://www.city.kawasaki.jp/350/page/0000185033.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年度生活扶助基準の見直しについて(第55回社会保障審議会生活保護基準部会 資料4・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/12002000/001662704.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "平成25年生活扶助基準改定に関する最高裁判決への対応について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/newpage_68902.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "最高裁判決を踏まえた保護費の追加給付相談センター(厚生労働省)",
      "url": "https://tsuikakyufu-sodancenter.mhlw.go.jp/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -171,12 +171,12 @@ window.SEIDO_DATA = {
     {
      "title": "制度の紹介(生活困窮者自立支援制度)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活困窮者自立支援法等の一部改正法(令和6年)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/shingi/other-syakai_141308_00004.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -211,12 +211,12 @@ window.SEIDO_DATA = {
     {
      "title": "制度の紹介(生活困窮者自立支援制度)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活困窮者自立支援法等の一部改正法(令和6年)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/shingi/other-syakai_141308_00004.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -251,12 +251,12 @@ window.SEIDO_DATA = {
     {
      "title": "制度の紹介(生活困窮者自立支援制度)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活困窮者自立支援法等の一部改正法(令和6年)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/shingi/other-syakai_141308_00004.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -292,22 +292,22 @@ window.SEIDO_DATA = {
     {
      "title": "生活福祉資金貸付制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活福祉資金一覧(貸付条件等)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/kashitsukejoken.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "平成27年度 生活福祉資金貸付事業の見直しの概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/minaoshi.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "福祉の貸付制度(全国社会福祉協議会)",
      "url": "https://www.shakyo.or.jp/guide/shikin/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -346,17 +346,17 @@ window.SEIDO_DATA = {
     {
      "title": "生活福祉資金貸付制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活福祉資金一覧(貸付条件等)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/kashitsukejoken.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "平成27年度 生活福祉資金貸付事業の見直しの概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/minaoshi.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -398,17 +398,17 @@ window.SEIDO_DATA = {
     {
      "title": "生活福祉資金貸付制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活福祉資金一覧(貸付条件等)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/kashitsukejoken.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "福祉の貸付制度(全国社会福祉協議会)",
      "url": "https://www.shakyo.or.jp/guide/shikin/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -446,12 +446,12 @@ window.SEIDO_DATA = {
     {
      "title": "臨時特例つなぎ資金(北海道 保健福祉部福祉局地域福祉課)",
      "url": "https://www.pref.hokkaido.lg.jp/hf/feg/rinnjitokureitunagisikinn.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活福祉資金貸付制度・臨時特例つなぎ資金貸付制度について(石川県)",
      "url": "https://www.pref.ishikawa.lg.jp/kousei/seikatsufukushi/seikatsufukushi.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -493,7 +493,7 @@ window.SEIDO_DATA = {
     {
      "title": "日常生活自立支援事業(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/chiiki-fukusi-yougo/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -535,12 +535,12 @@ window.SEIDO_DATA = {
     {
      "title": "生活福祉資金貸付制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活福祉資金一覧(貸付条件等)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatsu-fukushi-shikin1/kashitsukejoken.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -579,12 +579,12 @@ window.SEIDO_DATA = {
     {
      "title": "生活保護法(昭和25年法律第144号)第18条(厚生労働省法令等データベース)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=82048000&dataType=0&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活保護制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/seikatuhogo/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -626,32 +626,32 @@ window.SEIDO_DATA = {
     {
      "title": "多重債務についての相談窓口(金融庁)",
      "url": "https://www.fsa.go.jp/soudan/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "多重債務者対策・貸金業法等について(金融庁)",
      "url": "https://www.fsa.go.jp/policy/kashikin/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "「多重債務者相談強化キャンペーン2026」における相談会の開催状況及び予定等について(金融庁)",
      "url": "https://www.fsa.go.jp/policy/kashikin/soudankai2026.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "貸付自粛制度について(金融庁)",
      "url": "https://www.fsa.go.jp/policy/kashikin/kasitsukejisyuku.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "借金が返せない方へ 無料で相談できる国の窓口(関東財務局)",
      "url": "https://lfb.mof.go.jp/kantou/information/5222_200407/madaguchi.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "多重債務無料相談窓口(近畿財務局)",
      "url": "https://lfb.mof.go.jp/kinki/498.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -706,32 +706,32 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 生活支援特設ホームページ 住居確保給付金:制度概要",
      "url": "https://corona-support.mhlw.go.jp/jukyokakuhokyufukin/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 生活支援特設ホームページ 住居確保給付金:手続きの流れ",
      "url": "https://corona-support.mhlw.go.jp/jukyokakuhokyufukin/flow.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 生活困窮者自立支援制度の沿革",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000073432.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "台東区 住居確保給付金の支給(家賃補助)",
      "url": "https://www.city.taito.lg.jp/kurashi/soudan/seikatsu/jyukyokakuho.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "徳島県 住居確保給付金(家賃補助・転居費用補助)等のご案内",
      "url": "https://www.pref.tokushima.lg.jp/ippannokata/kenko/chiikifukushi/7215727",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "堺市 住居確保給付金(転居費用補助)について",
      "url": "https://www.city.sakai.lg.jp/kenko/fukushikaigo/seikatsuhogo/jyuukyokakuho_tenkyohiyouhojo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -777,17 +777,17 @@ window.SEIDO_DATA = {
     {
      "title": "国土交通省 公営住宅の優先入居について",
      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000096.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国土交通省中部地方整備局 公営住宅とは",
      "url": "https://www.cbr.mlit.go.jp/kensei/sumai_topics/08_seibi.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "小値賀町 収入基準について教えてください。(公営住宅)",
      "url": "https://www.town.ojika.lg.jp/faq/sumai-kankyou-infura/16/708.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -825,22 +825,22 @@ window.SEIDO_DATA = {
     {
      "title": "国土交通省 住宅セーフティネット制度",
      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000055.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国土交通省 住宅確保要配慮者に対する賃貸住宅の供給の促進に関する法律等の一部を改正する法律について",
      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk7_000054.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "セーフティネット住宅情報提供システム",
      "url": "https://safetynet-jutaku.mlit.go.jp/guest/index.php",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "居住サポート住宅情報提供システム",
      "url": "https://support-jutaku.mlit.go.jp/guest/index.php",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -877,22 +877,22 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 生活困窮者自立支援制度",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 生活困窮者自立支援制度の沿革",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000073432.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "住まい・生活の困りごと相談「すまこま。」(厚生労働省主催) 一時生活支援事業",
      "url": "https://sumakoma.mhlw.go.jp/organization/poverty_2-2/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "千葉市 一時的な居所の提供について(一時生活支援事業)",
      "url": "https://www.city.chiba.jp/hokenfukushi/hogo/ichijiseikatusien.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -933,17 +933,17 @@ window.SEIDO_DATA = {
     {
      "title": "e-Gov法令検索 公営住宅法(第16条第5項=家賃の減免、第19条=家賃・敷金の徴収猶予)",
      "url": "https://laws.e-gov.go.jp/law/326AC1000000193",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "鹿児島市 市営住宅家賃等減免申請",
      "url": "https://www.city.kagoshima.lg.jp/kensetu/kenchiku/jutaku/kurashi/sumai/shie/nyukyo/shinsesho/genmen.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "北九州市 家賃の減免再申請手続きはお済みですか",
      "url": "https://www.city.kitakyushu.lg.jp/contents/07300028.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -985,22 +985,22 @@ window.SEIDO_DATA = {
     {
      "title": "住宅金融支援機構 月々の返済でお困りになったとき",
      "url": "https://www.jhf.go.jp/hensai/hensai/komatta.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "住宅金融支援機構 タイプ別返済方法変更メニュー",
      "url": "https://www.jhf.go.jp/hensai/hensai/type.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "住宅金融支援機構 返済方法の変更を希望するとき",
      "url": "https://www.jhf.go.jp/hensai/hensai/kibou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "住宅金融支援機構 お問い合わせの内容に応じた番号",
      "url": "https://www.jhf.go.jp/faq/contact/number.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1047,27 +1047,27 @@ window.SEIDO_DATA = {
     {
      "title": "国土交通省 サービス付き高齢者向け住宅",
      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000005.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 介護サービス情報公表システム サービス付き高齢者向け住宅について",
      "url": "https://www.kaigokensaku.mhlw.go.jp/publish_sumai/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "千葉県 サービス付き高齢者向け住宅の登録基準",
      "url": "https://www.pref.chiba.lg.jp/juutaku/chintai/koureisha/satsuki-jutaku-kijun.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "サービス付き高齢者向け住宅情報提供システム 制度について",
      "url": "https://www.satsuki-jutaku.mlit.go.jp/system.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国土交通省 住宅確保要配慮者に対する賃貸住宅の供給の促進に関する法律等の一部を改正する法律について",
      "url": "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk7_000054.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1113,22 +1113,22 @@ window.SEIDO_DATA = {
     {
      "title": "こども家庭庁 社会的養護の施設等について",
      "url": "https://www.cfa.go.jp/policies/shakaiteki-yougo/shisetsu-gaiyou",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "中央区 母子生活支援施設の入所",
      "url": "https://www.city.chuo.lg.jp/a0020/kosodate/kosodate/hitorioya/sumai/bosiseikatu.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 児童福祉法等の一部を改正する法律(令和4年法律第66号)の概要",
      "url": "https://www.mhlw.go.jp/content/000994205.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 福祉事務所",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/fukusijimusyo/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1173,17 +1173,17 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 高額療養費制度を利用される皆さまへ",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 高額療養費制度の見直しについて(患者負担割合及び自己負担限度額 令和8年8月〜)",
      "url": "https://www.mhlw.go.jp/content/001726232.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国健康保険協会 高額な医療費を支払ったとき(高額療養費)",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/high_cost_medical_expenses/002/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -1227,12 +1227,12 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 マイナンバーカードの健康保険証利用について",
      "url": "https://www.mhlw.go.jp/stf/newpage_08277.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国健康保険協会 医療費が高額になりそうなとき(限度額適用認定証等)",
      "url": "https://www.kyoukaikenpo.or.jp/faq/benefit/003/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -1270,12 +1270,12 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 無料低額診療事業等に係る運用上の留意事項について(平成30年1月18日通知)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc3134&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "大阪府 無料低額診療事業について",
      "url": "https://www.pref.osaka.lg.jp/o090030/houjin/muryoteigaku/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1324,37 +1324,37 @@ window.SEIDO_DATA = {
     {
      "title": "自立支援医療(精神通院医療)について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001507767.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自立支援医療の患者負担の基本的な枠組み(厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001718390.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自立支援医療制度の概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/jiritsu/gaiyo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自立支援医療(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/jiritsu/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自立支援医療等における利用者負担区分の見直しについて(社会保障審議会障害者部会 第144回 資料3・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/12201000/001360391.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自立支援医療(精神通院医療)(神戸市)",
      "url": "https://www.city.kobe.lg.jp/a37430/kenko/health/kokoro/yakudatiseido/tsuiniryo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自立支援医療(東京都福祉局)",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/shougai/shogai/jiritsu",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1399,22 +1399,22 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 令和8年4月時点の指定難病(告示番号1〜348)",
      "url": "https://www.mhlw.go.jp/stf/newpage_53881.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "難病情報センター 指定難病患者への医療費助成制度のご案内",
      "url": "https://www.nanbyou.or.jp/entry/5460",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "大阪市 指定難病医療費助成制度の概要について",
      "url": "https://www.city.osaka.lg.jp/kenko/page/0000428077.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "東京都難病ポータルサイト 難病医療費助成の助成内容",
      "url": "https://www.hokeniryo.metro.tokyo.lg.jp/kenkou/nanbyo/portal/seido/josei",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -1452,12 +1452,12 @@ window.SEIDO_DATA = {
     {
      "title": "全国健康保険協会 入院時食事療養費・入院時生活療養費",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/mynumber_insurance_card/002/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 入院時の食費・光熱水費について(社会保障審議会医療保険部会資料・令和7年11月20日)",
      "url": "https://www.mhlw.go.jp/content/12401000/001597708.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -1496,12 +1496,12 @@ window.SEIDO_DATA = {
     {
      "title": "厚生労働省 一部負担金の徴収猶予及び減免並びに保険医療機関等の一部負担金の取扱について(昭和34年保発第21号)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tb0616&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "横浜市 一部負担金の減免及び徴収猶予",
      "url": "https://www.city.yokohama.lg.jp/kurashi/koseki-zei-hoken/kokuho/iryo/gennmenn20200304.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -1540,7 +1540,7 @@ window.SEIDO_DATA = {
     {
      "title": "全国健康保険協会 高額介護合算療養費",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/high_cost_medical_expenses/003/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -1581,17 +1581,17 @@ window.SEIDO_DATA = {
     {
      "title": "全国健康保険協会 高額な医療費を支払ったとき(特定疾病療養受療証)",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/high_cost_medical_expenses/002/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国健康保険協会 健康保険特定疾病療養受療証交付申請書",
      "url": "https://www.kyoukaikenpo.or.jp/application_form/benefit/014/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "神戸市 特定疾病療養受療証",
      "url": "https://www.city.kobe.lg.jp/a52670/kurashi/support/insurance/kogakuryoyohi/tokuteisipei.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -1643,22 +1643,22 @@ window.SEIDO_DATA = {
     {
      "title": "小児慢性特定疾病情報センター 医療費助成の概要",
      "url": "https://www.shouman.jp/assist/outline",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "東京都福祉局 小児慢性特定疾病医療費助成制度の概要",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/kosodate/josei/syoman/top",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "長崎市 小児慢性特定疾病医療費の助成制度",
      "url": "https://www.city.nagasaki.lg.jp/site/e-kao/6503.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "福岡県 小児慢性特定疾病医療費助成制度のご案内",
      "url": "https://www.pref.fukuoka.lg.jp/contents/syouman-fukuoka1.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1707,17 +1707,17 @@ window.SEIDO_DATA = {
     {
      "title": "横浜市 未熟児養育医療給付制度",
      "url": "https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/kenko-iryo/iryohijosei/yoiku-2019.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "東京都福祉局 未熟児の養育医療",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/kosodate/josei/mijukuji",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 未熟児養育事業の実施について(昭和62年児発第668号)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00ta9644&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1764,17 +1764,17 @@ window.SEIDO_DATA = {
     {
      "title": "全国健康保険協会 医療費の立替(療養費)",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/medical_expenses/001/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国健康保険協会 健康保険療養費支給申請書(立替払等、治療用装具)",
      "url": "https://www.kyoukaikenpo.or.jp/application_form/benefit/002/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国健康保険協会 健康保険給付について(健康保険給付の時効)",
      "url": "https://www.kyoukaikenpo.or.jp/faq/benefit/001/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -1814,17 +1814,17 @@ window.SEIDO_DATA = {
     {
      "title": "全国健康保険協会 移送費",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/transfer_cost/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国健康保険協会 健康保険給付について(健康保険給付の時効)",
      "url": "https://www.kyoukaikenpo.or.jp/faq/benefit/001/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "厚生労働省 健康保険の移送費の支給の取扱いについて(平成6年保険発第119号)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tb0348&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -1871,12 +1871,12 @@ window.SEIDO_DATA = {
     {
      "title": "東京都福祉局 入院助産(出産費用の助成)",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/shussan/josan",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "横浜市 助産制度",
      "url": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/oyakokenko/ninshin/josanseido.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -1921,27 +1921,27 @@ window.SEIDO_DATA = {
     {
      "title": "令和8年8月1日からの基本手当日額等の適用について（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000160564_00050.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "雇用保険の基本手当（失業給付）を受給される皆さまへ（厚生労働省リーフレット・令和8年8月1日改定）",
      "url": "https://www.mhlw.go.jp/content/001726934.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "基本手当について（ハローワークインターネットサービス）",
      "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "雇用保険の具体的な手続き（ハローワークインターネットサービス）",
      "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_procedure.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自己都合離職者の給付制限の見直し（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000160564_00045.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -1987,17 +1987,17 @@ window.SEIDO_DATA = {
     {
      "title": "傷病手当金｜給付と手続き（全国健康保険協会）",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/injury_and_sickness_allowance/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "e-Gov法令検索 健康保険法（第99条＝傷病手当金の支給・額・通算1年6月の支給期間、第104条＝資格喪失後の継続給付、第108条＝報酬との調整）",
      "url": "https://laws.e-gov.go.jp/law/211AC0000000070",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和4年1月1日から健康保険の傷病手当金の支給期間が通算化されます（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/newpage_22308.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2043,22 +2043,22 @@ window.SEIDO_DATA = {
     {
      "title": "休業（補償）等給付の計算方法（厚生労働省 労災保険FAQ）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000154476.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "療養（補償）等給付の請求手続（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyousei/rousai/040325-14.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "労災保険給付の種類（佐賀労働局）",
      "url": "https://jsite.mhlw.go.jp/saga-roudoukyoku/hourei_seido_tetsuzuki/rousai_hoken/rousai/rousai02.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "フリーランスの労災保険特別加入（令和6年11月から）（厚生労働省リーフレット）",
      "url": "https://www.mhlw.go.jp/content/001250166.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2101,7 +2101,7 @@ window.SEIDO_DATA = {
     {
      "title": "求職者支援制度のご案内（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyushokusha_shien/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -2138,12 +2138,12 @@ window.SEIDO_DATA = {
     {
      "title": "未払賃金の立替払制度の概要（独立行政法人労働者健康安全機構）",
      "url": "https://www.johas.go.jp/financial/unpaid-wage-payment/unpaid-wage-overview/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "未払賃金立替払制度の概要と実績（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/shinsai_rousaihoshouseido/tatekae/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -2185,27 +2185,27 @@ window.SEIDO_DATA = {
     {
      "title": "就職促進給付（ハローワークインターネットサービス）",
      "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_stepup.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "就職促進給付に関するQ＆A（東京労働局・ハローワーク）",
      "url": "https://jsite.mhlw.go.jp/tokyo-hellowork/kakushu_jouhou/koyouhoken/koyouhoken/QA/syuusyokusokusinnkyuufu_QA.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "再就職手当支給申請書（ハローワークインターネットサービス 電子申請）",
      "url": "https://hoken.hellowork.mhlw.go.jp/static/saishu_teate.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "就業促進定着手当支給申請書（ハローワークインターネットサービス 電子申請）",
      "url": "https://hoken.hellowork.mhlw.go.jp/static/shugyosokushinteichaku.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "雇用保険法等の一部を改正する法律について（令和6年5月17日基発0517第1号・職発0517第4号／厚生労働省法令等データベース）",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc8538&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -2250,22 +2250,22 @@ window.SEIDO_DATA = {
     {
      "title": "ハロートレーニング（離職者訓練・求職者支援訓練）（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/rishokusha.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "職業支援・給付金などについて知る（厚生労働省 ハロトレ特設サイト）",
      "url": "https://www.mhlw.go.jp/hellotraining/support/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "基本手当について（ハローワークインターネットサービス）",
      "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和7年4月以降に教育訓練等を受ける場合、給付制限が解除されます（香川労働局・ハローワーク）",
      "url": "https://jsite.mhlw.go.jp/kagawa-hellowork/zyuuyou_kussyon_00004.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2309,22 +2309,22 @@ window.SEIDO_DATA = {
     {
      "title": "高年齢求職者給付金の支給を受けることができる方には（北海道労働局・ハローワーク）",
      "url": "https://jsite.mhlw.go.jp/hokkaido-hellowork/list/sapporo/kyusyokusya/hokenzyukyu/kourei/1.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "基本手当について(高年齢求職者給付金について)（ハローワークインターネットサービス・厚生労働省）",
      "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "求職者給付に関するQ＆A（東京労働局・ハローワーク）",
      "url": "https://jsite.mhlw.go.jp/tokyo-hellowork/kakushu_jouhou/koyouhoken/koyouhoken/QA/kyuusyokusyakyuufu_QA.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "年金と雇用保険の失業給付との調整（日本年金機構）",
      "url": "https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/koyou-chosei/20140421-03.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2368,17 +2368,17 @@ window.SEIDO_DATA = {
     {
      "title": "受給期間の延長申請について（兵庫労働局）",
      "url": "https://jsite.mhlw.go.jp/hyogo-roudoukyoku/roudoukyoku/_105009/_111627_00165.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "求職者給付に関するQ＆A（東京労働局・ハローワーク）",
      "url": "https://jsite.mhlw.go.jp/tokyo-hellowork/kakushu_jouhou/koyouhoken/koyouhoken/QA/kyuusyokusyakyuufu_QA.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "受給期間の延長（大阪労働局）",
      "url": "https://jsite.mhlw.go.jp/osaka-roudoukyoku/hourei_seido_tetsuzuki/koyou_hoken/hourei_seido/situgyo/minasama/entyo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2420,7 +2420,7 @@ window.SEIDO_DATA = {
     {
      "title": "求職者支援制度のご案内（厚生労働省）",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyushokusha_shien/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -2459,12 +2459,12 @@ window.SEIDO_DATA = {
     {
      "title": "身体障害者手帳(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/shougaishatechou/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "身体障害者手帳制度の概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/shougaishatechou/dl/gaiyou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -2500,17 +2500,17 @@ window.SEIDO_DATA = {
     {
      "title": "療育手帳制度について(昭和48年厚生省発児第156号・厚生労働省法令等データベース)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00ta9476&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害者手帳(国立障害者リハビリテーションセンター)",
      "url": "https://www.rehab.go.jp/ddis/system/supportact/handycapped/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "療育手帳の在り方の検討状況について(社会保障審議会障害者部会 第147回 資料2・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/12201000/001509397.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -2552,32 +2552,32 @@ window.SEIDO_DATA = {
     {
      "title": "障害者手帳・障害年金(こころの情報サイト・国立精神・神経医療研究センター)",
      "url": "https://kokoro.ncnp.go.jp/support_certificate.php",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害者手帳について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/techou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "JR運賃精神障害者割引制度の導入について(姫路市)",
      "url": "https://www.city.himeji.lg.jp/kurashi/0000029437.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "鉄道運賃の割引(横浜市)",
      "url": "https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/fukushi-kaigo/fukushi/annai/gaishutsu/kotsu/jr.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "精神障害者に対する旅客鉄道株式会社等の旅客運賃の割引について(東京都福祉局)",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/shougai/nichijo/seishintetyou/ryokakuunchinwaribiki",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "精神障害者に対する旅客鉄道株式会社等の旅客運賃割引について(兵庫県)",
      "url": "https://web.pref.hyogo.lg.jp/kf21/tetyou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -2625,27 +2625,27 @@ window.SEIDO_DATA = {
     {
      "title": "令和8年度の年金額および年金生活者支援給付金支給金額の改定について(日本年金機構)",
      "url": "https://www.nenkin.go.jp/tokusetsu/nenkingakutou_kaitei.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害年金ガイド 令和8年度版(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/pamphlet/kyufu.files/LK03-2.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害基礎年金の受給要件・請求時期・年金額(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/jukyu/seido/shougainenkin/jukyu-yoken/20150514.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害厚生年金の受給要件・請求時期・年金額(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/jukyu/seido/shougainenkin/jukyu-yoken/20150401-02.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "20歳前の傷病による障害基礎年金にかかる支給制限等(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/jukyu/seido/shougainenkin/jukyu-yoken/20200805.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -2686,12 +2686,12 @@ window.SEIDO_DATA = {
     {
      "title": "障害年金生活者支援給付金の概要(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/jukyu/seido/sonota-kyufu/shienkyufukin/syougai.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年4月分からの年金額等について(日本年金機構)",
      "url": "https://www.nenkin.go.jp/oshirase/taisetu/kojin/2026/202604/0401.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2729,7 +2729,7 @@ window.SEIDO_DATA = {
     {
      "title": "特別障害者手当について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/jidou/tokubetsu.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2767,7 +2767,7 @@ window.SEIDO_DATA = {
     {
      "title": "障害児福祉手当について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/jidou/hukushi.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -2808,17 +2808,17 @@ window.SEIDO_DATA = {
     {
      "title": "障害福祉サービスについて(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害者の利用者負担(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/hutan1.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害福祉サービスの利用について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000096052.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -2856,17 +2856,17 @@ window.SEIDO_DATA = {
     {
      "title": "障害福祉サービスについて(就労系サービスの内容)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/naiyou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和6年度工賃(賃金)の実績について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/12200000/001637154.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "就労選択支援に係る通知(令和7年3月31日・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001473458.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -2905,12 +2905,12 @@ window.SEIDO_DATA = {
     {
      "title": "補装具費支給制度の概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/yogu/hosouguhisikyuuseido.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害児の補装具費支給制度の所得制限撤廃について(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/shougaijishien/shisaku/hosougu",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -2947,7 +2947,7 @@ window.SEIDO_DATA = {
     {
      "title": "日常生活用具給付等事業の概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/yogu/seikatsu.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -2990,22 +2990,22 @@ window.SEIDO_DATA = {
     {
      "title": "特別児童扶養手当について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/jidou/huyou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年度の特別児童扶養手当等について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/newpage_71570.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "特別児童扶養手当(大阪府)",
      "url": "https://www.pref.osaka.lg.jp/o090135/kateishien/teate/tokubetsujihu.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "特別児童扶養手当について(福岡県)",
      "url": "https://www.pref.fukuoka.lg.jp/contents/tokuji-24-1.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -3053,22 +3053,22 @@ window.SEIDO_DATA = {
     {
      "title": "利用者負担の仕組み(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/shougaijishien/shisaku/futan",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "就学前障害児の発達支援の無償化について(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/shougaijishien/shisaku/mushouka/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害児支援施策(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/shougaijishien/shisaku",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "児童福祉法等の一部を改正する法律(令和4年法律第66号)の概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/000994205.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -3111,12 +3111,12 @@ window.SEIDO_DATA = {
     {
      "title": "意思疎通支援(厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/sanka/shien.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "市町村対象事業一覧(地域生活支援事業・厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/chiiki/taisho.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3160,17 +3160,17 @@ window.SEIDO_DATA = {
     {
      "title": "市町村対象事業一覧(地域生活支援事業・厚生労働省)",
      "url": "https://www.mhlw.go.jp/bunya/shougaihoken/chiiki/taisho.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "成年後見制度利用促進(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000202622.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "成年後見制度利用支援事業の適切な実施について(事務連絡・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001001934.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3218,17 +3218,17 @@ window.SEIDO_DATA = {
     {
      "title": "しょうがい共済制度のごあんない(独立行政法人福祉医療機構)",
      "url": "https://www.wam.go.jp/hp/guide-fuyou-outline-tabid-245/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害者扶養共済制度(しょうがい共済)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000195619.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "心身障害者扶養保険事業(独立行政法人福祉医療機構)",
      "url": "https://www.wam.go.jp/hp/cat/sinsinsyogaihoken/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -3265,17 +3265,17 @@ window.SEIDO_DATA = {
     {
      "title": "障害のある人に対する相談支援について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/soudan_shien.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "基幹相談支援センターについて(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/kikan.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "障害者の日常生活及び社会生活を総合的に支援するための法律等の一部を改正する法律の概要(厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001081033.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -3315,22 +3315,22 @@ window.SEIDO_DATA = {
     {
      "title": "介護保険の解説「介護保険制度について」(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/about.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護保険の解説「サービス利用までの流れ」(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/flow.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護保険の解説「サービスにかかる利用料」(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/fee.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年度介護報酬改定に関する審議報告(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/newpage_67625.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3371,22 +3371,22 @@ window.SEIDO_DATA = {
     {
      "title": "介護保険の解説「サービスにかかる利用料」(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/fee.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高額介護(予防)サービス費等の支給制度(北九州市)",
      "url": "https://www.city.kitakyushu.lg.jp/contents/924_11142.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高額介護サービス費(利用者負担が高額になったとき)(京都市)",
      "url": "https://www.city.kyoto.lg.jp/hokenfukushi/page/0000060820.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護サービス利用者負担額の軽減制度(札幌市)",
      "url": "https://www.city.sapporo.jp/kaigo/k100citizen/k143keigen.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -3427,27 +3427,27 @@ window.SEIDO_DATA = {
     {
      "title": "介護保険の解説「サービスにかかる利用料」(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/fee.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年8月1日より介護保険施設等における食費・居住費が変更となります(桜川市)",
      "url": "https://www.city.sakuragawa.lg.jp/fukushi_kenkou/kaigo_hoken/page010281.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年8月からの介護保険制度の見直しについて(負担限度額)(小美玉市)",
      "url": "https://www.city.omitama.lg.jp/0039/info-0000012523-0.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護保険施設等の食費・居住費負担額の軽減制度(東京都北区)",
      "url": "https://www.city.kita.lg.jp/socialcare-health/nursing/1001827/1001836.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "負担限度額認定(施設を利用した場合の居住費・食費の減額)(江東区)",
      "url": "https://www.city.koto.lg.jp/212105/fukushi/kaigohoken/genmen/6541.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -3485,17 +3485,17 @@ window.SEIDO_DATA = {
     {
      "title": "雇用継続給付(介護休業給付)(ハローワークインターネットサービス)",
      "url": "https://www.hellowork.mhlw.go.jp/insurance/insurance_continue.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "育児・介護休業法 改正のポイント(厚生労働省 仕事と介護の両立支援)",
      "url": "https://www.mhlw.go.jp/seisakunitsuite/bunya/koyou_roudou/koyoukintou/ryouritsu/kaigo/law-amendment",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "育児・介護休業法について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000130583.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -3529,12 +3529,12 @@ window.SEIDO_DATA = {
     {
      "title": "地域包括支援センターについて(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/chiiki-houkatsu/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護保険の解説「サービス利用までの流れ」(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/flow.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -3572,12 +3572,12 @@ window.SEIDO_DATA = {
     {
      "title": "住宅改修費・福祉用具購入費の支給に関する手続き(長浜市)",
      "url": "https://www.city.nagahama.lg.jp/0000002619.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護保険住宅改修費の支給(北九州市)",
      "url": "https://www.city.kitakyushu.lg.jp/contents/16800539.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -3616,27 +3616,27 @@ window.SEIDO_DATA = {
     {
      "title": "介護予防・日常生活支援総合事業のサービス利用の流れ(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/commentary/flow_synthesis.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護予防・日常生活支援総合事業(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000192992.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護予防・日常生活支援総合事業の適切かつ有効な実施を図るための指針(令和6年3月29日厚生労働省告示第168号)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00013320&dataType=0&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護予防・日常生活支援総合事業(札幌市)",
      "url": "https://www.city.sapporo.jp/kaigo/sougoujigyou/sougoujigyou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "介護予防・日常生活支援総合事業(神戸市)",
      "url": "https://www.city.kobe.lg.jp/a46210/business/annaitsuchi/kaigoservice/sougouzigyou/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3680,12 +3680,12 @@ window.SEIDO_DATA = {
     {
      "title": "どんなサービスがあるの? 福祉用具貸与(厚生労働省 介護サービス情報公表システム)",
      "url": "https://www.kaigokensaku.mhlw.go.jp/publish/group21.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "福祉用具・住宅改修(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000212398.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -3698,7 +3698,7 @@ window.SEIDO_DATA = {
     "kaigo"
    ],
    "target": "認知症またはその疑いのある本人と、その家族が対象になる。診断を受けていない段階で「もの忘れが心配」「受診をどう勧めればよいか分からない」という相談でも利用できる。65歳未満で発症する若年性認知症についての相談を受け付ける窓口もある。",
-   "benefit": "地域包括支援センターは市町村が設置する高齢者の総合相談窓口で、認知症に関する相談を受け、必要に応じて専門機関につなぐ。認知症疾患医療センターは都道府県・指定都市が指定する専門医療機関で、鑑別診断、行動・心理症状(BPSD)や身体合併症への対応、専門医療相談、地域の医療機関の紹介などを行う(基幹型・地域型・診療所型の類型がある)。認知症初期集中支援チームは、医療・介護の専門職が自宅を訪問し、受診の勧奨、医療・介護サービスの導入や調整、家族支援などをおおむね6か月以内の期間で集中的に行う。認知症地域支援推進員は相談対応や地域のネットワークづくりを担う。認知症カフェは、認知症の人と家族が地域の人や専門職と情報を共有し交流できる場。このほか電話相談として、公益社団法人認知症の人と家族の会による「認知症に関する電話相談」(0120-294-456。受付は月曜から金曜の午前10時から午後3時、祝日を除く)と、認知症介護研究・研修大府センターによる「若年性認知症専用コールセンター」(0800-100-2707。受付は月曜から土曜の午前10時から午後3時、年末年始・祝日を除く)がある。",
+   "benefit": "地域包括支援センターは市町村が設置する高齢者の総合相談窓口で、認知症に関する相談を受け、必要に応じて専門機関につなぐ。認知症疾患医療センターは都道府県・指定都市が指定する専門医療機関で、鑑別診断、行動・心理症状(BPSD)や身体合併症への対応、専門医療相談、地域の医療機関の紹介などを行う(基幹型・地域型・診療所型の類型がある)。認知症初期集中支援チームは、医療・介護の専門職が自宅を訪問し、受診の勧奨、医療・介護サービスの導入や調整、家族支援などをおおむね6か月以内の期間で集中的に行う。認知症地域支援推進員は相談対応や地域のネットワークづくりを担う。認知症カフェは、認知症の人と家族が地域の人や専門職と情報を共有し交流できる場。このほか電話相談として、公益社団法人認知症の人と家族の会による「認知症に関する電話相談」(0120-294-456。受付は月曜から金曜の午前10時から午後3時、祝日を除く)と、認知症介護研究・研修大府センターによる「若年性認知症専用コールセンター」(0800-100-2707。受付は月曜から土曜の午前10時から午後3時で、水曜日は午後7時まで。年末年始・祝日を除く)がある。",
    "window": "住所地を担当する地域包括支援センター(市区町村の高齢者福祉・介護保険担当窓口でも相談できる)。専門的な診断は認知症疾患医療センターやもの忘れ外来。電話での相談は、認知症の人と家族の会の電話相談(平日10〜15時・祝日除く)でも受けられる。",
    "phone": "0120-294-456",
    "documents": [
@@ -3722,17 +3722,17 @@ window.SEIDO_DATA = {
     {
      "title": "認知症に関する相談について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000076236_00003.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "認知症に関する相談窓口(大阪府)",
      "url": "https://www.pref.osaka.lg.jp/o090090/kaigoshien/ninnshishou-gyakutai/soudan.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "認知症施策推進基本計画(令和6年12月・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001344090.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "認知症疾患医療センターについて(愛知県)",
@@ -3780,22 +3780,22 @@ window.SEIDO_DATA = {
     {
      "title": "市町村・都道府県における高齢者虐待への対応と養護者支援について(国マニュアル)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000200478_00002.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高齢者虐待とは(大阪府)",
      "url": "https://www.pref.osaka.lg.jp/o090090/kaigoshien/ninnshishou-gyakutai/koreisyagyakutai.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高齢者虐待の防止(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/boushi/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高齢者虐待の防止/身体拘束等の適正化の推進(社会保障審議会介護給付費分科会資料・厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/12300000/001171214.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3839,27 +3839,27 @@ window.SEIDO_DATA = {
     {
      "title": "地域支援事業の実施について(平成18年6月9日老発第0609001号・最終改正 令和7年7月17日老発0717第5号)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tb6317&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高齢者在宅介護用品の支給(広島市)",
      "url": "https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1025759/1025760/1015439.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "家族介護慰労金支給事業(松阪市)",
      "url": "https://www.city.matsusaka.mie.jp/site/koureisya-wel/irokin.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "家族介護慰労金(守口市)",
      "url": "https://www.city.moriguchi.osaka.jp/kakukanoannai/kenkofukushibu/koreikaigoka/koureikaigo/kaigohoken/17478.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "寝たきりの者のおむつ代(国税庁)",
      "url": "https://www.nta.go.jp/law/shitsugi/shotoku/05/54.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3902,12 +3902,12 @@ window.SEIDO_DATA = {
     {
      "title": "児童手当制度のご案内(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/annai",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "もっと子育て応援!児童手当(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/kokoseido/jidouteate/mottoouen",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -3949,17 +3949,17 @@ window.SEIDO_DATA = {
     {
      "title": "児童扶養手当について(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/hitori-oya/fuyou-teate",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "児童扶養手当の手当額が改定されます(令和8年4月分〜)(佐賀県)",
      "url": "https://www.pref.saga.lg.jp/kiji003829/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "児童扶養手当(堺市)",
      "url": "https://www.city.sakai.lg.jp/kosodate/hughug/hitorioya/boshifushi/jidofuyoteate.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4005,12 +4005,12 @@ window.SEIDO_DATA = {
     {
      "title": "ひとり親家庭等医療費助成制度(マル親)(東京都福祉局)",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/seikatsu/josei/maruoya",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "ひとり親家庭等医療費助成(マル親)(江東区)",
      "url": "https://www.city.koto.lg.jp/281011/kodomo/kosodate/teate/6030.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -4051,12 +4051,12 @@ window.SEIDO_DATA = {
     {
      "title": "支援施策について(ひとり親家庭のためのポータルサイト・こども家庭庁)",
      "url": "https://support-hitorioya.cfa.go.jp/support/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "母子福祉資金・父子福祉資金の貸付け(東京都福祉局)",
      "url": "https://www.fukushi.metro.tokyo.lg.jp/kodomo/hitorioya_shien/keizai/boshi",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -4094,7 +4094,7 @@ window.SEIDO_DATA = {
     {
      "title": "就学援助制度について(就学援助ポータルサイト)(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/career/05010502/017.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -4136,12 +4136,12 @@ window.SEIDO_DATA = {
     {
      "title": "高等職業訓練促進給付金のご案内(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/hitori-oya/syokugyou-kunren",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高等職業訓練促進給付金等事業(広島市)",
      "url": "https://www.city.hiroshima.lg.jp/living/kosodate/1021257/1023772.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -4181,7 +4181,7 @@ window.SEIDO_DATA = {
     {
      "title": "母子家庭自立支援給付金及び父子家庭自立支援給付金事業について(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/hitori-oya/jiritsu-shien-kyuufukin",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -4218,17 +4218,17 @@ window.SEIDO_DATA = {
     {
      "title": "民法等の一部を改正する法律(父母の離婚後等の子の養育に関する見直し)について〔令和8年4月1日施行〕(法務省)",
      "url": "https://www.moj.go.jp/MINJI/minji07_00357.html",
-     "checked": "2026-08-31"
+     "checked": "2026-11-26"
     },
     {
      "title": "法務大臣閣議後記者会見の概要(令和7年11月28日・法定養育費と先取特権の額を説明)(法務省)",
      "url": "https://www.moj.go.jp/hisho/kouhou/hisho08_00673.html",
-     "checked": "2026-08-31"
+     "checked": "2026-11-26"
     },
     {
      "title": "法テラス(日本司法支援センター)",
      "url": "https://www.houterasu.or.jp/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4268,12 +4268,12 @@ window.SEIDO_DATA = {
     {
      "title": "令和7年度「こどもに係る医療費の助成についての調査」(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/boshihoken/kodomoiryouhityousa-r7",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和7年度「こどもに係る医療費の助成についての調査」について(こども家庭庁)",
      "url": "https://www.cfa.go.jp/press/2a8699a3-eb02-4f7a-b838-1561a0004476",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -4312,12 +4312,12 @@ window.SEIDO_DATA = {
     {
      "title": "妊産婦への伴走型相談支援と経済的支援の一体的実施(妊婦等包括相談支援事業・妊婦のための支援給付)(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/shussan-kosodate",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "妊婦のための支援給付金(豊島区)",
      "url": "https://www.city.toshima.lg.jp/219/kosodate/ninshin/shussanmade/2503251025.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -4359,17 +4359,17 @@ window.SEIDO_DATA = {
     {
      "title": "出産育児一時金等について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/shussan/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "出産育児一時金(全国健康保険協会)",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/childbirth/002/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "子どもが生まれたとき(出産育児一時金)(全国健康保険協会・よくあるご質問)",
      "url": "https://www.kyoukaikenpo.or.jp/faq/benefit/006/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4416,7 +4416,7 @@ window.SEIDO_DATA = {
     {
      "title": "出産手当金(全国健康保険協会)",
      "url": "https://www.kyoukaikenpo.or.jp/benefit/childbirth/001/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -4461,22 +4461,22 @@ window.SEIDO_DATA = {
     {
      "title": "育児休業等給付について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000135090_00001.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "Q&A〜育児休業等給付〜(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000158500.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年8月1日から育児休業給付の申請手続きを見直します(東京労働局)",
      "url": "https://jsite.mhlw.go.jp/tokyo-roudoukyoku/newpage_01714.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "育児休業等給付金について(福岡労働局)",
      "url": "https://jsite.mhlw.go.jp/fukuoka-roudoukyoku/hourei_seido_tetsuzuki/koyou_hoken/hourei_seido/ikujifukuoka_02900.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4521,12 +4521,12 @@ window.SEIDO_DATA = {
     {
      "title": "出生後休業支援給付の簡易診断(要件確認)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/syussyougo_kanishindan_00001.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "育児休業等給付について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000135090_00001.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4571,17 +4571,17 @@ window.SEIDO_DATA = {
     {
      "title": "幼児教育・保育の無償化(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/kokoseido/mushouka",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "幼児教育・保育の無償化概要(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/kokoseido/mushouka/gaiyou",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "幼児教育・保育の無償化について(日本語)(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/kokoseido/mushouka/about/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4627,17 +4627,17 @@ window.SEIDO_DATA = {
     {
      "title": "母子保健・不妊症・不育症など(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/boshihoken",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "産後ケア事業を利用したい方(健やか親子21・こども家庭庁)",
      "url": "https://sukoyaka21.cfa.go.jp/sango-care/guide_01/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "産後ケア事業(宿泊・通所)(神戸市)",
      "url": "https://www.city.kobe.lg.jp/a86732/kosodate/maternity/consult/sangokea.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4676,12 +4676,12 @@ window.SEIDO_DATA = {
     {
      "title": "配偶者からの暴力被害者支援情報(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "政府・地方公共団体が関与する犯罪被害者等に関する相談先一覧(令和6年版犯罪被害者白書・警察庁)",
      "url": "https://www.npa.go.jp/hanzaihigai/whitepaper/2024/zenbun/part3_siryo/siryo-9.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -4715,17 +4715,17 @@ window.SEIDO_DATA = {
     {
      "title": "相談機関一覧(DV相談＋・内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/soudankikan.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "DV相談プラス(内閣府)",
      "url": "https://soudanplus.jp/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "政府・地方公共団体が関与する犯罪被害者等に関する相談先一覧(令和6年版犯罪被害者白書・警察庁)",
      "url": "https://www.npa.go.jp/hanzaihigai/whitepaper/2024/zenbun/part3_siryo/siryo-9.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -4761,7 +4761,7 @@ window.SEIDO_DATA = {
     {
      "title": "配偶者暴力相談支援センターとは(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/soudankikan/01.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4801,17 +4801,17 @@ window.SEIDO_DATA = {
     {
      "title": "保護命令(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/law/12.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "配偶者暴力防止法に関するQ&A(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/law/29.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "配偶者暴力防止法の令和5年一部改正法情報(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/law/32.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -4845,12 +4845,12 @@ window.SEIDO_DATA = {
     {
      "title": "困難な問題を抱える女性の相談窓口(女性相談支援センター)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/newpage_40452.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "困難な問題を抱える女性への支援に関する法律(厚生労働省法令等データベース)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=82ab8736&dataType=0&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4886,12 +4886,12 @@ window.SEIDO_DATA = {
     {
      "title": "児童相談所虐待対応ダイヤル「189」について(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/jidougyakutai/gyakutai-taiou-dial",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "親子のための相談LINE(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/jidougyakutai/oyako-line",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4926,12 +4926,12 @@ window.SEIDO_DATA = {
     {
      "title": "ヤングケアラーについて(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/young-carer",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "関連サービスの相談窓口(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/young-carer/soudan-madoguchi",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -4966,7 +4966,7 @@ window.SEIDO_DATA = {
     {
      "title": "ひきこもり支援推進事業(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/hikikomori/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5004,7 +5004,7 @@ window.SEIDO_DATA = {
     {
      "title": "まもろうよ こころ(厚生労働省)",
      "url": "https://www.mhlw.go.jp/mamorouyokokoro/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -5044,22 +5044,22 @@ window.SEIDO_DATA = {
     {
      "title": "法テラス(トップページ・サポートダイヤル案内)",
      "url": "https://www.houterasu.or.jp/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "民事法律扶助業務(法テラス)",
      "url": "https://www.houterasu.or.jp/site/bengoshitou-fujo/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "DV等被害者法律相談援助の概要とイメージ(法テラス)",
      "url": "https://www.houterasu.or.jp/site/bengoshitou-higaishashien/higaishashien-dv-gaiyo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "DV等被害者法律相談援助業務とは(法テラス よくあるQ&A)",
      "url": "https://www.houterasu.or.jp/site/jichitaifukushi-faq/faq-017.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5096,7 +5096,7 @@ window.SEIDO_DATA = {
     {
      "title": "性犯罪・性暴力被害者のためのワンストップ支援センター(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/seibouryoku/consult.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5132,17 +5132,17 @@ window.SEIDO_DATA = {
     {
      "title": "相談専用ダイヤルで(警察庁 SOS47)",
      "url": "https://www.npa.go.jp/bureau/safetylife/sos47/manga/dial/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "政府・地方公共団体が関与する犯罪被害者等に関する相談先一覧(令和6年版犯罪被害者白書・警察庁)",
      "url": "https://www.npa.go.jp/hanzaihigai/whitepaper/2024/zenbun/part3_siryo/siryo-9.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "ご意見、各種相談・情報提供等(警察庁)",
      "url": "https://www.npa.go.jp/goiken_index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5180,17 +5180,17 @@ window.SEIDO_DATA = {
     {
      "title": "犯罪被害給付制度(警察庁 犯罪被害者等施策ホームページ)",
      "url": "https://www.npa.go.jp/higaisya/kyuhu/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "犯罪被害者等給付金支給裁定の申請(警察庁)",
      "url": "https://www.npa.go.jp/policies/application/form/09/02.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "給付金の支給に係る制度の充実等(令和6年版犯罪被害者白書・警察庁)",
      "url": "https://www.npa.go.jp/hanzaihigai/whitepaper/2024/zenbun/part2_chapter1/s2_1_2.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -5229,17 +5229,17 @@ window.SEIDO_DATA = {
     {
      "title": "ストーカー規制法が改正されました!(警察庁)",
      "url": "https://www.npa.go.jp/bureau/safetylife/stalker/kaisei/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "ストーカー・DV等対策(警察庁)",
      "url": "https://www.npa.go.jp/bureau/safetylife/stalker/stalker.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "ストーカー行為等の規制等に関する法律(内閣府男女共同参画局)",
      "url": "https://www.gender.go.jp/policy/no_violence/e-vaw/law/06.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -5280,22 +5280,22 @@ window.SEIDO_DATA = {
     {
      "title": "依存症対策(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000070789.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "身近にある地域の相談窓口(厚生労働省 こころもメンテしよう)",
      "url": "https://www.mhlw.go.jp/kokoro/youth/consultation/window/window_01.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "こころの健康相談統一ダイヤル(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/seikatsuhogo/jisatsu/kokoro_dial.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和4年精神保健及び精神障害者福祉に関する法律の一部改正について(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/kaisei_seisin/index_00003.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5337,12 +5337,12 @@ window.SEIDO_DATA = {
     {
      "title": "「24時間子供SOSダイヤル」について(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1306988.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "子供のSOSの相談窓口(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/06112210.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -5383,22 +5383,22 @@ window.SEIDO_DATA = {
     {
      "title": "人権相談(法務省)",
      "url": "https://www.moj.go.jp/JINKEN/jinken20.html",
-     "checked": "2026-08-31"
+     "checked": "2026-11-26"
     },
     {
      "title": "人権相談の窓口一覧(法務省)",
      "url": "https://www.moj.go.jp/JINKEN/index_soudan.html",
-     "checked": "2026-08-31"
+     "checked": "2026-11-26"
     },
     {
      "title": "こどもの人権110番(法務省)",
      "url": "https://www.moj.go.jp/JINKEN/jinken112.html",
-     "checked": "2026-08-31"
+     "checked": "2026-11-26"
     },
     {
-     "title": "女性の人権ホットライン(法務省)",
+     "title": "女性の人権に関する相談について(法務省)",
      "url": "https://www.moj.go.jp/JINKEN/jinken108.html",
-     "checked": "2026-08-31"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5444,22 +5444,22 @@ window.SEIDO_DATA = {
     {
      "title": "消費者ホットライン(消費者庁)",
      "url": "https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "消費者ホットライン188番のご案内(チラシ・消費者庁)",
      "url": "https://www.caa.go.jp/policies/policy/local_cooperation/local_consumer_administration/hotline/assets/local_cooperation_cms202_20260401_01.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "全国の消費生活センター等(国民生活センター)",
      "url": "https://www.kokusen.go.jp/map/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "相談時のポイント(国民生活センターのバックアップ相談)",
      "url": "https://www.kokusen.go.jp/soudan/data/point.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -5507,22 +5507,22 @@ window.SEIDO_DATA = {
     {
      "title": "国民年金保険料の免除制度・納付猶予制度(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/kokunen/menjo/20150428.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "ねんきん加入者ダイヤル(日本年金機構)",
      "url": "https://www.nenkin.go.jp/section/tel/toiawase_kanyusha.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国民年金保険料の追納制度(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/kokunen/menjo/20150331.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年10月から国民年金保険料の育児免除制度が始まります(日本年金機構)",
      "url": "https://www.nenkin.go.jp/tokusetsu/ikujimenjo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5562,12 +5562,12 @@ window.SEIDO_DATA = {
     {
      "title": "国民年金保険料の学生納付特例制度(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/kokunen/menjo/20150514.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国民年金保険料の追納制度(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/kokunen/menjo/20150331.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -5604,17 +5604,17 @@ window.SEIDO_DATA = {
     {
      "title": "国民年金保険料の産前産後期間の免除制度(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/kokunen/menjo/20180810.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国民年金第1号被保険者の産前産後期間の保険料免除(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000193798_00001.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年10月から国民年金保険料の育児免除制度が始まります(日本年金機構)",
      "url": "https://www.nenkin.go.jp/tokusetsu/ikujimenjo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -5653,17 +5653,17 @@ window.SEIDO_DATA = {
     {
      "title": "保険料の軽減・減免(大阪市)",
      "url": "https://www.city.osaka.lg.jp/fukushi/page/0000369751.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "保険料はいくら(令和8年度)(仙台市)",
      "url": "https://www.city.sendai.jp/kenko-hoken/kurashi/tetsuzuki/kokumin/kenkohoken/hokenryo.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年度国民健康保険料について(明石市)",
      "url": "https://www.city.akashi.lg.jp/shimin_kenkou/kokuho_ka/new_info/r8hokennryou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -5702,17 +5702,17 @@ window.SEIDO_DATA = {
     {
      "title": "令和8年度の後期高齢者医療保険料の計算方法(立川市)",
      "url": "https://www.city.tachikawa.lg.jp/kurashi/nenkin/1002477/1002485/1002502.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高齢者医療制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/koukikourei/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "後期高齢者医療の保険料について(厚生労働省・PDF)",
      "url": "https://www.mhlw.go.jp/content/001255769.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -5747,12 +5747,12 @@ window.SEIDO_DATA = {
     {
      "title": "第9期(令和6年度〜令和8年度)の介護保険料設定の考え方(新宿区)",
      "url": "https://www.city.shinjuku.lg.jp/fukushi/file07_02_00002.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "65歳以上の方の介護保険料(令和6年度〜令和8年度)(多摩市)",
      "url": "https://www.city.tama.lg.jp/kenkofukushi/1008237/kaigo/seido/1014139.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -5787,17 +5787,17 @@ window.SEIDO_DATA = {
     {
      "title": "個人住民税|暮らしと税金(東京都主税局)",
      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/life/kojin_ju",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高額療養費制度を利用される皆さまへ(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "住民税の障害者控除・非課税(新宿区)",
      "url": "https://www.city.shinjuku.lg.jp/fukushi/file06_04_00058.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -5832,12 +5832,12 @@ window.SEIDO_DATA = {
     {
      "title": "NHK放送受信料の免除基準(羽幌町)",
      "url": "https://www.town.haboro.lg.jp/kurashi/fukushi/fukushi-sonota/nhk_jushinryou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "NHK受信料の免除(横浜市)",
      "url": "https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/fukushi-kaigo/fukushi/annai/zeikin/kokyo/receivingfree.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -5871,12 +5871,12 @@ window.SEIDO_DATA = {
     {
      "title": "No.1160 障害者控除(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1160.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "住民税の障害者控除・非課税(新宿区)",
      "url": "https://www.city.shinjuku.lg.jp/fukushi/file06_04_00058.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -5913,7 +5913,7 @@ window.SEIDO_DATA = {
     {
      "title": "No.1120 医療費を支払ったとき(医療費控除)(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1120.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -5949,12 +5949,12 @@ window.SEIDO_DATA = {
     {
      "title": "自動車税環境性能割・自動車税種別割の減免制度のご案内(東京都主税局)",
      "url": "https://www.tax.metro.tokyo.lg.jp/genmen/car-genmen",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "自動車税環境性能割及び軽自動車税環境性能割は廃止されました(東京都主税局)",
      "url": "https://www.tax.metro.tokyo.lg.jp/kazei/automobiles/kankyou/abolition",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -5968,7 +5968,7 @@ window.SEIDO_DATA = {
     "saigai"
    ],
    "target": "災害で住宅や家財に損害を受けた人、失業や廃業などで所得が大きく減った人、生活保護法による扶助を受けている人、多額の医療費の支出や盗難の被害で納付が難しくなった人など。対象と基準は市区町村の条例で定められている。",
-   "benefit": "申請により、個人住民税(令和6年度から併せて徴収される森林環境税を含む)の全部または一部が減免される場合がある。減免の理由と割合は市区町村により異なる。大阪市の例(2026年6月更新)では、生活保護法による扶助を受けている場合は全額免除。失業した場合は、同一生計配偶者・扶養親族がいない人で前年の合計所得金額180万円以下が全額免除、220万円以下が7割減額、260万円以下が5割減額(扶養親族の数が増えると基準額も上がる)。当年の合計所得金額の見積額が前年の10分の6以下に減る場合は、同じ所得区分ごとに「所得減少率を乗じた額」の7割・5割・3割が減額される。災害による被害は全額免除から1割5分減額まで。さいたま市の例(2026年4月更新)では、災害で死亡した場合は全部、災害で障害者になった場合は10分の9、住宅・家財の損害が価額の10分の3以上の場合と失業・廃業で所得が大幅に減った場合は8分の1・4分の1・2分の1・全部のいずれか、生活保護受給は全部の減免。",
+   "benefit": "申請により、個人住民税(令和6年度から併せて徴収される森林環境税を含む)の全部または一部が減免される場合がある。減免の理由と割合は市区町村により異なる。大阪市の例(2026年9月更新)では、生活保護法による扶助を受けている場合は全額免除。失業した場合は、同一生計配偶者・扶養親族がいない人で前年の合計所得金額180万円以下が全額免除、220万円以下が7割減額、260万円以下が5割減額(扶養親族の数が増えると基準額も上がる)。当年の合計所得金額の見積額が前年の10分の6以下に減る場合は、同じ所得区分ごとに「所得減少率を乗じた額」の7割・5割・3割が減額される。災害による被害は全額免除から1割5分減額まで。さいたま市の例(2026年4月更新)では、災害で死亡した場合は全部、災害で障害者になった場合は10分の9、住宅・家財の損害が価額の10分の3以上の場合と失業・廃業で所得が大幅に減った場合は8分の1・4分の1・2分の1・全部のいずれか、生活保護受給は全部の減免。",
    "window": "市区町村の住民税(市民税)担当窓口または市税事務所",
    "phone": "",
    "documents": [
@@ -5996,12 +5996,12 @@ window.SEIDO_DATA = {
     {
      "title": "市民税・府民税・森林環境税の減額・免除制度について(大阪市)",
      "url": "https://www.city.osaka.lg.jp/zaisei/page/0000384659.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "個人市民税・県民税の減免(さいたま市)",
      "url": "https://www.city.saitama.lg.jp/001/153/004/002/001/001/p014681.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6044,12 +6044,12 @@ window.SEIDO_DATA = {
     {
      "title": "No.1902 災害減免法による所得税の軽減免除(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1902.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "No.8003 給与、公的年金等、報酬または料金の支払を受ける方が災害により被害を受けたときの源泉所得税および復興特別所得税の徴収猶予および還付(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/saigai/8003.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -6067,7 +6067,7 @@ window.SEIDO_DATA = {
     "saigai"
    ],
    "target": "震災・風水害・火災など自然現象の異変や人為による異常な災害、害虫などの生物による異常な災害、盗難、横領によって資産に損害を受けた納税者。損害を受けた資産の所有者が、納税者本人、または納税者と生計を一にする配偶者やその他の親族でその年の総所得金額等が58万円以下(令和2年分から令和6年分までは48万円以下。令和8年12月1日施行の改正により、令和8年分からは62万円以下)の場合も対象。",
-   "benefit": "次の2つのうち多い方の金額を所得から差し引ける。▼(損害金額+災害等関連支出の金額-保険金などで補填される金額)-総所得金額等×10%▼(災害関連支出の金額-保険金などで補填される金額)-5万円。その年の所得から引ききれない金額は、翌年以後3年間(東日本大震災または令和5年4月1日以後に発生する特定非常災害は5年間)繰り越して控除できる。(令和7年4月1日現在の法令による)",
+   "benefit": "次の2つのうち多い方の金額を所得から差し引ける。▼(損害金額+災害等関連支出の金額-保険金などで補填される金額)-総所得金額等×10%▼(災害関連支出の金額-保険金などで補填される金額)-5万円。その年の所得から引ききれない金額は、翌年以後3年間(東日本大震災または令和5年4月1日以後に発生する特定非常災害は5年間)繰り越して控除できる。(令和8年4月1日現在の法令による)",
    "window": "納税地の所轄税務署(確定申告。e-Taxでも申告できる)",
    "phone": "",
    "documents": [
@@ -6093,12 +6093,12 @@ window.SEIDO_DATA = {
     {
      "title": "No.1110 災害や盗難などで資産に損害を受けたとき(雑損控除)(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1110.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "No.1902 災害減免法による所得税の軽減免除(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1902.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6145,17 +6145,17 @@ window.SEIDO_DATA = {
     {
      "title": "No.9206 国税を期限内に納付できないとき(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9206.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "No.9205 延滞税について(国税庁タックスアンサー)",
      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/osirase/9205.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "納税が困難な方に対する猶予制度について(東京都主税局)",
      "url": "https://www.tax.metro.tokyo.lg.jp/tozei_nouzei/new_virus_yuyo",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6201,17 +6201,17 @@ window.SEIDO_DATA = {
     {
      "title": "固定資産税および都市計画税の減免(大阪市)",
      "url": "https://www.city.osaka.lg.jp/zaisei/page/0000233867.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "税負担が困難な方へ 固定資産税を減免(堺市)",
      "url": "https://www.city.sakai.lg.jp/kurashi/zei/shizei/koteishi/koteigenmen.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "固定資産税の概要(総務省)",
      "url": "https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/149767_08.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -6253,12 +6253,12 @@ window.SEIDO_DATA = {
     {
      "title": "厚生年金保険料等の免除(産前産後休業・育児休業等期間)(日本年金機構)",
      "url": "https://www.nenkin.go.jp/service/kounen/hokenryo/menjo/20140122-01.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "6-4: 育児休業等を取得し、保険料の免除を受けようとするとき(日本年金機構)",
      "url": "https://www.nenkin.go.jp/shinsei/kounen/tekiyo/menjo/20140403-01.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -6299,22 +6299,22 @@ window.SEIDO_DATA = {
     {
      "title": "高等教育の修学支援新制度(文部科学省 特設サイト)",
      "url": "https://www.mext.go.jp/kyufu/",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "制度の概要(文部科学省)",
      "url": "https://www.mext.go.jp/kyufu/outline/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "給付奨学金の支給額(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/about/kyufu/kingaku.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和7年度からの多子世帯に対する大学等の授業料等減免について(文部科学省)",
      "url": "https://www.mext.go.jp/content/20250416-mxt_gakushi01_100001505_4.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6356,12 +6356,12 @@ window.SEIDO_DATA = {
     {
      "title": "高校生等への修学支援(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/mushouka/index.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高等学校等就学支援金制度に関するQ&A(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/mushouka/1342600.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6404,22 +6404,22 @@ window.SEIDO_DATA = {
     {
      "title": "高校生等への修学支援(高校生等奨学給付金)(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/mushouka/index.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "高校生等奨学給付金リーフレット(令和8年度)(文部科学省)",
      "url": "https://www.mext.go.jp/content/20260616-mxt_shuukyo03-100002595_18.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "令和8年度 奨学のための給付金(高校生等奨学給付金)(沖縄県)",
      "url": "https://www.pref.okinawa.jp/kyoiku/edu/1008819/1008843/1008848.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "千葉県私立高等学校等奨学のための給付金(高校生等奨学給付金)(千葉県)",
      "url": "https://www.pref.chiba.lg.jp/gakuji/shiritsutou/gakuhi-josei/josei-kyuufukin.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6461,42 +6461,42 @@ window.SEIDO_DATA = {
     {
      "title": "奨学金(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "給付奨学金の支給額(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/about/kyufu/kingaku.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "第一種奨学金の貸与月額(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/about/taiyo/taiyo_1shu/kingaku/2018ikou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "第二種奨学金の貸与月額(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/about/taiyo/taiyo_2shu/kingaku.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "入学時特別増額貸与奨学金(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/about/taiyo/nyuzo/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "貸与奨学金(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/about/taiyo/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "お問い合わせ先一覧(JASSO)",
      "url": "https://www.jasso.go.jp/about/toiawase/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "予約採用(JASSO)",
      "url": "https://www.jasso.go.jp/shogakukin/moshikomi/yoyaku/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6533,12 +6533,12 @@ window.SEIDO_DATA = {
     {
      "title": "教育訓練給付金(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/kyouiku.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "教育訓練休暇給付金(厚生労働省・労働局案内)",
      "url": "https://jsite.mhlw.go.jp/tokyo-hellowork/list/tachikawa/kyushokusha/kyouikukunrenkyuukakyuufukin.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed"
@@ -6573,12 +6573,12 @@ window.SEIDO_DATA = {
     {
      "title": "夜間中学の設置促進・充実について(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/yakan/index.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "夜間中学で学びたい方へ(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/yakan/index_00005.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -6617,7 +6617,7 @@ window.SEIDO_DATA = {
     {
      "title": "高等学校卒業程度認定試験(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/koutou/shiken/index.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6658,12 +6658,12 @@ window.SEIDO_DATA = {
     {
      "title": "特別支援教育就学奨励費負担等 内容の説明(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/tokubetu/main/006/1310461.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "特別支援教育 令和7年度実施事業(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/tokubetu/main/006/r07/1422837_00004.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -6705,12 +6705,12 @@ window.SEIDO_DATA = {
     {
      "title": "ひとり親家庭学び直し支援事業(旧 ひとり親家庭高等学校卒業程度認定試験合格支援事業)(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/hitori-oya/goukakushien",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "ひとり親家庭等関係(こども家庭庁)",
      "url": "https://www.cfa.go.jp/policies/hitori-oya",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -6748,12 +6748,12 @@ window.SEIDO_DATA = {
     {
      "title": "生活保護法による進学準備給付金の支給について(平成30年6月8日社援発第608006号)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc3452&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活保護法による進学準備給付金の取扱いについて(平成30年6月8日社援保発第608002号)(厚生労働省)",
      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc3453&dataType=1&pageNo=1",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -6789,17 +6789,17 @@ window.SEIDO_DATA = {
     {
      "title": "生活困窮者自立支援制度(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059425.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "生活困窮者自立支援制度の沿革(厚生労働省)",
      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000073432.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "子どもの学習・生活支援事業に関するガイドライン(厚生労働省)",
      "url": "https://www.mhlw.go.jp/content/001506554.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok"
@@ -6840,22 +6840,22 @@ window.SEIDO_DATA = {
     {
      "title": "教育一般貸付(国の教育ローン)(日本政策金融公庫)",
      "url": "https://www.jfc.go.jp/n/finance/search/ippan.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "国の教育ローン ご利用条件・返済シミュレーション(日本政策金融公庫)",
      "url": "https://www.jfc.go.jp/n/finance/ippan/sim.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "教育資金に関するご融資(国の教育ローン)の金利(日本政策金融公庫)",
      "url": "https://www.jfc.go.jp/n/rate/natioinal.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "よくあるご質問 国の教育ローンのご利用をお考えの方(日本政策金融公庫)",
      "url": "https://www.jfc.go.jp/n/faq/kyoqa_m.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -6897,77 +6897,77 @@ window.SEIDO_DATA = {
     {
      "title": "不登校に関する地元の相談窓口(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/06112214.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "不登校に関する地元の相談窓口 関東地方のページ(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/kanto.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "不登校対策(COCOLOプラン等)について(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1397802_00005.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "誰一人取り残されない学びの保障に向けた不登校対策 COCOLOプラン(文部科学省・令和5年3月)",
      "url": "https://www.mext.go.jp/content/20230418-mxt_jidou02-000028870-cc.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "【保護者等向け】不登校児童生徒の出席扱い・成績評価について(文部科学省)",
      "url": "https://www.mext.go.jp/content/20260407-mxt_jidou01-000028870-002.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "「24時間子供SOSダイヤル」について(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1306988.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "子供のSOSの相談窓口(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/06112210.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "義務教育の段階における普通教育に相当する教育の機会の確保等に関する法律(文部科学省掲載の条文)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1380960.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "義務教育の段階における普通教育に相当する教育の機会の確保等に関する基本指針の策定について(通知)(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1384370.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "不登校児童生徒への支援の在り方について(通知)令和元年10月25日(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1422155.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "不登校児童生徒が欠席中に行った学習の成果に係る成績評価について(通知)令和6年8月29日(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1422155_00002.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "学びの多様化学校(いわゆる不登校特例校)について(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1387008.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "「不登校特例校」の新たな名称について(通知)令和5年8月31日(文部科学省)",
      "url": "https://www.mext.go.jp/content/20230905-mxt_jidou02-100002759_a.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "学びの多様化学校(いわゆる不登校特例校)の設置者一覧(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/1387004.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "不登校への対応について(文部科学省)",
      "url": "https://www.mext.go.jp/a_menu/shotou/seitoshidou/04121505/004.htm",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -7038,27 +7038,27 @@ window.SEIDO_DATA = {
     {
      "title": "内閣府 被災者支援に関する各種制度の概要(令和8年6月1日現在)",
      "url": "https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/kakusyuseido_tsuujou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 災害に係る住家の被害認定",
      "url": "https://www.bousai.go.jp/taisaku/unyou.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "横浜市 被災した場合の証明書の交付(罹災証明書・火災を除く)",
      "url": "https://www.city.yokohama.lg.jp/bousai-kyukyu-bohan/bousai-saigai/iza/hisaisha/risai.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "神戸市 罹災証明書・罹災届出証明の発行(火災を除く)",
      "url": "https://www.city.kobe.lg.jp/a84453/bosai/emergency/hisaishashien/risai/index.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 被害認定に関するQ&A",
      "url": "https://www.bousai.go.jp/taisaku/pdf/higai_qa.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
@@ -7110,22 +7110,22 @@ window.SEIDO_DATA = {
     {
      "title": "内閣府 被災者生活再建支援制度の概要",
      "url": "https://www.bousai.go.jp/taisaku/seikatsusaiken/pdf/140612gaiyou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 被災者生活再建支援法",
      "url": "https://www.bousai.go.jp/taisaku/seikatsusaiken/shiensya.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 被災者支援に関する各種制度の概要(令和8年6月1日現在)",
      "url": "https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/kakusyuseido_tsuujou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "石川県 令和6年(2024年)能登半島地震における被災者生活再建支援金について",
      "url": "https://www.pref.ishikawa.lg.jp/saigai/hisaisyasaikenshienkin.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -7176,12 +7176,12 @@ window.SEIDO_DATA = {
     {
      "title": "内閣府 被災者支援に関する各種制度の概要(令和8年6月1日現在)",
      "url": "https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/kakusyuseido_tsuujou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 災害弔慰金の支給等に関する法律",
      "url": "https://www.bousai.go.jp/taisaku/choui/choui.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -7231,12 +7231,12 @@ window.SEIDO_DATA = {
     {
      "title": "内閣府 被災者支援に関する各種制度の概要(令和8年6月1日現在)",
      "url": "https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/kakusyuseido_tsuujou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 災害弔慰金の支給等に関する法律",
      "url": "https://www.bousai.go.jp/taisaku/choui/choui.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -7284,22 +7284,22 @@ window.SEIDO_DATA = {
     {
      "title": "防災庁 災害救助法の概要(令和8年11月)",
      "url": "https://www.bousai.go.jp/oyakudachi/pdf/kyuujo_a7.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 被災者支援に関する各種制度の概要(令和8年6月1日現在)",
      "url": "https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/kakusyuseido_tsuujou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 災害対策基本法等の一部を改正する法律(令和7年法律第51号)",
      "url": "https://www.bousai.go.jp/taisaku/kihonhou/kihonhou_r7_01.html",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "内閣府 災害対策基本法等の一部を改正する法律の概要",
      "url": "https://www.bousai.go.jp/taisaku/kihonhou/pdf/r7_01_gaiyou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "ok",
@@ -7354,12 +7354,12 @@ window.SEIDO_DATA = {
     {
      "title": "内閣府 被災者支援に関する各種制度の概要(令和8年6月1日現在)",
      "url": "https://www.bousai.go.jp/taisaku/hisaisyagyousei/pdf/kakusyuseido_tsuujou.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     },
     {
      "title": "防災庁 災害救助法の概要(令和8年11月)",
      "url": "https://www.bousai.go.jp/oyakudachi/pdf/kyuujo_a7.pdf",
-     "checked": "2026-11-17"
+     "checked": "2026-11-26"
     }
    ],
    "verified": "fixed",
